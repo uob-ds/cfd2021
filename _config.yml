@@ -1,12 +1,12 @@
 # Book settings
-title : "Coding for Data - 2020 edition"
-author: Matthew Brett, Ani Adhikari, John Denero, David Wagner
+title : "Coding for Data - 2021 edition"
+author: Matthew Brett, Ani Adhikari, John Denero, David Wagner, Peter Rush
 logo: images/dsfe_logo.png
 email: matthew.brett@gmail.com
 # >- starts a multiline string, where newlines replaced by spaces, and final
 # newlines are stripped.
 description: >-
-  Textbook for University of Birmingham Data Science modules.
+  Textbook for some University of Birmingham Data Science modules.
 
 execute:
   # 'cache' attempts to cache the results.
@@ -22,10 +22,10 @@ html:
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
-  baseurl: https://matthew-brett.github.io/cfd2020
+  baseurl: https://uob-ds.github.io/cfd2021
 
 repository:
-  url: https://github.com/matthew-brett/cfd2020
+  url: https://github.com/uob-ds/cfd2021
   branch: master
 
 launch_buttons:
