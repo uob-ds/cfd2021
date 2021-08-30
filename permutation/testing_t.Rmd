@@ -44,7 +44,7 @@ numbers of mosquitoes attracted to each of the 25 volunteers who drank beer,
 and the equivalent numbers for each of the 18 volunteers who drank water.
 
 See [the data
-page](https://github.com/matthew-brett/datasets/tree/master/mosquito_beer) for
+page](https://github.com/odsti/datasets/tree/master/mosquito_beer) for
 more details on the dataset, and [the data license page](../data/LICENSE).
 
 For an equal variance test, we assume that the spread of the beer values is

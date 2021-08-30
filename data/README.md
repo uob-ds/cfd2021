@@ -33,7 +33,7 @@ distributed freely.
 Samuel P. Oliner and Pearl M. Oliner (1992) "The Altruistic Personality:
 Rescuers of Jews in Nazi Europe". Free Press, New York. ISBN 0-02923829-3.
 
-See <https://github.com/matthew-brett/datasets/oliner1988> for details.
+See <https://github.com/odsti/datasets/oliner1988> for details.
 
 I believe the underlying *data* are not subject to copyright.  To the extent
 that this table reflects my own (MBs) arrangement of the data, I release it

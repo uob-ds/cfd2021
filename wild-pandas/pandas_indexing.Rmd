@@ -56,7 +56,7 @@ gender from the World Bank.
 
 This is the {download}`gender_stats.csv <../data/gender_stats.csv>` file.
 See [the gender stats data
-page](https://github.com/matthew-brett/datasets/tree/master/gender_stats) for
+page](https://github.com/odsti/datasets/tree/master/gender_stats) for
 some more detail.
 
 Download that file to the same directory as this notebook, if you are running

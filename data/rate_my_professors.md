@@ -36,7 +36,7 @@ There are two data files containing the same data:
 * Original {download}`average ratings per course in Excel <disciplines_SI.xlsx>`
 * {download}`Average ratings per course in CSV format <rate_my_course.csv>`.
   This is the Excel file above saved in CSV format; see the [Github dataset
-  page](https://github.com/matthew-brett/datasets/tree/master/good_and_easy)
+  page](https://github.com/odsti/datasets/tree/master/good_and_easy)
   for more detail.
 
 ## References

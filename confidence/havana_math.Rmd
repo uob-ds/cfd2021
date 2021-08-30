@@ -46,7 +46,7 @@ plt.style.use('fivethirtyeight')
 ```
 
 Here are the
-[actual](https://github.com/matthew-brett/datasets/tree/abb224b/havana_exams)
+[actual](https://github.com/odsti/datasets/tree/abb224b/havana_exams)
 school-leaver mathematics examination results from 2018.
 
 

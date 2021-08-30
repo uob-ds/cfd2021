@@ -32,7 +32,7 @@ As before, you can download the data from
 {download}`mosquito_beer.csv <../data/mosquito_beer.csv>`.
 
 See [this
-page](https://github.com/matthew-brett/datasets/tree/master/mosquito_beer)
+page](https://github.com/odsti/datasets/tree/master/mosquito_beer)
 for more details on the dataset, and [the data license
 page](../data/LICENSE).
 

@@ -17,7 +17,7 @@ You can get a copy of the 2017 data at:
 [Gender_StatsData.csv](https://ndownloader.figshare.com/files/17803202).
 
 See [the Gender Statistics dataset
-page](https://github.com/matthew-brett/datasets/tree/1ac6d8c/gender_stats) for
+page](https://github.com/odsti/datasets/tree/1ac6d8c/gender_stats) for
 more detail on my processing of the data.
 
 In summary, I've rearranged the data, calculated averaged data from 2012 to

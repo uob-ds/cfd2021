@@ -4,7 +4,7 @@ The chronic kidney disease (CKD) dataset is a processed version of the original
 from <https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease>.
 
 See [the processed CKD dataset
-page](https://github.com/matthew-brett/datasets/tree/1ac6d8c/ckd) for more
+page](https://github.com/odsti/datasets/tree/1ac6d8c/ckd) for more
 detail.
 
 The data are blood tests and other measures from patients with and without CKD.
@@ -18,7 +18,7 @@ rows correspond to patients *without* CKD.  This information is in the "Class"
 column of the dataset.
 
 Here is a description of each column, from the header of the [original data
-file](https://github.com/matthew-brett/datasets/blob/1ac6d8c/ckd/chronic_kidney_disease_full.arff)
+file](https://github.com/odsti/datasets/blob/1ac6d8c/ckd/chronic_kidney_disease_full.arff)
 with some annotations by me (Matthew Brett), each preceded by "MB: ":
 
 *   Age: age in years
