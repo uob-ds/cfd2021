@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multiple regression &#8212; Coding for Data - 2021 edition</title>
     
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,8 +41,8 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -58,23 +55,14 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Simple and multiple regression" href="single_multiple.html" />
     <link rel="prev" title="Accuracy of the classifier" href="Accuracy_of_the_Classifier.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://uob-ds.github.io/cfd2021/classification/Multiple_Regression.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Multiple regression" />
-<meta property="og:description" content="Multiple regression  Note  This page has content from the Multiple_Regression notebook of an older version of the UC Berkeley data science course. See the Berke" />
-<meta property="og:image"       content="https://uob-ds.github.io/cfd2021/_static/dsfe_logo.png" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -83,25 +71,25 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Coding for Data - 2021 edition</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Coding for Data - 2021 edition</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
  <span class="caption-text">
   Coding for data
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro/what-is-data-science.html">
    What is data science?
@@ -112,11 +100,16 @@
    Why Data Science?
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../intro/tools_techniques.html">
    Tools and techniques
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../intro/computational-tools.html">
      Computational Tools
@@ -128,14 +121,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../intro/text-is-data.html">
    Text is data
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../intro/Plotting_the_Classics.html">
      Plotting the classics
@@ -152,8 +148,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../intro/surviving_computers.html">
@@ -176,12 +170,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   On code
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../code-basics/to_code.html">
    Ode to code
@@ -228,12 +222,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Data types
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../data-types/data_types.html">
    Types of things
@@ -270,12 +264,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Arrays
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../arrays/Arrays.html">
    Arrays
@@ -317,12 +311,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Iteration
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../iteration/iteration.html">
    Iteration
@@ -344,12 +338,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Data frames
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../data-frames/boolean_indexing.html">
    Indexing with Boolean arrays
@@ -381,12 +375,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Population and permutation
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../permutation/permutation.html">
    Populations and permutations
@@ -413,12 +407,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   More building blocks
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../functions-conditionals/more_building_blocks.html">
    More building blocks
@@ -450,12 +444,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wild-pandas/pandas_indexing.html">
    Indexing in Pandas
@@ -482,12 +476,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   The mean and straight lines
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../mean-slopes/mean.html">
    The mean
@@ -549,12 +543,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Classification
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="classification.html">
    Classification
@@ -596,12 +590,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Useful pandas
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../useful-pandas/crosstab.html">
    Cross-tabulation
@@ -618,24 +612,24 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   More on regression
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../more-regression/logistic_regression.html">
    Logistic regression
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Confidence
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../confidence/confidence.html">
    On confidence
@@ -697,12 +691,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   The end of the beginning
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../end/end_of_beginning.html">
    The end of the beginning
@@ -710,6 +704,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -725,21 +720,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -757,7 +752,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -771,27 +766,27 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fclassification/Multiple_Regression.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/master/classification/Multiple_Regression.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/classification/Multiple_Regression.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/master?urlpath=tree/classification/Multiple_Regression.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/classification/Multiple_Regression.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -799,7 +794,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/master/classification/Multiple_Regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/classification/Multiple_Regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -811,16 +806,16 @@
     </div>
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#home-prices">
    Home Prices
@@ -858,8 +853,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -1229,19 +1224,19 @@ Correlation of Yr Sold and SalePrice:	0.026
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicting sale price for: 1st Flr SF       1342.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicting sale price for: 1st Flr SF        864.0
 2nd Flr SF          0.0
-Total Bsmt SF    1372.0
-Garage Area       457.0
+Total Bsmt SF     576.0
+Garage Area       528.0
 Wood Deck SF        0.0
 Open Porch SF       0.0
-Lot Area         9790.0
-Year Built       1967.0
-Yr Sold          2009.0
-Name: 598, dtype: float64
-Using slopes: [ 7.67879826 10.49217336  9.77239023  9.3292782  12.26113903  8.83956824
- 10.32474769 11.47366403 11.35266865]
-Result: 174431.6351608537
+Lot Area         7200.0
+Year Built       1950.0
+Yr Sold          2006.0
+Name: 2648, dtype: float64
+Using slopes: [10.25968351  9.46738485  9.52946621 10.03768513 10.32330754  8.85449719
+  9.68282958  9.6746211  11.70262658]
+Result: 131710.58991671194
 </pre></div>
 </div>
 </div>
@@ -1255,8 +1250,8 @@ Result: 174431.6351608537
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 161500
-Predicted sale price using random slopes: 174431.6351608537
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 105000
+Predicted sale price using random slopes: 131710.58991671194
 </pre></div>
 </div>
 </div>
@@ -1286,7 +1281,10 @@ Predicted sale price using random slopes: 174431.6351608537
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE of all training examples using random slopes: 85673.01854287206
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE of all training examples using random slopes:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 96645.3298474419
 </pre></div>
 </div>
 </div>
@@ -1314,7 +1312,7 @@ Don’t worry about the details, unless you are interested.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fast RMSE of all training examples using random slopes: 85673.01854287206
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fast RMSE of all training examples using random slopes: 96645.3298474419
 </pre></div>
 </div>
 </div>
@@ -1337,36 +1335,45 @@ RMSE. Computation of the best slopes may take several minutes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 29240.23788385533
- hess_inv: array([[ 0.00144959, -0.00005547,  0.00043935, -0.00101599,  0.0000124 ,
-         0.00009595, -0.00012304, -0.00011294, -0.00027328],
-       [-0.00005547,  0.00688243,  0.00229855, -0.0066236 , -0.00013551,
-         0.00022627, -0.00011571, -0.00368617,  0.00360075],
-       [ 0.00043935,  0.00229855,  0.01451396, -0.00250024, -0.00073421,
-         0.00125411, -0.00061424, -0.02208403,  0.02155089],
-       [-0.00101599, -0.0066236 , -0.00250024,  0.00785235,  0.00028166,
-        -0.00028905,  0.00015666,  0.00306862, -0.00306255],
-       [ 0.0000124 , -0.00013551, -0.00073421,  0.00028166,  0.00160917,
-        -0.00144683, -0.00004841,  0.0008066 , -0.00094505],
-       [ 0.00009595,  0.00022627,  0.00125411, -0.00028905, -0.00144683,
-         0.00150544, -0.00006341, -0.00161059,  0.00155367],
-       [-0.00012304, -0.00011571, -0.00061424,  0.00015666, -0.00004841,
-        -0.00006341,  0.00012786,  0.00080752, -0.00072006],
-       [-0.00011294, -0.00368617, -0.02208403,  0.00306862,  0.0008066 ,
-        -0.00161059,  0.00080752,  0.05452263, -0.05366766],
-       [-0.00027328,  0.00360075,  0.02155089, -0.00306255, -0.00094505,
-         0.00155367, -0.00072006, -0.05366766,  0.05328298]])
-      jac: array([ 0.        ,  0.        , -0.00024414,  0.        ,  0.        ,
-        0.        , -0.00146484,  0.        ,  0.        ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 30265.754097430552
+ hess_inv: array([[ 837.20843946,  369.7062034 ,  140.48794143,    5.99458469,
+         139.78849802, -365.2364169 , -134.74724071, -762.18828764,
+         752.67724383],
+       [ 369.7062034 ,  163.39446632,   62.27115502,    2.72833948,
+          61.7687015 , -161.52959772,  -59.5442541 , -336.95644603,
+         332.86713004],
+       [ 140.48794143,   62.27115502,   24.29502161,    0.96024718,
+          23.55166363,  -61.45687069,  -22.70053381, -129.16717659,
+         127.50176243],
+       [   5.99458469,    2.72833948,    0.96024718,    0.99071029,
+           1.02566839,   -2.61892209,   -0.99029131,   -6.70049528,
+           6.55570082],
+       [ 139.78849802,   61.7687015 ,   23.55166363,    1.02566839,
+          23.36456986,  -60.9837591 ,  -22.5190909 , -127.50368792,
+         125.87326657],
+       [-365.2364169 , -161.52959772,  -61.45687069,   -2.61892209,
+         -60.9837591 ,  160.29632018,   58.80882834,  331.66520518,
+        -328.25699688],
+       [-134.74724071,  -59.5442541 ,  -22.70053381,   -0.99029131,
+         -22.5190909 ,   58.80882834,   21.70562693,  122.87882021,
+        -121.32993049],
+       [-762.18828764, -336.95644603, -129.16717659,   -6.70049528,
+        -127.50368792,  331.66520518,  122.87882021,  714.22772738,
+        -704.31161882],
+       [ 752.67724383,  332.86713004,  127.50176243,    6.55570082,
+         125.87326657, -328.25699688, -121.32993049, -704.31161882,
+         695.15814958]])
+      jac: array([ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.00024414, -0.00048828,  0.00024414,  0.00024414])
   message: &#39;Desired error not necessarily achieved due to precision loss.&#39;
-     nfev: 600
-      nit: 42
-     njev: 60
+     nfev: 580
+      nit: 29
+     njev: 58
    status: 2
   success: False
-        x: array([  75.45169335,   74.83495204,   42.71623652,   49.54653152,
-         28.45329313,   30.38048565,    0.54336619,  547.41003352,
-       -541.90868582])
+        x: array([  70.18520725,   74.33073793,   52.02852814,   55.35145712,
+         29.00838508,   10.56288869,    0.47396247,  528.49873298,
+       -525.12223618])
 </pre></div>
 </div>
 </div>
@@ -1382,7 +1389,7 @@ RMSE. Computation of the best slopes may take several minutes.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The best slopes for the training set:
-RMSE of all training examples using the best slopes: 29240.237883855323
+RMSE of all training examples using the best slopes: 30265.754097430556
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1417,15 +1424,15 @@ RMSE of all training examples using the best slopes: 29240.237883855323
   <tbody>
     <tr>
       <th>0</th>
-      <td>75.451693</td>
-      <td>74.834952</td>
-      <td>42.716237</td>
-      <td>49.546532</td>
-      <td>28.453293</td>
-      <td>30.380486</td>
-      <td>0.543366</td>
-      <td>547.410034</td>
-      <td>-541.908686</td>
+      <td>70.185207</td>
+      <td>74.330738</td>
+      <td>52.028528</td>
+      <td>55.351457</td>
+      <td>29.008385</td>
+      <td>10.562889</td>
+      <td>0.473962</td>
+      <td>528.498733</td>
+      <td>-525.122236</td>
     </tr>
   </tbody>
 </table>
@@ -1458,10 +1465,7 @@ other samples from the same population.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 32925.433524421984
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression: 31920.300099091535
 </pre></div>
 </div>
 </div>
@@ -1544,31 +1548,31 @@ of the graph.</p>
   </thead>
   <tbody>
     <tr>
-      <th>2030</th>
-      <td>169500</td>
-      <td>1226</td>
-      <td>592</td>
-      <td>1040.0</td>
+      <th>881</th>
+      <td>190000</td>
+      <td>1500</td>
+      <td>0</td>
+      <td>1500.0</td>
+      <td>570.0</td>
+      <td>2004</td>
+    </tr>
+    <tr>
+      <th>1245</th>
+      <td>116000</td>
+      <td>882</td>
+      <td>0</td>
+      <td>720.0</td>
       <td>240.0</td>
-      <td>1931</td>
+      <td>1952</td>
     </tr>
     <tr>
-      <th>1549</th>
-      <td>119000</td>
-      <td>780</td>
-      <td>420</td>
-      <td>780.0</td>
-      <td>0.0</td>
-      <td>1930</td>
-    </tr>
-    <tr>
-      <th>208</th>
-      <td>244400</td>
-      <td>1207</td>
-      <td>1196</td>
-      <td>1032.0</td>
-      <td>349.0</td>
-      <td>1940</td>
+      <th>1068</th>
+      <td>370000</td>
+      <td>1804</td>
+      <td>886</td>
+      <td>1765.0</td>
+      <td>795.0</td>
+      <td>2003</td>
     </tr>
   </tbody>
 </table>
@@ -1636,54 +1640,54 @@ of the graph.</p>
   </thead>
   <tbody>
     <tr>
-      <th>1401</th>
-      <td>241500</td>
-      <td>1363</td>
+      <th>2556</th>
+      <td>79900</td>
+      <td>747</td>
       <td>0</td>
-      <td>1385.0</td>
-      <td>439.0</td>
-      <td>1954</td>
-      <td>33.211444</td>
+      <td>600.0</td>
+      <td>528.0</td>
+      <td>1926</td>
+      <td>121.823643</td>
     </tr>
     <tr>
-      <th>2583</th>
-      <td>140000</td>
-      <td>1375</td>
+      <th>182</th>
+      <td>105900</td>
+      <td>720</td>
       <td>0</td>
-      <td>1367.0</td>
-      <td>451.0</td>
-      <td>1954</td>
-      <td>36.318040</td>
-    </tr>
-    <tr>
-      <th>2529</th>
-      <td>164500</td>
-      <td>1334</td>
-      <td>0</td>
-      <td>1334.0</td>
-      <td>477.0</td>
-      <td>1967</td>
-      <td>43.680659</td>
-    </tr>
-    <tr>
-      <th>2792</th>
-      <td>220000</td>
-      <td>1358</td>
-      <td>0</td>
-      <td>1348.0</td>
-      <td>418.0</td>
-      <td>2002</td>
-      <td>59.816386</td>
-    </tr>
-    <tr>
-      <th>2896</th>
-      <td>180000</td>
-      <td>1339</td>
-      <td>0</td>
-      <td>1309.0</td>
+      <td>624.0</td>
       <td>484.0</td>
-      <td>1990</td>
-      <td>72.360210</td>
+      <td>1928</td>
+      <td>159.561900</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>85000</td>
+      <td>756</td>
+      <td>0</td>
+      <td>660.0</td>
+      <td>440.0</td>
+      <td>1927</td>
+      <td>164.295466</td>
+    </tr>
+    <tr>
+      <th>1551</th>
+      <td>99500</td>
+      <td>912</td>
+      <td>0</td>
+      <td>520.0</td>
+      <td>360.0</td>
+      <td>1930</td>
+      <td>184.564352</td>
+    </tr>
+    <tr>
+      <th>773</th>
+      <td>149900</td>
+      <td>1034</td>
+      <td>0</td>
+      <td>456.0</td>
+      <td>504.0</td>
+      <td>1978</td>
+      <td>211.329127</td>
     </tr>
   </tbody>
 </table>
@@ -1703,7 +1707,7 @@ of the graph.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>189200.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104040.0
 </pre></div>
 </div>
 </div>
@@ -1718,8 +1722,8 @@ for our one test example. Looks reasonable!</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 161500
-Predicted sale price using nearest neighbors: 189200.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 105000
+Predicted sale price using nearest neighbors: 104040.0
 </pre></div>
 </div>
 </div>
@@ -1742,8 +1746,8 @@ the predictions. Computation of the predictions may take several minutes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression:  32925.433524421984
-Test set RMSE for nearest neighbor regression: 35586.224633591686
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression:  31920.300099091535
+Test set RMSE for nearest neighbor regression: 34599.41628816472
 </pre></div>
 </div>
 </div>
@@ -1783,7 +1787,7 @@ indicating that fewer prices were predicted with very high accuracy.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "master",
+            ref: "deepnote-build",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1800,15 +1804,35 @@ indicating that fewer prices were predicted with very high accuracy.</p>
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Accuracy_of_the_Classifier.html" title="previous page">Accuracy of the classifier</a>
-    <a class='right-next' id="next-link" href="single_multiple.html" title="next page">Simple and multiple regression</a>
+            
 
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="Accuracy_of_the_Classifier.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Accuracy of the classifier</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="single_multiple.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Simple and multiple regression</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -1816,7 +1840,7 @@ indicating that fewer prices were predicted with very high accuracy.</p>
         
           By Matthew Brett, Ani Adhikari, John Denero, David Wagner, Peter Rush<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
@@ -1825,11 +1849,9 @@ indicating that fewer prices were predicted with very high accuracy.</p>
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
+  
   </body>
 </html>
