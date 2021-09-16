@@ -26,7 +26,7 @@ html:
 
 repository:
   url: https://github.com/uob-ds/cfd2021
-  branch: master
+  branch: deepnote-build
 
 launch_buttons:
   # The interface interactive links will activate ["classic", "jupyterlab"]
@@ -35,6 +35,8 @@ launch_buttons:
   binderhub_url: "https://mybinder.org"
   # The URL of Google Colab (e.g., https://colab.research.google.com)
   colab_url: "https://colab.research.google.com"
+  
+  deepnote_url: "https://deepnote.com"
   thebe: true
 
 sphinx:
