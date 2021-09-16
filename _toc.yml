@@ -1,5 +1,7 @@
-- file: intro
-- part: Coding for data
+format: jb-book
+root: intro
+parts:
+- caption: Coding for data
   chapters:
   - file: intro/what-is-data-science
   - file: intro/why-data-science
@@ -9,15 +11,14 @@
     - file: intro/statistical-techniques
   - file: intro/text-is-data
     sections:
-      - file: intro/Plotting_the_Classics
-      - file: intro/Literary_Characters
-      - file: intro/Another_Kind_Of_Character
+    - file: intro/Plotting_the_Classics
+    - file: intro/Literary_Characters
+    - file: intro/Another_Kind_Of_Character
   - file: intro/surviving_computers
   - file: intro/the_software
   - file: intro/using_jupyter
   - file: intro/more_on_jupyter
-
-- part: On code
+- caption: On code
   chapters:
   - file: code-basics/to_code
   - file: code-basics/sampling_problem
@@ -32,8 +33,7 @@
   - file: code-basics/Calls
   # exprs_states exercise
   - file: code-basics/first_pass_three_girls
-
-- part: Data types
+- caption: Data types
   chapters:
   - file: data-types/data_types
   - file: data-types/Numbers
@@ -46,8 +46,7 @@
   # AKA Booleans
   - file: data-types/Comparison
   - file: data-types/lists
-
-- part: Arrays
+- caption: Arrays
   chapters:
   - file: arrays/Arrays
   # Page above covers multi-line statements.
@@ -63,9 +62,7 @@
   - file: arrays/boolean_arrays
   # Expand?  Need exercise.
   - file: arrays/leaping_ahead
-
-- part: Iteration
-  # and inference.
+- caption: Iteration
   chapters:
   - file: iteration/iteration
   - file: iteration/indentation
@@ -78,7 +75,7 @@
 
 # Need some introduction to plotting here.
 
-- part: Data frames
+- caption: Data frames
   chapters:
   - file: data-frames/boolean_indexing
   # boolean_arrays exercise.
@@ -87,16 +84,14 @@
   - file: data-frames/df_series_arrays
   - file: data-frames/missing_values
   - file: data-frames/df_plotting
-
-- part: Population and permutation
+- caption: Population and permutation
   chapters:
   - file: permutation/permutation
   - file: permutation/population_permutation
   - file: permutation/brexit_ages
   - file: permutation/permutation_idea
   - file: permutation/permutation_and_t_test
-
-- part: More building blocks
+- caption: More building blocks
   chapters:
   - file: functions-conditionals/more_building_blocks
   - file: functions-conditionals/introducing_functions
@@ -105,17 +100,14 @@
   - file: functions-conditionals/conditional_statements
   # functions_conditionals
   - file: functions-conditionals/functions_as_values
-  # function_vals
-
-- part: Pandas, indices and labels
+- caption: Pandas, indices and labels
   chapters:
   - file: wild-pandas/pandas_indexing
   - file: wild-pandas/noble_politics
   - file: wild-pandas/safe_pandas
   - file: wild-pandas/text_encoding
   - file: wild-pandas/numbers_and_strings
-
-- part: The mean and straight lines
+- caption: The mean and straight lines
   chapters:
   - file: mean-slopes/mean
   - file: mean-slopes/mean_meaning
@@ -134,8 +126,7 @@
   - file: mean-slopes/standard_scores
   # ryostd
   - file: mean-slopes/Correlation
-
-- part: Classification
+- caption: Classification
   chapters:
   - file: classification/classification
   - file: classification/Nearest_Neighbors
@@ -148,18 +139,15 @@
   # classify_song_part2
   - file: classification/Multiple_Regression
   - file: classification/single_multiple
-
-- part: Useful pandas
+- caption: Useful pandas
   chapters:
   - file: useful-pandas/crosstab
   - file: useful-pandas/groupby
   - file: useful-pandas/merge
-
-- part: More on regression
+- caption: More on regression
   chapters:
   - file: more-regression/logistic_regression
-
-- part: Confidence
+- caption: Confidence
   chapters:
   - file: confidence/confidence
   - file: confidence/bootstrap
@@ -174,7 +162,7 @@
   - file: confidence/confident_treatment
   - file: confidence/bayes_confidence
 
-- part: The end of the beginning
+- caption: The end of the beginning
   chapters:
   - file: end/end_of_beginning
 
