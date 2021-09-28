@@ -1,6 +1,13 @@
 # Build requirements
--r requirements.txt
-jupyter-book
-jupytext
+
+# Deepnote button PRs
+# This should just be jupyter-book when PR merged.
+git+https://github.com/matthew-brett/jupyter-book.git@deepnote-button
+# Remove this next one when PRs merged (it's a dependency of jupyter-book).
+git+https://github.com/matthew-brett/sphinx-book-theme.git@deepnote-button
+
 # To allow static build / upload
 ghp-import
+
+# Notebook etc requirements
+-r requirements.txt
