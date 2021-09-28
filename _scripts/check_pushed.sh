@@ -4,5 +4,8 @@ if [ -n "$(git status --porcelain)" ]; then
     echo "Check git status; needs commit"
     exit 1
 fi
-$(git merge-base --is-ancestor @{u} HEAD) || ( \
-    echo "Current branch not yet pushed upstream" && exit 2 )
+upstream_diff=$(git diff @{u} --stat)
+if [ "$upstream_diff" != "" ]; then
+    echo "HEAD differs from upstream; please review git status"
+    exit 2
+fi

@@ -16,8 +16,6 @@ html: bibliography delete-ipynbs $(IPYNBS)
 
 github: html
 	ghp-import -n _build/html -p -f
-
-foo:
 	./_scripts/check_pushed.sh
 
 clean:
