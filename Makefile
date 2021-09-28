@@ -1,12 +1,23 @@
 BUILD_DIR=_build/html
+RMDS:=$(wildcard */*.Rmd)
+IPYNBS:=$(patsubst %.Rmd,%.ipynb,$(RMDS))
 
-html: bibliography
-	# Check for ipynb files in source (should all be .Rmd).
-	# if compgen -G "*/*.ipynb" 2> /dev/null; then (echo "ipynb files" && exit 1); fi
+checkout-ipynbs:
+	# Reset notebooks to version in repository.
+	git checkout */*.ipynb
+
+%.ipynb: %.Rmd
+	# Convert .Rmd file to ipynb file.
+	jupytext --to ipynb $<
+
+html: bibliography checkout-ipynbs $(IPYNBS)
+	# For ucb_pages module
+	export PYTHONPATH="${PYTHONPATH}:${PWD}"
 	jupyter-book build .
-	python _scripts/make_redirects.py
 
 github: html
+	# Complain if tree has changes or commit not pushed.
+	# My code here.
 	ghp-import -n _build/html -p -f
 
 clean:
