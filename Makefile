@@ -12,8 +12,7 @@ checkout-ipynbs:
 
 html: bibliography checkout-ipynbs $(IPYNBS)
 	# For ucb_pages module
-	export PYTHONPATH="${PYTHONPATH}:${PWD}"
-	jupyter-book build .
+	( export PYTHONPATH="${PYTHONPATH}:${PWD}" && jupyter-book build . )
 
 github: html
 	# Complain if tree has changes or commit not pushed.
