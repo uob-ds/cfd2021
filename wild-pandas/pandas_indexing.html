@@ -1723,45 +1723,45 @@ understand or use labels:</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py</span> in <span class="ni">_has_valid_tuple</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">753</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">754</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_validate_key</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">755</span>             <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="nn">~/Library/Python/3.8/lib/python/site-packages/pandas/core/indexing.py</span> in <span class="ni">_has_valid_tuple</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">723</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_validate_key</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">724</span>             <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py</span> in <span class="ni">_validate_key</span><span class="nt">(self, key, axis)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1425</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1426</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Can only index by location with a [</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_valid_types</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1427</span> 
+<span class="nn">~/Library/Python/3.8/lib/python/site-packages/pandas/core/indexing.py</span> in <span class="ni">_validate_key</span><span class="nt">(self, key, axis)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1374</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1375</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Can only index by location with a [</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_valid_types</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span> 
 
 <span class="ne">ValueError</span>: Can only index by location with a [integer, integer slice (START point is INCLUDED, END point is EXCLUDED), listlike of integers, boolean array]
 
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_7</span><span class="o">/</span><span class="n">h5j1wn6n2b5c2qwh5dtr3jlm0000gq</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_77221</span><span class="o">/</span><span class="mf">1358166649.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">3</span><span class="n">b068730429a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># We can&#39;t specify columns by label, using iloc.</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">richest_15</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;gdp_us_billion&#39;</span><span class="p">]</span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">923</span>                 <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">924</span>                     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">takeable</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_takeable</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">925</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_tuple</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">926</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">927</span>             <span class="c1"># we by definition only have the 0th axis</span>
+<span class="nn">~/Library/Python/3.8/lib/python/site-packages/pandas/core/indexing.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">887</span>                     <span class="c1"># AttributeError for IntervalTree get_value</span>
+<span class="g g-Whitespace">    </span><span class="mi">888</span>                     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">_get_value</span><span class="p">(</span><span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">takeable</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_takeable</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">889</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_tuple</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">890</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">891</span>             <span class="c1"># we by definition only have the 0th axis</span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py</span> in <span class="ni">_getitem_tuple</span><span class="nt">(self, tup)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1504</span>     <span class="k">def</span> <span class="nf">_getitem_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tup</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1505</span> 
-<span class="ne">-&gt; </span><span class="mi">1506</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_has_valid_tuple</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1507</span>         <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="n">IndexingError</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1508</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_lowerdim</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="nn">~/Library/Python/3.8/lib/python/site-packages/pandas/core/indexing.py</span> in <span class="ni">_getitem_tuple</span><span class="nt">(self, tup)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1448</span>     <span class="k">def</span> <span class="nf">_getitem_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tup</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1449</span> 
+<span class="ne">-&gt; </span><span class="mi">1450</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_has_valid_tuple</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1451</span>         <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="n">IndexingError</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1452</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_lowerdim</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
 
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py</span> in <span class="ni">_has_valid_tuple</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">754</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_validate_key</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">755</span>             <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">756</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">757</span>                     <span class="s2">&quot;Location based indexing can only have &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">758</span>                     <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_valid_types</span><span class="si">}</span><span class="s2">] types&quot;</span>
+<span class="nn">~/Library/Python/3.8/lib/python/site-packages/pandas/core/indexing.py</span> in <span class="ni">_has_valid_tuple</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_validate_key</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">724</span>             <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">725</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>                     <span class="s2">&quot;Location based indexing can only have &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">727</span>                     <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_valid_types</span><span class="si">}</span><span class="s2">] types&quot;</span>
 
 <span class="ne">ValueError</span>: Location based indexing can only have [integer, integer slice (START point is INCLUDED, END point is EXCLUDED), listlike of integers, boolean array] types
 </pre></div>
