@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -74,6 +74,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -768,7 +772,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fmean-slopes/mean_meaning.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/mean-slopes/mean_meaning.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/mean-slopes/mean_meaning.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -788,7 +792,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/mean-slopes/mean_meaning.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/mean-slopes/mean_meaning.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -796,13 +800,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/mean-slopes/mean_meaning.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/mean-slopes/mean_meaning.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fmean-slopes/mean_meaning.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fmean-slopes/mean_meaning.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -969,7 +973,7 @@ you.  That is your <em>prediction error</em> for that value.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-121.97404371584699
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-144.224043715847
 </pre></div>
 </div>
 </div>
@@ -983,7 +987,7 @@ you.  That is your <em>prediction error</em> for that value.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-80.72404371584699
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-140.974043715847
 </pre></div>
 </div>
 </div>
@@ -999,8 +1003,8 @@ you.  That is your <em>prediction error</em> for that value.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-121.97,  -80.72,    9.53, -162.47, -149.72,  578.03, -157.72,
-        344.53, -140.97,  -97.47])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-144.22, -140.97, -161.72, -169.47, -146.47,  224.03, -166.22,
+        145.28, -158.97,  -56.22])
 </pre></div>
 </div>
 </div>
@@ -1025,7 +1029,7 @@ you.  That is your <em>prediction error</em> for that value.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.382183422218077e-12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9895196601282805e-12
 </pre></div>
 </div>
 </div>
@@ -1059,8 +1063,8 @@ zero</span></a>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 14877.67,   6516.37,     90.74,  26397.81,  22417.29, 334114.01,
-        24876.87, 118698.13,  19873.68,   9501.19])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20800.57, 19873.68, 26154.67, 28721.45, 21454.65, 50187.63,
+       27630.43, 21105.1 , 25272.75,  3161.14])
 </pre></div>
 </div>
 </div>
@@ -1222,7 +1226,7 @@ the lowest sum of squares error.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1248,14 +1252,20 @@ the lowest sum of squares error.</p>
     
     <div id="prev">
         <a class="left-prev" href="mean.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">The mean</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">The mean</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="where_and_argmin.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Where and argmin</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Where and argmin</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -1263,7 +1273,7 @@ the lowest sum of squares error.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

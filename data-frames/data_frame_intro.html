@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fdata-frames/data_frame_intro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/data-frames/data_frame_intro.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/data-frames/data_frame_intro.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/data-frames/data_frame_intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/data-frames/data_frame_intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/data-frames/data_frame_intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/data-frames/data_frame_intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fdata-frames/data_frame_intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fdata-frames/data_frame_intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -2059,7 +2063,7 @@ there is little relationship between GDP and maternal mortality.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x12f0082b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fc9d08fc4c0&gt;
 </pre></div>
 </div>
 <img alt="../_images/data_frame_intro_48_1.png" src="../_images/data_frame_intro_48_1.png" />
@@ -2534,7 +2538,7 @@ any of this selection of rich countries.   Here’s a plot of
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x12ef78e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fc9d016bbb0&gt;
 </pre></div>
 </div>
 <img alt="../_images/data_frame_intro_68_1.png" src="../_images/data_frame_intro_68_1.png" />
@@ -2549,7 +2553,7 @@ any of this selection of rich countries.   Here’s a plot of
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2575,14 +2579,20 @@ any of this selection of rich countries.   Here’s a plot of
     
     <div id="prev">
         <a class="left-prev" href="data_frames.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Data frames</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Data frames</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="df_series_arrays.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Data frames, Series and arrays</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Data frames, Series and arrays</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -2590,7 +2600,7 @@ any of this selection of rich countries.   Here’s a plot of
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

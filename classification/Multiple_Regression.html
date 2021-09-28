@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fclassification/Multiple_Regression.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/classification/Multiple_Regression.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/classification/Multiple_Regression.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/classification/Multiple_Regression.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/classification/Multiple_Regression.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/classification/Multiple_Regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/classification/Multiple_Regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fclassification/Multiple_Regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fclassification/Multiple_Regression.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -1147,7 +1151,7 @@ houses that sold for less than $35,000.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6424662541030225
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6424662541030212
 </pre></div>
 </div>
 </div>
@@ -1186,7 +1190,7 @@ Correlation of Yr Sold and SalePrice:	0.026
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7821920556134877
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7821920556134857
 </pre></div>
 </div>
 </div>
@@ -1230,19 +1234,19 @@ Correlation of Yr Sold and SalePrice:	0.026
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicting sale price for: 1st Flr SF         835.0
-2nd Flr SF         861.0
-Total Bsmt SF      835.0
-Garage Area        542.0
-Wood Deck SF       143.0
-Open Porch SF       66.0
-Lot Area         10110.0
-Year Built        2003.0
-Yr Sold           2008.0
-Name: 1132, dtype: float64
-Using slopes: [ 8.55229159 10.98896757  9.1641183   8.69579144  9.12187259  8.60932623
- 10.78852069  8.02322786 10.02891277]
-Result: 176120.9919875413
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicting sale price for: 1st Flr SF        990.0
+2nd Flr SF          0.0
+Total Bsmt SF     990.0
+Garage Area       299.0
+Wood Deck SF        0.0
+Open Porch SF      64.0
+Lot Area         8775.0
+Year Built       1994.0
+Yr Sold          2007.0
+Name: 2120, dtype: float64
+Using slopes: [ 9.62636507 10.37649542 10.59918711  9.94389962  9.67614317 10.8443387
+ 10.96844228 11.0355414   9.11291843]
+Result: 160233.13812246665
 </pre></div>
 </div>
 </div>
@@ -1256,8 +1260,8 @@ Result: 176120.9919875413
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 188000
-Predicted sale price using random slopes: 176120.9919875413
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 126000
+Predicted sale price using random slopes: 160233.13812246665
 </pre></div>
 </div>
 </div>
@@ -1287,10 +1291,7 @@ Predicted sale price using random slopes: 176120.9919875413
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE of all training examples using random slopes:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 112568.06650238717
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE of all training examples using random slopes: 111432.66762108306
 </pre></div>
 </div>
 </div>
@@ -1318,7 +1319,7 @@ Don’t worry about the details, unless you are interested.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fast RMSE of all training examples using random slopes: 112568.06650238717
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fast RMSE of all training examples using random slopes: 111432.66762108302
 </pre></div>
 </div>
 </div>
@@ -1341,45 +1342,45 @@ RMSE. Computation of the best slopes may take several minutes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 30823.056942516505
- hess_inv: array([[  0.73330158,   0.07675905,  -0.47718418,  -0.26503947,
-         -0.14608178,  -0.52115687,  -0.00268441,   2.02810562,
-         -2.0824009 ],
-       [  0.07675905,   0.24450687,   0.05535579,  -0.11069673,
-         -0.08190566,  -0.24281157,  -0.00059449,  -0.19662693,
-          0.12313445],
-       [ -0.47718418,   0.05535579,   0.65140947,   0.18799831,
-          0.13726948,   0.01377301,  -0.00007933,  -3.33393558,
-          3.1962905 ],
-       [ -0.26503947,  -0.11069673,   0.18799831,   1.4383002 ,
-          0.28195319,   1.51534135,  -0.00249871,  -6.01587892,
-          5.73074525],
-       [ -0.14608178,  -0.08190566,   0.13726948,   0.28195319,
-          1.89636458,   0.29076548,  -0.00330411,  -1.46272422,
-          1.48416722],
-       [ -0.52115687,  -0.24281157,   0.01377301,   1.51534135,
-          0.29076548,   2.02272521,   0.00026503,  -4.71004895,
-          4.61685565],
-       [ -0.00268441,  -0.00059449,  -0.00007933,  -0.00249871,
-         -0.00330411,   0.00026503,   0.00034572,   0.0212537 ,
-         -0.02115377],
-       [  2.02810562,  -0.19662693,  -3.33393558,  -6.01587892,
-         -1.46272422,  -4.71004895,   0.0212537 ,  74.37412172,
-        -71.37206188],
-       [ -2.0824009 ,   0.12313445,   3.1962905 ,   5.73074525,
-          1.48416722,   4.61685565,  -0.02115377, -71.37206188,
-         68.61492152]])
-      jac: array([0.00048828, 0.00048828, 0.00048828, 0.00048828, 0.00024414,
-       0.        , 0.00463867, 0.00073242, 0.00073242])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 32725.114872889913
+ hess_inv: array([[  0.64185364,   0.15179158,  -0.30809346,  -0.08585488,
+         -0.31709329,  -0.90705936,  -0.00274096,   0.25070247,
+         -0.43147633],
+       [  0.15179158,   0.29688987,   0.00765863,  -0.10403706,
+         -0.37046752,  -0.92960006,  -0.00124214,   0.8889314 ,
+         -0.97549581],
+       [ -0.30809346,   0.00765863,   0.44445068,  -0.18957013,
+         -0.02043711,   0.13368445,  -0.00060522,   0.27167003,
+         -0.27461584],
+       [ -0.08585488,  -0.10403706,  -0.18957013,   1.10381092,
+         -0.25544174,  -0.46367506,  -0.0000822 ,  -0.17475769,
+          0.08085209],
+       [ -0.31709329,  -0.37046752,  -0.02043711,  -0.25544174,
+          3.144591  ,   3.04723661,   0.00042691,  -4.00553041,
+          4.14911099],
+       [ -0.90705936,  -0.92960006,   0.13368445,  -0.46367506,
+          3.04723661,  14.6655895 ,   0.00797939, -10.43592268,
+         10.76469114],
+       [ -0.00274096,  -0.00124214,  -0.00060522,  -0.0000822 ,
+          0.00042691,   0.00797939,   0.00035425,  -0.00282123,
+          0.00282155],
+       [  0.25070247,   0.8889314 ,   0.27167003,  -0.17475769,
+         -4.00553041, -10.43592268,  -0.00282123,   9.78006776,
+         -9.80999886],
+       [ -0.43147633,  -0.97549581,  -0.27461584,   0.08085209,
+          4.14911099,  10.76469114,   0.00282155,  -9.80999886,
+         10.00064093]])
+      jac: array([-0.00073242, -0.00170898, -0.00048828, -0.00097656,  0.00073242,
+        0.00048828, -0.00415039, -0.00048828,  0.00024414])
   message: &#39;Desired error not necessarily achieved due to precision loss.&#39;
-     nfev: 510
-      nit: 26
-     njev: 51
+     nfev: 450
+      nit: 23
+     njev: 45
    status: 2
   success: False
-        x: array([  82.27966008,   77.69821478,   47.42802449,   48.86554942,
-         29.06442572,   14.03928372,    0.46068457,  494.39873373,
-       -495.15614675])
+        x: array([  82.72345502,   78.14933337,   50.74944475,   41.73180111,
+         43.35960121,   31.06465375,    0.49361655,  483.1804536 ,
+       -485.46822636])
 </pre></div>
 </div>
 </div>
@@ -1395,7 +1396,7 @@ RMSE. Computation of the best slopes may take several minutes.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The best slopes for the training set:
-RMSE of all training examples using the best slopes: 30823.056942516505
+RMSE of all training examples using the best slopes: 32725.11487288993
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1430,15 +1431,15 @@ RMSE of all training examples using the best slopes: 30823.056942516505
   <tbody>
     <tr>
       <th>0</th>
-      <td>82.27966</td>
-      <td>77.698215</td>
-      <td>47.428024</td>
-      <td>48.865549</td>
-      <td>29.064426</td>
-      <td>14.039284</td>
-      <td>0.460685</td>
-      <td>494.398734</td>
-      <td>-495.156147</td>
+      <td>82.723455</td>
+      <td>78.149333</td>
+      <td>50.749445</td>
+      <td>41.731801</td>
+      <td>43.359601</td>
+      <td>31.064654</td>
+      <td>0.493617</td>
+      <td>483.180454</td>
+      <td>-485.468226</td>
     </tr>
   </tbody>
 </table>
@@ -1471,7 +1472,7 @@ other samples from the same population.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression: 31354.66883901676
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression: 29661.679356204666
 </pre></div>
 </div>
 </div>
@@ -1554,31 +1555,31 @@ of the graph.</p>
   </thead>
   <tbody>
     <tr>
-      <th>1894</th>
-      <td>147000</td>
-      <td>1374</td>
+      <th>1361</th>
+      <td>141000</td>
+      <td>1272</td>
       <td>0</td>
-      <td>1130.0</td>
-      <td>286.0</td>
-      <td>1964</td>
+      <td>1272.0</td>
+      <td>400.0</td>
+      <td>1938</td>
     </tr>
     <tr>
-      <th>2145</th>
-      <td>228500</td>
-      <td>1284</td>
-      <td>885</td>
-      <td>1284.0</td>
-      <td>647.0</td>
-      <td>2002</td>
+      <th>2643</th>
+      <td>110000</td>
+      <td>813</td>
+      <td>0</td>
+      <td>813.0</td>
+      <td>270.0</td>
+      <td>1930</td>
     </tr>
     <tr>
-      <th>1183</th>
-      <td>290000</td>
-      <td>1671</td>
+      <th>2384</th>
+      <td>415000</td>
+      <td>1868</td>
       <td>0</td>
-      <td>1426.0</td>
-      <td>550.0</td>
-      <td>1976</td>
+      <td>1868.0</td>
+      <td>1085.0</td>
+      <td>2005</td>
     </tr>
   </tbody>
 </table>
@@ -1646,54 +1647,54 @@ of the graph.</p>
   </thead>
   <tbody>
     <tr>
-      <th>867</th>
-      <td>198500</td>
-      <td>840</td>
-      <td>885</td>
-      <td>840.0</td>
-      <td>550.0</td>
-      <td>2002</td>
-      <td>26.286879</td>
+      <th>2490</th>
+      <td>126000</td>
+      <td>984</td>
+      <td>0</td>
+      <td>984.0</td>
+      <td>310.0</td>
+      <td>1965</td>
+      <td>32.155870</td>
     </tr>
     <tr>
-      <th>1473</th>
-      <td>208500</td>
-      <td>856</td>
-      <td>854</td>
-      <td>856.0</td>
-      <td>548.0</td>
-      <td>2003</td>
-      <td>31.096624</td>
+      <th>633</th>
+      <td>149500</td>
+      <td>988</td>
+      <td>0</td>
+      <td>988.0</td>
+      <td>297.0</td>
+      <td>1959</td>
+      <td>35.171011</td>
     </tr>
     <tr>
-      <th>2130</th>
-      <td>190550</td>
-      <td>845</td>
-      <td>845</td>
-      <td>845.0</td>
-      <td>517.0</td>
-      <td>2001</td>
-      <td>32.939338</td>
+      <th>2784</th>
+      <td>128500</td>
+      <td>971</td>
+      <td>0</td>
+      <td>971.0</td>
+      <td>300.0</td>
+      <td>1969</td>
+      <td>36.715120</td>
     </tr>
     <tr>
-      <th>1127</th>
-      <td>205950</td>
-      <td>822</td>
-      <td>843</td>
-      <td>813.0</td>
-      <td>562.0</td>
-      <td>2007</td>
-      <td>37.322915</td>
+      <th>1323</th>
+      <td>110000</td>
+      <td>984</td>
+      <td>0</td>
+      <td>984.0</td>
+      <td>308.0</td>
+      <td>1959</td>
+      <td>37.121422</td>
     </tr>
     <tr>
-      <th>592</th>
-      <td>227000</td>
-      <td>810</td>
-      <td>855</td>
-      <td>810.0</td>
-      <td>528.0</td>
-      <td>2001</td>
-      <td>38.548671</td>
+      <th>1917</th>
+      <td>131000</td>
+      <td>1008</td>
+      <td>0</td>
+      <td>1008.0</td>
+      <td>308.0</td>
+      <td>1956</td>
+      <td>46.615448</td>
     </tr>
   </tbody>
 </table>
@@ -1713,7 +1714,7 @@ of the graph.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>206100.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>129000.0
 </pre></div>
 </div>
 </div>
@@ -1728,8 +1729,8 @@ for our one test example. Looks reasonable!</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 188000
-Predicted sale price using nearest neighbors: 206100.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Actual sale price: 126000
+Predicted sale price using nearest neighbors: 129000.0
 </pre></div>
 </div>
 </div>
@@ -1752,8 +1753,8 @@ the predictions. Computation of the predictions may take several minutes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression:  31354.66883901676
-Test set RMSE for nearest neighbor regression: 32426.94080809579
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test set RMSE for multiple linear regression:  29661.679356204666
+Test set RMSE for nearest neighbor regression: 30827.653605743086
 </pre></div>
 </div>
 </div>
@@ -1793,7 +1794,7 @@ indicating that fewer prices were predicted with very high accuracy.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1819,14 +1820,20 @@ indicating that fewer prices were predicted with very high accuracy.</p>
     
     <div id="prev">
         <a class="left-prev" href="Accuracy_of_the_Classifier.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Accuracy of the classifier</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Accuracy of the classifier</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="single_multiple.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Simple and multiple regression</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Simple and multiple regression</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -1834,7 +1841,7 @@ indicating that fewer prices were predicted with very high accuracy.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

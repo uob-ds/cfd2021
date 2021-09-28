@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fuseful-pandas/groupby.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/useful-pandas/groupby.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/useful-pandas/groupby.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/useful-pandas/groupby.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/useful-pandas/groupby.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/useful-pandas/groupby.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/useful-pandas/groupby.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fuseful-pandas/groupby.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fuseful-pandas/groupby.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -984,7 +988,7 @@ by <a class="reference external" href="http://vanderplas.com">Jake Vanderplas</a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x103791af0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f7f58c3c4c0&gt;
 </pre></div>
 </div>
 </div>
@@ -1228,6 +1232,14 @@ fare    12.649753
 dtype: float64
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_77171/3168374954.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  print(&#39;1st mean&#39;, df[df[&#39;class&#39;] == &#39;1st&#39;].mean())
+/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_77171/3168374954.py:2: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  print(&#39;2nd mean&#39;, df[df[&#39;class&#39;] == &#39;2nd&#39;].mean())
+/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_77171/3168374954.py:3: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  print(&#39;3rd mean&#39;, df[df[&#39;class&#39;] == &#39;3rd&#39;].mean())
+</pre></div>
+</div>
 </div>
 </div>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">mean</span></code> function only returned results for the numerical
@@ -1261,33 +1273,33 @@ Croatia                   11
 Channel Islands           10
 Spain                      8
 Wales                      8
-India                      7
-Denmark                    7
 Hungary                    7
+Denmark                    7
+India                      7
 Argentina                  7
 Turkey                     6
 South Africa               6
 Germany                    5
+Italy                      4
 Bosnia                     4
 Slovenia                   4
-Italy                      4
 Poland                     3
-Greece                     2
 Austria                    2
-Australia                  2
+Russia                     2
+Greece                     2
 Siam                       2
 Peru                       2
+Australia                  2
 Uruguay                    2
-Russia                     2
-China/Hong Kong            1
-Latvia                     1
-Cuba                       1
-Mexico                     1
 Syria                      1
 Japan                      1
 Egypt                      1
-Slovakia (Modern day)      1
+China/Hong Kong            1
+Latvia                     1
 Yugoslavia                 1
+Slovakia (Modern day)      1
+Cuba                       1
+Mexico                     1
 Name: country, dtype: int64
 </pre></div>
 </div>
@@ -1754,7 +1766,7 @@ we can get a new GroupBy object, that contains only the <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x12c1e8f70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x7f7f98a4de20&gt;
 </pre></div>
 </div>
 </div>
@@ -1861,7 +1873,7 @@ by:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x12c242550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f7f9845e2e0&gt;
 </pre></div>
 </div>
 </div>
@@ -2158,7 +2170,7 @@ chapter</a> for much more detail.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2184,14 +2196,20 @@ chapter</a> for much more detail.</p>
     
     <div id="prev">
         <a class="left-prev" href="crosstab.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Cross-tabulation</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Cross-tabulation</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="merge.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Merging</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Merging</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -2199,7 +2217,7 @@ chapter</a> for much more detail.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

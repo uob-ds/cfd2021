@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fclassification/single_multiple.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/classification/single_multiple.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/classification/single_multiple.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/classification/single_multiple.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/classification/single_multiple.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/classification/single_multiple.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/classification/single_multiple.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fclassification/single_multiple.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fclassification/single_multiple.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -1210,7 +1214,7 @@ substances from the blood.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8458834154017618
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.845883415401762
 </pre></div>
 </div>
 </div>
@@ -1340,17 +1344,17 @@ error must be the same as the <code class="docutils literal notranslate"><span c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2218544954108195
- hess_inv: array([[ 8.23440421, -0.05728554],
-       [-0.05728554,  0.00054516]])
-      jac: array([ 0.        , -0.00000006])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.221854495410725
+ hess_inv: array([[ 8.23455682, -0.05728661],
+       [-0.05728661,  0.00054517]])
+      jac: array([-0.00000003, -0.00000003])
   message: &#39;Optimization terminated successfully.&#39;
      nfev: 33
       nit: 7
      njev: 11
    status: 0
   success: True
-        x: array([-0.0849082 ,  0.05524181])
+        x: array([-0.08490848,  0.05524181])
 </pre></div>
 </div>
 </div>
@@ -1386,7 +1390,7 @@ the same as the correlation:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8458834154017618
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.845883415401762
 </pre></div>
 </div>
 </div>
@@ -1439,10 +1443,10 @@ predicting <code class="docutils literal notranslate"><span class="pre">Creatini
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   103.1</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Thu, 16 Sep 2021</td> <th>  Prob (F-statistic):</th> <td>9.33e-13</td>
+  <th>Date:</th>             <td>Tue, 28 Sep 2021</td> <th>  Prob (F-statistic):</th> <td>9.33e-13</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:08:46</td>     <th>  Log-Likelihood:    </th> <td> -95.343</td>
+  <th>Time:</th>                 <td>13:21:55</td>     <th>  Log-Likelihood:    </th> <td> -95.343</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    43</td>      <th>  AIC:               </th> <td>   194.7</td>
@@ -1539,7 +1543,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2218544954108195
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.221854495410725
 </pre></div>
 </div>
 </div>
@@ -1555,7 +1559,7 @@ line using <code class="docutils literal notranslate"><span class="pre">Hemoglob
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x13fd8cd00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7ff6288c0cd0&gt;
 </pre></div>
 </div>
 <img alt="../_images/single_multiple_41_1.png" src="../_images/single_multiple_41_1.png" />
@@ -1572,17 +1576,17 @@ line using <code class="docutils literal notranslate"><span class="pre">Hemoglob
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2175367410277436
- hess_inv: array([[48.15029196, -4.70191806],
-       [-4.70191806,  0.48130848]])
-      jac: array([0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2175367453880646
+ hess_inv: array([[48.14155397, -4.70029029],
+       [-4.70029029,  0.4810762 ]])
+      jac: array([-0.00000003, -0.00000003])
   message: &#39;Optimization terminated successfully.&#39;
      nfev: 30
       nit: 7
      njev: 10
    status: 0
   success: True
-        x: array([ 0.63010369, -0.06449526])
+        x: array([ 0.63010384, -0.06449527])
 </pre></div>
 </div>
 </div>
@@ -1680,18 +1684,18 @@ root mean square error (and the sum of squared error):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2155372023695943
- hess_inv: array([[105.03032804,  -0.21512878,  -8.22254556],
-       [ -0.21512878,   0.00079935,   0.01341336],
-       [ -8.22254556,   0.01341336,   0.69895248]])
-      jac: array([ 0.        , -0.00000039, -0.00000003])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2155372023693656
+ hess_inv: array([[105.36279907,  -0.21584833,  -8.24876416],
+       [ -0.21584833,   0.00080046,   0.01347377],
+       [ -8.24876416,   0.01347377,   0.70099011]])
+      jac: array([-0.00000006, -0.00000042,  0.        ])
   message: &#39;Optimization terminated successfully.&#39;
      nfev: 80
       nit: 14
      njev: 20
    status: 0
   success: True
-        x: array([ 1.02389338,  0.05345681, -0.09432169])
+        x: array([ 1.02389135,  0.05345681, -0.09432153])
 </pre></div>
 </div>
 </div>
@@ -1722,7 +1726,7 @@ above.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.28908245609285
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.289082456092852
 </pre></div>
 </div>
 </div>
@@ -1752,18 +1756,18 @@ intercept and two slopes.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2155372023700126
- hess_inv: array([[104.12647406,  -0.2093455 ,  -8.18721274],
-       [ -0.2093455 ,   0.00077243,   0.01318249],
-       [ -8.18721274,   0.01318249,   0.69692729]])
-      jac: array([ 0.00000003, -0.00000069,  0.00000006])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 2.2155372023693465
+ hess_inv: array([[107.9982874 ,  -0.21686482,  -8.49555102],
+       [ -0.21686482,   0.00078654,   0.01378687],
+       [ -8.49555102,   0.01378687,   0.72141924]])
+      jac: array([ 0.        , -0.00000083,  0.00000006])
   message: &#39;Optimization terminated successfully.&#39;
      nfev: 84
       nit: 16
      njev: 21
    status: 0
   success: True
-        x: array([ 1.02389636,  0.0534568 , -0.09432192])
+        x: array([ 1.02389094,  0.05345681, -0.09432149])
 </pre></div>
 </div>
 </div>
@@ -1826,10 +1830,10 @@ and the <code class="docutils literal notranslate"><span class="pre">Hemoglobin<
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   50.70</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Thu, 16 Sep 2021</td> <th>  Prob (F-statistic):</th> <td>1.08e-11</td>
+  <th>Date:</th>             <td>Tue, 28 Sep 2021</td> <th>  Prob (F-statistic):</th> <td>1.08e-11</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:08:47</td>     <th>  Log-Likelihood:    </th> <td> -95.221</td>
+  <th>Time:</th>                 <td>13:21:56</td>     <th>  Log-Likelihood:    </th> <td> -95.221</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    43</td>      <th>  AIC:               </th> <td>   196.4</td>
@@ -1948,7 +1952,7 @@ this plane around until it has minimized the error.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1974,14 +1978,20 @@ this plane around until it has minimized the error.</p>
     
     <div id="prev">
         <a class="left-prev" href="Multiple_Regression.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Multiple regression</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Multiple regression</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="../useful-pandas/crosstab.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Cross-tabulation</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Cross-tabulation</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -1989,7 +1999,7 @@ this plane around until it has minimized the error.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

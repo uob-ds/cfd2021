@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fwild-pandas/two_by_two_tables.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/wild-pandas/two_by_two_tables.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/wild-pandas/two_by_two_tables.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/wild-pandas/two_by_two_tables.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/wild-pandas/two_by_two_tables.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/wild-pandas/two_by_two_tables.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/wild-pandas/two_by_two_tables.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fwild-pandas/two_by_two_tables.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fwild-pandas/two_by_two_tables.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -1065,37 +1069,57 @@ code (unhide the code in this page, or see the notebook version for details):</p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style  type="text/css" >
-#T_265cd_row0_col2,#T_265cd_row1_col2,#T_265cd_row2_col0,#T_265cd_row2_col1{
-            background-color:  #cccccc;
-            color:  #000000;
-        }#T_265cd_row2_col2{
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #999999;
-            color:  #000000;
-        }</style><table id="T_265cd_" ><thead>    <tr>        <th class="index_name level0" >Respondent</th>        <th class="col_heading level0 col0" >No</th>        <th class="col_heading level0 col1" >Yes</th>        <th class="col_heading level0 col2" >Col totals</th>    </tr>    <tr>        <th class="index_name level0" >Party</th>        <th class="blank" ></th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_265cd_level0_row0" class="row_heading level0 row0" >B</th>
-                        <td id="T_265cd_row0_col0" class="data row0 col0" >1</td>
-                        <td id="T_265cd_row0_col1" class="data row0 col1" >2</td>
-                        <td id="T_265cd_row0_col2" class="data row0 col2" >3</td>
-            </tr>
-            <tr>
-                        <th id="T_265cd_level0_row1" class="row_heading level0 row1" >R</th>
-                        <td id="T_265cd_row1_col0" class="data row1 col0" >2</td>
-                        <td id="T_265cd_row1_col1" class="data row1 col1" >3</td>
-                        <td id="T_265cd_row1_col2" class="data row1 col2" >5</td>
-            </tr>
-            <tr>
-                        <th id="T_265cd_level0_row2" class="row_heading level0 row2" >Row totals</th>
-                        <td id="T_265cd_row2_col0" class="data row2 col0" >3</td>
-                        <td id="T_265cd_row2_col1" class="data row2 col1" >5</td>
-                        <td id="T_265cd_row2_col2" class="data row2 col2" >8</td>
-            </tr>
-    </tbody></table></div></div>
+<div class="output text_html"><style type="text/css">
+#T_38a03_row0_col2, #T_38a03_row1_col2, #T_38a03_row2_col0, #T_38a03_row2_col1 {
+  background-color: #cccccc;
+  color: #000000;
+}
+#T_38a03_row2_col2 {
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #999999;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_38a03_">
+  <thead>
+    <tr>
+      <th class="index_name level0" >Respondent</th>
+      <th class="col_heading level0 col0" >No</th>
+      <th class="col_heading level0 col1" >Yes</th>
+      <th class="col_heading level0 col2" >Col totals</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Party</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_38a03_level0_row0" class="row_heading level0 row0" >B</th>
+      <td id="T_38a03_row0_col0" class="data row0 col0" >1</td>
+      <td id="T_38a03_row0_col1" class="data row0 col1" >2</td>
+      <td id="T_38a03_row0_col2" class="data row0 col2" >3</td>
+    </tr>
+    <tr>
+      <th id="T_38a03_level0_row1" class="row_heading level0 row1" >R</th>
+      <td id="T_38a03_row1_col0" class="data row1 col0" >2</td>
+      <td id="T_38a03_row1_col1" class="data row1 col1" >3</td>
+      <td id="T_38a03_row1_col2" class="data row1 col2" >5</td>
+    </tr>
+    <tr>
+      <th id="T_38a03_level0_row2" class="row_heading level0 row2" >Row totals</th>
+      <td id="T_38a03_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_38a03_row2_col1" class="data row2 col1" >5</td>
+      <td id="T_38a03_row2_col2" class="data row2 col2" >8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <p>Now let’s say we want to create a random association between the “Party” (Yes/No) column and the “Respondent” (R/B) column.   We can do that by shuffling (permuting) the Yes/No values, and recreating the table, like this:</p>
 <div class="cell docutils container">
@@ -1108,37 +1132,57 @@ code (unhide the code in this page, or see the notebook version for details):</p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style  type="text/css" >
-#T_d3d05_row0_col2,#T_d3d05_row1_col2,#T_d3d05_row2_col0,#T_d3d05_row2_col1{
-            background-color:  #cccccc;
-            color:  #000000;
-        }#T_d3d05_row2_col2{
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #999999;
-            color:  #000000;
-        }</style><table id="T_d3d05_" ><thead>    <tr>        <th class="index_name level0" >Respondent</th>        <th class="col_heading level0 col0" >No</th>        <th class="col_heading level0 col1" >Yes</th>        <th class="col_heading level0 col2" >Col totals</th>    </tr>    <tr>        <th class="index_name level0" >row_0</th>        <th class="blank" ></th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_d3d05_level0_row0" class="row_heading level0 row0" >B</th>
-                        <td id="T_d3d05_row0_col0" class="data row0 col0" >2</td>
-                        <td id="T_d3d05_row0_col1" class="data row0 col1" >1</td>
-                        <td id="T_d3d05_row0_col2" class="data row0 col2" >3</td>
-            </tr>
-            <tr>
-                        <th id="T_d3d05_level0_row1" class="row_heading level0 row1" >R</th>
-                        <td id="T_d3d05_row1_col0" class="data row1 col0" >1</td>
-                        <td id="T_d3d05_row1_col1" class="data row1 col1" >4</td>
-                        <td id="T_d3d05_row1_col2" class="data row1 col2" >5</td>
-            </tr>
-            <tr>
-                        <th id="T_d3d05_level0_row2" class="row_heading level0 row2" >Row totals</th>
-                        <td id="T_d3d05_row2_col0" class="data row2 col0" >3</td>
-                        <td id="T_d3d05_row2_col1" class="data row2 col1" >5</td>
-                        <td id="T_d3d05_row2_col2" class="data row2 col2" >8</td>
-            </tr>
-    </tbody></table></div></div>
+<div class="output text_html"><style type="text/css">
+#T_b3339_row0_col2, #T_b3339_row1_col2, #T_b3339_row2_col0, #T_b3339_row2_col1 {
+  background-color: #cccccc;
+  color: #000000;
+}
+#T_b3339_row2_col2 {
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #999999;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_b3339_">
+  <thead>
+    <tr>
+      <th class="index_name level0" >Respondent</th>
+      <th class="col_heading level0 col0" >No</th>
+      <th class="col_heading level0 col1" >Yes</th>
+      <th class="col_heading level0 col2" >Col totals</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >row_0</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_b3339_level0_row0" class="row_heading level0 row0" >B</th>
+      <td id="T_b3339_row0_col0" class="data row0 col0" >2</td>
+      <td id="T_b3339_row0_col1" class="data row0 col1" >1</td>
+      <td id="T_b3339_row0_col2" class="data row0 col2" >3</td>
+    </tr>
+    <tr>
+      <th id="T_b3339_level0_row1" class="row_heading level0 row1" >R</th>
+      <td id="T_b3339_row1_col0" class="data row1 col0" >1</td>
+      <td id="T_b3339_row1_col1" class="data row1 col1" >4</td>
+      <td id="T_b3339_row1_col2" class="data row1 col2" >5</td>
+    </tr>
+    <tr>
+      <th id="T_b3339_level0_row2" class="row_heading level0 row2" >Row totals</th>
+      <td id="T_b3339_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_b3339_row2_col1" class="data row2 col1" >5</td>
+      <td id="T_b3339_row2_col2" class="data row2 col2" >8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <p>Note that I could have shuffled the “Respondent” labels instead, or both sets
 of labels - any of these operations creates what we want - which is a random
@@ -1152,37 +1196,57 @@ association between the “Party” and “Respondent” labels.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style  type="text/css" >
-#T_7950b_row0_col2,#T_7950b_row1_col2,#T_7950b_row2_col0,#T_7950b_row2_col1{
-            background-color:  #cccccc;
-            color:  #000000;
-        }#T_7950b_row2_col2{
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #999999;
-            color:  #000000;
-        }</style><table id="T_7950b_" ><thead>    <tr>        <th class="index_name level0" >Respondent</th>        <th class="col_heading level0 col0" >No</th>        <th class="col_heading level0 col1" >Yes</th>        <th class="col_heading level0 col2" >Col totals</th>    </tr>    <tr>        <th class="index_name level0" >row_0</th>        <th class="blank" ></th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_7950b_level0_row0" class="row_heading level0 row0" >B</th>
-                        <td id="T_7950b_row0_col0" class="data row0 col0" >0</td>
-                        <td id="T_7950b_row0_col1" class="data row0 col1" >3</td>
-                        <td id="T_7950b_row0_col2" class="data row0 col2" >3</td>
-            </tr>
-            <tr>
-                        <th id="T_7950b_level0_row1" class="row_heading level0 row1" >R</th>
-                        <td id="T_7950b_row1_col0" class="data row1 col0" >3</td>
-                        <td id="T_7950b_row1_col1" class="data row1 col1" >2</td>
-                        <td id="T_7950b_row1_col2" class="data row1 col2" >5</td>
-            </tr>
-            <tr>
-                        <th id="T_7950b_level0_row2" class="row_heading level0 row2" >Row totals</th>
-                        <td id="T_7950b_row2_col0" class="data row2 col0" >3</td>
-                        <td id="T_7950b_row2_col1" class="data row2 col1" >5</td>
-                        <td id="T_7950b_row2_col2" class="data row2 col2" >8</td>
-            </tr>
-    </tbody></table></div></div>
+<div class="output text_html"><style type="text/css">
+#T_24833_row0_col2, #T_24833_row1_col2, #T_24833_row2_col0, #T_24833_row2_col1 {
+  background-color: #cccccc;
+  color: #000000;
+}
+#T_24833_row2_col2 {
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #999999;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_24833_">
+  <thead>
+    <tr>
+      <th class="index_name level0" >Respondent</th>
+      <th class="col_heading level0 col0" >No</th>
+      <th class="col_heading level0 col1" >Yes</th>
+      <th class="col_heading level0 col2" >Col totals</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >row_0</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_24833_level0_row0" class="row_heading level0 row0" >B</th>
+      <td id="T_24833_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_24833_row0_col1" class="data row0 col1" >3</td>
+      <td id="T_24833_row0_col2" class="data row0 col2" >3</td>
+    </tr>
+    <tr>
+      <th id="T_24833_level0_row1" class="row_heading level0 row1" >R</th>
+      <td id="T_24833_row1_col0" class="data row1 col0" >3</td>
+      <td id="T_24833_row1_col1" class="data row1 col1" >2</td>
+      <td id="T_24833_row1_col2" class="data row1 col2" >5</td>
+    </tr>
+    <tr>
+      <th id="T_24833_level0_row2" class="row_heading level0 row2" >Row totals</th>
+      <td id="T_24833_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_24833_row2_col1" class="data row2 col1" >5</td>
+      <td id="T_24833_row2_col2" class="data row2 col2" >8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1192,37 +1256,57 @@ association between the “Party” and “Respondent” labels.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style  type="text/css" >
-#T_62770_row0_col2,#T_62770_row1_col2,#T_62770_row2_col0,#T_62770_row2_col1{
-            background-color:  #cccccc;
-            color:  #000000;
-        }#T_62770_row2_col2{
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #999999;
-            color:  #000000;
-        }</style><table id="T_62770_" ><thead>    <tr>        <th class="index_name level0" >Respondent</th>        <th class="col_heading level0 col0" >No</th>        <th class="col_heading level0 col1" >Yes</th>        <th class="col_heading level0 col2" >Col totals</th>    </tr>    <tr>        <th class="index_name level0" >row_0</th>        <th class="blank" ></th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_62770_level0_row0" class="row_heading level0 row0" >B</th>
-                        <td id="T_62770_row0_col0" class="data row0 col0" >1</td>
-                        <td id="T_62770_row0_col1" class="data row0 col1" >2</td>
-                        <td id="T_62770_row0_col2" class="data row0 col2" >3</td>
-            </tr>
-            <tr>
-                        <th id="T_62770_level0_row1" class="row_heading level0 row1" >R</th>
-                        <td id="T_62770_row1_col0" class="data row1 col0" >2</td>
-                        <td id="T_62770_row1_col1" class="data row1 col1" >3</td>
-                        <td id="T_62770_row1_col2" class="data row1 col2" >5</td>
-            </tr>
-            <tr>
-                        <th id="T_62770_level0_row2" class="row_heading level0 row2" >Row totals</th>
-                        <td id="T_62770_row2_col0" class="data row2 col0" >3</td>
-                        <td id="T_62770_row2_col1" class="data row2 col1" >5</td>
-                        <td id="T_62770_row2_col2" class="data row2 col2" >8</td>
-            </tr>
-    </tbody></table></div></div>
+<div class="output text_html"><style type="text/css">
+#T_a626c_row0_col2, #T_a626c_row1_col2, #T_a626c_row2_col0, #T_a626c_row2_col1 {
+  background-color: #cccccc;
+  color: #000000;
+}
+#T_a626c_row2_col2 {
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #999999;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_a626c_">
+  <thead>
+    <tr>
+      <th class="index_name level0" >Respondent</th>
+      <th class="col_heading level0 col0" >No</th>
+      <th class="col_heading level0 col1" >Yes</th>
+      <th class="col_heading level0 col2" >Col totals</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >row_0</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_a626c_level0_row0" class="row_heading level0 row0" >B</th>
+      <td id="T_a626c_row0_col0" class="data row0 col0" >1</td>
+      <td id="T_a626c_row0_col1" class="data row0 col1" >2</td>
+      <td id="T_a626c_row0_col2" class="data row0 col2" >3</td>
+    </tr>
+    <tr>
+      <th id="T_a626c_level0_row1" class="row_heading level0 row1" >R</th>
+      <td id="T_a626c_row1_col0" class="data row1 col0" >2</td>
+      <td id="T_a626c_row1_col1" class="data row1 col1" >3</td>
+      <td id="T_a626c_row1_col2" class="data row1 col2" >5</td>
+    </tr>
+    <tr>
+      <th id="T_a626c_level0_row2" class="row_heading level0 row2" >Row totals</th>
+      <td id="T_a626c_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_a626c_row2_col1" class="data row2 col1" >5</td>
+      <td id="T_a626c_row2_col2" class="data row2 col2" >8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <p>You will see that, if the top left value goes up, or down, compared to the
 original table, then the bottom right value goes up, or down, by the same
@@ -1269,37 +1353,57 @@ the labels.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style  type="text/css" >
-#T_ca5e9_row0_col2,#T_ca5e9_row1_col2,#T_ca5e9_row2_col0,#T_ca5e9_row2_col1{
-            background-color:  #cccccc;
-            color:  #000000;
-        }#T_ca5e9_row2_col2{
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #999999;
-            color:  #000000;
-        }</style><table id="T_ca5e9_" ><thead>    <tr>        <th class="index_name level0" >Respondent</th>        <th class="col_heading level0 col0" >No</th>        <th class="col_heading level0 col1" >Yes</th>        <th class="col_heading level0 col2" >Col totals</th>    </tr>    <tr>        <th class="index_name level0" >Party</th>        <th class="blank" ></th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_ca5e9_level0_row0" class="row_heading level0 row0" >B</th>
-                        <td id="T_ca5e9_row0_col0" class="data row0 col0" >1</td>
-                        <td id="T_ca5e9_row0_col1" class="data row0 col1" >2</td>
-                        <td id="T_ca5e9_row0_col2" class="data row0 col2" >3</td>
-            </tr>
-            <tr>
-                        <th id="T_ca5e9_level0_row1" class="row_heading level0 row1" >R</th>
-                        <td id="T_ca5e9_row1_col0" class="data row1 col0" >2</td>
-                        <td id="T_ca5e9_row1_col1" class="data row1 col1" >3</td>
-                        <td id="T_ca5e9_row1_col2" class="data row1 col2" >5</td>
-            </tr>
-            <tr>
-                        <th id="T_ca5e9_level0_row2" class="row_heading level0 row2" >Row totals</th>
-                        <td id="T_ca5e9_row2_col0" class="data row2 col0" >3</td>
-                        <td id="T_ca5e9_row2_col1" class="data row2 col1" >5</td>
-                        <td id="T_ca5e9_row2_col2" class="data row2 col2" >8</td>
-            </tr>
-    </tbody></table></div></div>
+<div class="output text_html"><style type="text/css">
+#T_88cae_row0_col2, #T_88cae_row1_col2, #T_88cae_row2_col0, #T_88cae_row2_col1 {
+  background-color: #cccccc;
+  color: #000000;
+}
+#T_88cae_row2_col2 {
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #999999;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_88cae_">
+  <thead>
+    <tr>
+      <th class="index_name level0" >Respondent</th>
+      <th class="col_heading level0 col0" >No</th>
+      <th class="col_heading level0 col1" >Yes</th>
+      <th class="col_heading level0 col2" >Col totals</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Party</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_88cae_level0_row0" class="row_heading level0 row0" >B</th>
+      <td id="T_88cae_row0_col0" class="data row0 col0" >1</td>
+      <td id="T_88cae_row0_col1" class="data row0 col1" >2</td>
+      <td id="T_88cae_row0_col2" class="data row0 col2" >3</td>
+    </tr>
+    <tr>
+      <th id="T_88cae_level0_row1" class="row_heading level0 row1" >R</th>
+      <td id="T_88cae_row1_col0" class="data row1 col0" >2</td>
+      <td id="T_88cae_row1_col1" class="data row1 col1" >3</td>
+      <td id="T_88cae_row1_col2" class="data row1 col2" >5</td>
+    </tr>
+    <tr>
+      <th id="T_88cae_level0_row2" class="row_heading level0 row2" >Row totals</th>
+      <td id="T_88cae_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_88cae_row2_col1" class="data row2 col1" >5</td>
+      <td id="T_88cae_row2_col2" class="data row2 col2" >8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <p>Now consider permutations in the order of the Yes/No column of the original
 table.  We will just permute the first “Yes”, for now.</p>
@@ -1407,37 +1511,57 @@ for the first time, the counts table does change, like this:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style  type="text/css" >
-#T_9b306_row0_col2,#T_9b306_row1_col2,#T_9b306_row2_col0,#T_9b306_row2_col1{
-            background-color:  #cccccc;
-            color:  #000000;
-        }#T_9b306_row2_col2{
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #cccccc;
-            color:  #000000;
-            background-color:  #999999;
-            color:  #000000;
-        }</style><table id="T_9b306_" ><thead>    <tr>        <th class="index_name level0" >Respondent</th>        <th class="col_heading level0 col0" >No</th>        <th class="col_heading level0 col1" >Yes</th>        <th class="col_heading level0 col2" >Col totals</th>    </tr>    <tr>        <th class="index_name level0" >Party</th>        <th class="blank" ></th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_9b306_level0_row0" class="row_heading level0 row0" >B</th>
-                        <td id="T_9b306_row0_col0" class="data row0 col0" >0</td>
-                        <td id="T_9b306_row0_col1" class="data row0 col1" >3</td>
-                        <td id="T_9b306_row0_col2" class="data row0 col2" >3</td>
-            </tr>
-            <tr>
-                        <th id="T_9b306_level0_row1" class="row_heading level0 row1" >R</th>
-                        <td id="T_9b306_row1_col0" class="data row1 col0" >3</td>
-                        <td id="T_9b306_row1_col1" class="data row1 col1" >2</td>
-                        <td id="T_9b306_row1_col2" class="data row1 col2" >5</td>
-            </tr>
-            <tr>
-                        <th id="T_9b306_level0_row2" class="row_heading level0 row2" >Row totals</th>
-                        <td id="T_9b306_row2_col0" class="data row2 col0" >3</td>
-                        <td id="T_9b306_row2_col1" class="data row2 col1" >5</td>
-                        <td id="T_9b306_row2_col2" class="data row2 col2" >8</td>
-            </tr>
-    </tbody></table></div></div>
+<div class="output text_html"><style type="text/css">
+#T_0e313_row0_col2, #T_0e313_row1_col2, #T_0e313_row2_col0, #T_0e313_row2_col1 {
+  background-color: #cccccc;
+  color: #000000;
+}
+#T_0e313_row2_col2 {
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #cccccc;
+  color: #000000;
+  background-color: #999999;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_0e313_">
+  <thead>
+    <tr>
+      <th class="index_name level0" >Respondent</th>
+      <th class="col_heading level0 col0" >No</th>
+      <th class="col_heading level0 col1" >Yes</th>
+      <th class="col_heading level0 col2" >Col totals</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Party</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_0e313_level0_row0" class="row_heading level0 row0" >B</th>
+      <td id="T_0e313_row0_col0" class="data row0 col0" >0</td>
+      <td id="T_0e313_row0_col1" class="data row0 col1" >3</td>
+      <td id="T_0e313_row0_col2" class="data row0 col2" >3</td>
+    </tr>
+    <tr>
+      <th id="T_0e313_level0_row1" class="row_heading level0 row1" >R</th>
+      <td id="T_0e313_row1_col0" class="data row1 col0" >3</td>
+      <td id="T_0e313_row1_col1" class="data row1 col1" >2</td>
+      <td id="T_0e313_row1_col2" class="data row1 col2" >5</td>
+    </tr>
+    <tr>
+      <th id="T_0e313_level0_row2" class="row_heading level0 row2" >Row totals</th>
+      <td id="T_0e313_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_0e313_row2_col1" class="data row2 col1" >5</td>
+      <td id="T_0e313_row2_col2" class="data row2 col2" >8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <p>When we do this single change, we have:</p>
 <ul class="simple">
@@ -1458,7 +1582,7 @@ pairings at once.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1487,7 +1611,7 @@ pairings at once.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

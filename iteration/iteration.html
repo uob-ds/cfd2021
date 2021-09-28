@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fiteration/iteration.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/iteration/iteration.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/iteration/iteration.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/iteration/iteration.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/iteration/iteration.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/iteration/iteration.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/iteration/iteration.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fiteration/iteration.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fiteration/iteration.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -883,7 +887,7 @@ between the integers in the range we specify.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
@@ -899,7 +903,7 @@ the following cell many times to see if we get roughly equal numbers of
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1095,11 +1099,11 @@ print the results of five random integers:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-1
-1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 1
 0
+1
+1
 </pre></div>
 </div>
 </div>
@@ -1125,7 +1129,7 @@ result of each toss.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 1., 1., 0., 1.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 1., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -1152,7 +1156,7 @@ result of each toss.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 1., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 0., 0., 1., 0.])
 </pre></div>
 </div>
 </div>
@@ -1166,7 +1170,7 @@ number of heads in the five tosses.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 </pre></div>
 </div>
 </div>
@@ -1187,65 +1191,65 @@ heads in 1000 tosses.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 1., 0., 1., 1., 1., 0., 1., 0., 0., 0., 0., 0., 1., 0., 0.,
-       0., 0., 1., 1., 1., 1., 0., 0., 0., 1., 0., 1., 1., 0., 0., 0., 1.,
-       1., 0., 0., 0., 0., 0., 1., 0., 0., 1., 0., 1., 1., 1., 1., 1., 0.,
-       1., 1., 0., 1., 0., 1., 1., 0., 0., 0., 0., 1., 0., 1., 1., 0., 1.,
-       0., 0., 1., 0., 0., 0., 1., 1., 0., 1., 0., 0., 0., 0., 1., 1., 0.,
-       0., 0., 1., 0., 1., 1., 1., 0., 0., 1., 1., 1., 0., 1., 0., 0., 0.,
-       1., 1., 1., 0., 1., 1., 1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1.,
-       1., 0., 0., 0., 1., 0., 0., 1., 1., 1., 1., 0., 1., 1., 1., 0., 1.,
-       0., 0., 1., 1., 0., 0., 0., 1., 1., 1., 0., 0., 0., 1., 0., 1., 1.,
-       0., 1., 0., 1., 1., 1., 1., 1., 0., 0., 0., 1., 1., 1., 0., 0., 0.,
-       0., 1., 1., 1., 0., 1., 0., 0., 1., 1., 1., 0., 1., 0., 0., 1., 1.,
-       0., 1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 0., 0., 0., 1., 0.,
-       0., 0., 0., 1., 0., 1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 1., 1.,
-       0., 1., 1., 0., 0., 1., 0., 0., 1., 0., 1., 1., 0., 0., 0., 1., 0.,
-       1., 0., 0., 1., 1., 0., 1., 1., 0., 0., 0., 1., 0., 1., 1., 0., 1.,
-       1., 0., 0., 0., 0., 0., 1., 1., 0., 1., 0., 0., 0., 1., 1., 0., 1.,
-       1., 1., 1., 0., 1., 0., 0., 1., 0., 0., 1., 0., 1., 0., 0., 1., 0.,
-       0., 1., 1., 0., 1., 1., 1., 1., 1., 0., 1., 1., 1., 1., 0., 1., 1.,
-       1., 0., 1., 1., 0., 0., 1., 0., 1., 0., 1., 1., 0., 0., 0., 1., 1.,
-       0., 1., 0., 0., 1., 0., 1., 0., 1., 1., 1., 1., 1., 1., 0., 1., 1.,
-       0., 1., 1., 1., 0., 0., 1., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.,
-       0., 0., 0., 0., 0., 1., 1., 0., 1., 1., 0., 0., 1., 1., 0., 0., 0.,
-       0., 1., 0., 0., 0., 0., 1., 1., 1., 0., 0., 1., 0., 0., 0., 0., 0.,
-       1., 1., 1., 1., 1., 0., 1., 0., 0., 0., 0., 1., 1., 1., 1., 1., 0.,
-       0., 0., 1., 1., 1., 1., 0., 0., 1., 0., 0., 0., 1., 1., 0., 1., 1.,
-       1., 1., 1., 1., 1., 0., 0., 0., 0., 0., 1., 0., 0., 0., 1., 0., 0.,
-       1., 1., 1., 1., 0., 1., 0., 0., 0., 0., 1., 0., 0., 1., 1., 1., 0.,
-       1., 0., 0., 0., 1., 1., 1., 1., 0., 1., 0., 0., 1., 0., 1., 1., 0.,
-       0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 1., 0., 1., 1., 1., 1., 1.,
-       0., 0., 0., 1., 0., 0., 1., 1., 0., 1., 0., 1., 1., 1., 0., 1., 0.,
-       0., 0., 0., 1., 1., 1., 0., 0., 1., 0., 1., 1., 0., 1., 0., 0., 0.,
-       0., 0., 0., 0., 1., 1., 1., 1., 1., 0., 1., 0., 0., 0., 0., 1., 1.,
-       1., 0., 0., 0., 1., 0., 0., 1., 0., 0., 1., 1., 0., 0., 1., 0., 1.,
-       0., 0., 1., 1., 0., 0., 1., 1., 0., 1., 1., 1., 0., 1., 1., 1., 0.,
-       0., 0., 1., 1., 0., 0., 0., 1., 1., 1., 0., 0., 1., 1., 1., 1., 1.,
-       0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 0., 0., 1., 0., 1., 1.,
-       0., 1., 0., 0., 0., 1., 0., 1., 1., 1., 1., 1., 1., 1., 0., 1., 1.,
-       1., 1., 0., 1., 0., 1., 0., 1., 0., 1., 0., 1., 1., 1., 0., 0., 0.,
-       0., 1., 1., 0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 1., 1., 0., 1.,
-       0., 0., 0., 0., 1., 1., 0., 0., 1., 0., 1., 0., 0., 1., 0., 1., 1.,
-       0., 1., 1., 0., 1., 1., 1., 0., 0., 1., 1., 1., 0., 0., 0., 0., 1.,
-       1., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0., 1., 1., 1., 1., 1.,
-       1., 1., 0., 0., 1., 0., 1., 1., 1., 0., 0., 0., 0., 1., 0., 1., 1.,
-       1., 1., 1., 1., 0., 0., 1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1.,
-       0., 0., 1., 0., 0., 0., 1., 1., 0., 1., 0., 1., 1., 0., 0., 0., 0.,
-       0., 0., 0., 0., 1., 1., 0., 0., 1., 0., 1., 0., 1., 0., 1., 0., 1.,
-       1., 0., 1., 1., 1., 0., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0., 0.,
-       1., 0., 1., 1., 1., 0., 0., 1., 0., 0., 1., 1., 0., 0., 0., 1., 0.,
-       0., 1., 0., 0., 1., 0., 1., 1., 0., 0., 0., 0., 0., 1., 0., 0., 1.,
-       1., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 1., 1.,
-       1., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1., 0., 1., 1., 1., 0., 1.,
-       0., 1., 0., 0., 0., 1., 0., 1., 1., 0., 0., 1., 1., 0., 0., 1., 1.,
-       0., 1., 1., 1., 1., 1., 1., 0., 1., 1., 0., 0., 0., 1., 0., 0., 0.,
-       1., 1., 0., 0., 1., 1., 0., 1., 0., 1., 1., 0., 0., 0., 0., 0., 0.,
-       1., 1., 1., 0., 0., 0., 0., 0., 1., 0., 0., 1., 0., 0., 1., 0., 0.,
-       0., 1., 0., 0., 1., 0., 0., 0., 1., 1., 0., 0., 0., 0., 0., 0., 0.,
-       0., 0., 1., 1., 0., 0., 1., 0., 0., 1., 1., 0., 1., 1., 0., 0., 0.,
-       1., 1., 0., 1., 0., 1., 1., 1., 0., 1., 0., 1., 1., 1., 1., 0., 1.,
-       0., 0., 1., 0., 0., 0., 1., 1., 1., 0., 1., 0., 1., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 1., 0., 0., 1., 1., 1., 1., 1., 1., 1., 1., 1., 0., 0., 1.,
+       0., 1., 1., 1., 0., 0., 1., 0., 1., 1., 1., 1., 1., 0., 1., 0., 0.,
+       1., 0., 1., 1., 0., 1., 0., 1., 1., 0., 1., 0., 0., 0., 0., 0., 0.,
+       0., 1., 1., 0., 0., 1., 1., 0., 1., 1., 1., 1., 0., 1., 1., 1., 0.,
+       0., 0., 1., 0., 0., 1., 0., 0., 1., 1., 0., 1., 0., 0., 0., 1., 0.,
+       1., 0., 1., 0., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1., 1., 1., 0.,
+       1., 0., 0., 1., 1., 1., 1., 1., 1., 0., 1., 0., 0., 1., 1., 1., 1.,
+       0., 1., 0., 1., 0., 1., 1., 0., 1., 1., 1., 0., 1., 0., 1., 0., 1.,
+       1., 0., 1., 0., 1., 0., 1., 1., 1., 0., 1., 0., 1., 1., 0., 0., 1.,
+       0., 0., 1., 0., 0., 0., 1., 0., 1., 1., 0., 0., 0., 1., 0., 0., 1.,
+       1., 0., 1., 0., 1., 1., 0., 0., 0., 1., 0., 1., 0., 0., 1., 0., 0.,
+       1., 1., 0., 0., 1., 1., 1., 0., 1., 1., 1., 0., 0., 0., 0., 0., 0.,
+       1., 1., 1., 0., 1., 0., 1., 1., 1., 1., 0., 0., 1., 0., 0., 1., 0.,
+       1., 0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 1., 1., 1., 0.,
+       1., 0., 0., 1., 0., 0., 0., 0., 0., 1., 0., 0., 1., 1., 1., 1., 1.,
+       0., 0., 1., 0., 0., 1., 0., 0., 1., 0., 1., 1., 0., 0., 1., 1., 0.,
+       0., 0., 0., 0., 0., 0., 1., 1., 0., 1., 1., 0., 0., 0., 1., 1., 0.,
+       0., 1., 0., 0., 1., 0., 0., 0., 1., 1., 1., 1., 1., 0., 1., 0., 0.,
+       0., 1., 1., 1., 0., 0., 0., 1., 1., 1., 0., 0., 0., 0., 0., 1., 0.,
+       0., 0., 1., 1., 1., 1., 0., 0., 1., 1., 0., 0., 0., 0., 1., 1., 1.,
+       1., 0., 0., 0., 1., 0., 1., 1., 0., 0., 1., 1., 0., 1., 0., 0., 1.,
+       0., 1., 0., 1., 1., 0., 0., 1., 0., 1., 1., 0., 0., 1., 1., 0., 0.,
+       1., 1., 1., 0., 0., 1., 1., 0., 1., 0., 1., 0., 1., 0., 0., 1., 0.,
+       0., 1., 0., 1., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 1., 1., 0.,
+       1., 0., 0., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0.,
+       0., 0., 0., 0., 1., 1., 0., 1., 1., 1., 1., 1., 0., 0., 0., 0., 0.,
+       1., 0., 1., 0., 1., 0., 1., 0., 1., 0., 0., 1., 0., 0., 1., 1., 0.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 0., 1., 0., 1., 0., 1., 1., 1.,
+       1., 1., 1., 1., 1., 0., 0., 1., 1., 1., 1., 1., 0., 1., 0., 0., 1.,
+       0., 1., 0., 0., 1., 0., 0., 1., 0., 1., 0., 0., 0., 1., 1., 1., 0.,
+       0., 0., 0., 0., 1., 0., 0., 1., 1., 1., 1., 0., 1., 1., 1., 1., 1.,
+       1., 1., 0., 0., 1., 0., 1., 0., 1., 0., 0., 0., 1., 0., 0., 0., 1.,
+       1., 1., 0., 1., 0., 1., 1., 1., 1., 1., 0., 1., 0., 1., 0., 0., 1.,
+       0., 0., 0., 1., 0., 1., 1., 0., 0., 0., 0., 0., 1., 0., 0., 1., 0.,
+       1., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 0., 0., 1., 1., 1., 1.,
+       1., 1., 0., 1., 1., 1., 1., 0., 1., 0., 0., 1., 0., 0., 1., 1., 1.,
+       0., 0., 0., 0., 1., 0., 0., 0., 1., 0., 0., 0., 0., 1., 1., 0., 0.,
+       1., 1., 1., 1., 1., 1., 0., 0., 1., 1., 0., 0., 1., 0., 1., 0., 0.,
+       1., 0., 0., 1., 1., 0., 0., 0., 1., 1., 0., 1., 0., 0., 1., 0., 0.,
+       1., 1., 0., 0., 0., 0., 1., 1., 0., 1., 0., 0., 1., 1., 1., 0., 1.,
+       1., 1., 0., 0., 1., 1., 1., 0., 0., 1., 0., 1., 1., 0., 1., 1., 1.,
+       0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 1., 1.,
+       1., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0.,
+       0., 0., 1., 1., 1., 0., 0., 1., 0., 1., 0., 0., 1., 0., 1., 0., 0.,
+       0., 1., 0., 0., 1., 0., 1., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1.,
+       1., 1., 0., 1., 0., 0., 0., 1., 1., 0., 1., 1., 0., 0., 0., 1., 1.,
+       0., 0., 1., 1., 1., 0., 1., 0., 0., 0., 0., 1., 0., 1., 0., 1., 1.,
+       0., 0., 0., 0., 1., 1., 0., 1., 0., 1., 0., 0., 1., 1., 1., 1., 0.,
+       1., 1., 0., 1., 0., 1., 1., 1., 0., 0., 0., 0., 0., 1., 1., 1., 0.,
+       0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 0., 0., 1.,
+       1., 1., 0., 1., 1., 1., 0., 1., 0., 0., 1., 1., 1., 1., 1., 1., 0.,
+       0., 1., 1., 0., 0., 1., 1., 1., 0., 0., 1., 0., 1., 0., 0., 0., 0.,
+       1., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 0., 0., 1., 0., 1., 0.,
+       1., 1., 1., 1., 0., 0., 1., 1., 0., 0., 1., 0., 1., 0., 0., 1., 1.,
+       1., 0., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 1., 1., 0., 1., 0.,
+       1., 1., 0., 1., 1., 1., 0., 0., 1., 0., 0., 1., 0., 0., 0., 0., 0.,
+       0., 1., 1., 0., 0., 0., 1., 1., 1., 0., 0., 0., 0., 1., 0., 1., 0.,
+       1., 1., 0., 0., 0., 1., 0., 0., 0., 1., 0., 1., 1., 0., 0., 1., 1.,
+       0., 0., 1., 0., 1., 0., 1., 1., 1., 1., 1., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -1277,7 +1281,7 @@ returns an array length 10 of random integers from 0 up to, but not including
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 0, 0, 1, 1, 1, 0, 0, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 0, 0, 0, 1, 1, 0, 0, 1])
 </pre></div>
 </div>
 </div>
@@ -1301,7 +1305,7 @@ a coin 100 times, count the number of heads, and append it to <code class="docut
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([45., 45., 52., ..., 47., 48., 58.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([49., 54., 49., ..., 52., 44., 51.])
 </pre></div>
 </div>
 </div>
@@ -1362,7 +1366,7 @@ in coin tossing, as we will see later in the course.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1388,14 +1392,20 @@ in coin tossing, as we will see later in the course.</p>
     
     <div id="prev">
         <a class="left-prev" href="../arrays/leaping_ahead.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Leaping ahead</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Leaping ahead</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="indentation.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Indentation, indentation, indentation</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Indentation, indentation, indentation</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -1403,7 +1413,7 @@ in coin tossing, as we will see later in the course.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

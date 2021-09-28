@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fwild-pandas/noble_politics.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/wild-pandas/noble_politics.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/wild-pandas/noble_politics.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -786,7 +790,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/wild-pandas/noble_politics.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/wild-pandas/noble_politics.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -794,13 +798,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/wild-pandas/noble_politics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/wild-pandas/noble_politics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fwild-pandas/noble_politics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fwild-pandas/noble_politics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -1791,7 +1795,7 @@ labels are random.</p>
     </tr>
     <tr>
       <th>1</th>
-      <td>Yes</td>
+      <td>No</td>
       <td>bystander</td>
     </tr>
     <tr>
@@ -1801,7 +1805,7 @@ labels are random.</p>
     </tr>
     <tr>
       <th>3</th>
-      <td>No</td>
+      <td>Yes</td>
       <td>bystander</td>
     </tr>
     <tr>
@@ -1826,12 +1830,12 @@ labels are random.</p>
     </tr>
     <tr>
       <th>8</th>
-      <td>No</td>
+      <td>Yes</td>
       <td>bystander</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>No</td>
+      <td>Yes</td>
       <td>bystander</td>
     </tr>
   </tbody>
@@ -1888,13 +1892,13 @@ labels are random.</p>
   <tbody>
     <tr>
       <th>No</th>
-      <td>55</td>
-      <td>174</td>
+      <td>53</td>
+      <td>176</td>
     </tr>
     <tr>
       <th>Yes</th>
-      <td>16</td>
-      <td>35</td>
+      <td>18</td>
+      <td>33</td>
     </tr>
   </tbody>
 </table>
@@ -1926,7 +1930,7 @@ to belong to a political party.  Let us restrict our attention to the count of
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33
 </pre></div>
 </div>
 </div>
@@ -1956,7 +1960,7 @@ number of iterations to 1000 to keep the run-time down.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([41., 37., 29., 33., 38., 35., 36., 36., 36., 40.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([41., 35., 40., 40., 39., 35., 37., 34., 39., 38.])
 </pre></div>
 </div>
 </div>
@@ -1982,7 +1986,7 @@ number of iterations to 1000 to keep the run-time down.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.017
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.027
 </pre></div>
 </div>
 </div>
@@ -2026,7 +2030,7 @@ counts, for each trial:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([35., 41., 40., 40., 39., 34., 40., 39., 38., 37.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([37., 36., 41., 34., 39., 44., 39., 37., 41., 41.])
 </pre></div>
 </div>
 </div>
@@ -2040,7 +2044,7 @@ counts, for each trial:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([55., 61., 60., 60., 59., 54., 60., 59., 58., 57.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([57., 56., 61., 54., 59., 64., 59., 57., 61., 61.])
 </pre></div>
 </div>
 </div>
@@ -2084,7 +2088,7 @@ Differences all the same?
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.018
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025
 </pre></div>
 </div>
 </div>
@@ -2100,7 +2104,7 @@ Differences all the same?
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.018
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025
 </pre></div>
 </div>
 </div>
@@ -2117,7 +2121,7 @@ tables</span></a> page.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2143,14 +2147,20 @@ tables</span></a> page.</p>
     
     <div id="prev">
         <a class="left-prev" href="pandas_indexing.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Indexing in Pandas</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Indexing in Pandas</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="safe_pandas.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Handling Pandas safely</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Handling Pandas safely</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -2158,7 +2168,7 @@ tables</span></a> page.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

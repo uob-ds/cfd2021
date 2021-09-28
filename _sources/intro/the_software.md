@@ -3,9 +3,13 @@
 You have already jumped into the technology, but now we step back and [name
 the parts](https://en.wikipedia.org/wiki/Naming_of_Parts).
 
-You have been working in the [Jupyter Notebook](https://jupyter.org).  This is an *interface* that allows us to interact with the [Python](https://www.python.org) programming language.
+You have been working in the a deepnote implementation of a [Jupyter Notebook](https://jupyter.org).  This is an *interface* that allows us to interact with the [Python](https://www.python.org) programming language.
 
-There are many ways of installing Python and the Jupyter Notebook.  The best
+There are many ways of installing Python and the Jupyter Notebook.  Since we are working
+through deepnote, you won't have to do these (unless you want to work offline), but you may
+be interested to know how to set up Jupyter notebooks outside of deepnote.  
+
+The best
 way of installing Python depends on many things.  For this iteration of the
 class, we installed Python using the [Anaconda
 distribution](https://www.anaconda.com/distribution).  We discuss this more
@@ -38,9 +42,9 @@ post](http://asterisk.dynevor.org/python-matlab.html).
 
 ## The Jupyter Notebook
 
-We will soon here more about the Jupyter Noteboo.  It is a particularly easy interface to run Python code, and display the results.
+We will soon here more about the Jupyter Notebook.  It is a particularly easy interface to run Python code, and display the results.
 
-The Notebook has two parts.  The first is the web application, that you
+A jupyter notebook interface has two parts.  The first is the web application, that you
 interact with.  This is the web *client*.   The web client then sends commands
 to another process on your computer, called the *kernel*.  The kernel runs
 Python.  The client sends Python commands to the kernel, and the kernel runs
@@ -52,10 +56,16 @@ The Notebook is just one way to run Python commands; there are many others, and
 we will cover some of these later in the course.  The notebook is
 a particularly good way of running code for beginners, because it gets you
 started very quickly, in a familiar interface (the web browser).  As you gain
-experience, you will find that you will outgrow the Notebook, because it is not
+experience, you will find that you may outgrow the Notebook, because it is not
 a good interface for writing more than a small amount of code.  When you get
 there, you be much more efficient using a good code editor, such as
-[Atom](https://atom.io).
+[Atom](https://atom.io).  For presenting a mixture of text and code outputs, however,
+some sort of notebook interface can be very useful (e.g. for reports).
+
+As a point of history, notebooks are a kind of "literate programming" developed
+by the American computer scientist Donald Knuth.   You might be interested in
+his description of what literate programming is in the opening of his paper
+describing it (no need to go beyond the first section) (http://www.literateprogramming.com/knuthweb.pdf0
 
 ## Installing Python
 

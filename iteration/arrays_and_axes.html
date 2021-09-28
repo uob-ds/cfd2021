@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -764,7 +768,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fiteration/arrays_and_axes.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/iteration/arrays_and_axes.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/iteration/arrays_and_axes.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -784,7 +788,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/iteration/arrays_and_axes.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/iteration/arrays_and_axes.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -792,13 +796,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/iteration/arrays_and_axes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/iteration/arrays_and_axes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fiteration/arrays_and_axes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fiteration/arrays_and_axes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -875,7 +879,7 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.45067472, 0.24345267, 0.82626662])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.8304891 , 0.36902865, 0.93397023])
 </pre></div>
 </div>
 </div>
@@ -902,7 +906,7 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True, False])
 </pre></div>
 </div>
 </div>
@@ -915,7 +919,7 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
@@ -958,16 +962,16 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.66006642, 0.32482387, 0.45015054],
-       [0.06894218, 0.46689804, 0.18675516],
-       [0.00230345, 0.00821445, 0.22231393],
-       [0.29340376, 0.71904231, 0.11602111],
-       [0.40599033, 0.62865459, 0.32258449],
-       [0.51444242, 0.14613191, 0.97473218],
-       [0.86280932, 0.88735943, 0.78364452],
-       [0.76917409, 0.89277826, 0.73525271],
-       [0.66643818, 0.90443578, 0.47100451],
-       [0.52842562, 0.42962798, 0.5886611 ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.30938165, 0.81631484, 0.38599616],
+       [0.39250458, 0.07383047, 0.18078234],
+       [0.01153488, 0.06817886, 0.17026713],
+       [0.42467186, 0.23299694, 0.41844927],
+       [0.14091022, 0.56444691, 0.57100287],
+       [0.28714304, 0.06837222, 0.63830623],
+       [0.25878592, 0.50534996, 0.18789759],
+       [0.08463531, 0.23146426, 0.29172564],
+       [0.51897068, 0.39952308, 0.19201046],
+       [0.10876936, 0.60819907, 0.64453703]])
 </pre></div>
 </div>
 </div>
@@ -982,16 +986,16 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[False,  True,  True],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ True, False,  True],
        [ True,  True,  True],
        [ True,  True,  True],
+       [ True,  True,  True],
+       [ True, False, False],
+       [ True,  True, False],
        [ True, False,  True],
-       [ True, False,  True],
-       [False,  True, False],
-       [False, False, False],
-       [False, False, False],
-       [False, False,  True],
-       [False,  True, False]])
+       [ True,  True,  True],
+       [False,  True,  True],
+       [ True, False, False]])
 </pre></div>
 </div>
 </div>
@@ -1005,7 +1009,7 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
 </pre></div>
 </div>
 </div>
@@ -1023,7 +1027,7 @@ columns are the two <em>axes</em> of the array.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 5, 6])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([9, 6, 7])
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1060,7 @@ row.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 5, 6])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([9, 6, 7])
 </pre></div>
 </div>
 </div>
@@ -1070,7 +1074,7 @@ row.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 3, 3, 2, 2, 1, 0, 0, 1, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 3, 3, 3, 1, 2, 2, 3, 2, 1])
 </pre></div>
 </div>
 </div>
@@ -1088,7 +1092,7 @@ get one count for each row, so 10 counts.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1117,7 +1121,7 @@ get one count for each row, so 10 counts.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

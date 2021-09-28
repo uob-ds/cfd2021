@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -766,7 +770,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fintro/the_software.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/intro/the_software.md"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/intro/the_software.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -821,8 +825,11 @@
 <h1>Our tools<a class="headerlink" href="#our-tools" title="Permalink to this headline">¶</a></h1>
 <p>You have already jumped into the technology, but now we step back and <a class="reference external" href="https://en.wikipedia.org/wiki/Naming_of_Parts">name
 the parts</a>.</p>
-<p>You have been working in the <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a>.  This is an <em>interface</em> that allows us to interact with the <a class="reference external" href="https://www.python.org">Python</a> programming language.</p>
-<p>There are many ways of installing Python and the Jupyter Notebook.  The best
+<p>You have been working in the a deepnote implementation of a <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a>.  This is an <em>interface</em> that allows us to interact with the <a class="reference external" href="https://www.python.org">Python</a> programming language.</p>
+<p>There are many ways of installing Python and the Jupyter Notebook.  Since we are working
+through deepnote, you won’t have to do these (unless you want to work offline), but you may
+be interested to know how to set up Jupyter notebooks outside of deepnote.</p>
+<p>The best
 way of installing Python depends on many things.  For this iteration of the
 class, we installed Python using the <a class="reference external" href="https://www.anaconda.com/distribution">Anaconda
 distribution</a>.  We discuss this more
@@ -852,8 +859,8 @@ post</a>.</p>
 </div>
 <div class="section" id="the-jupyter-notebook">
 <h2>The Jupyter Notebook<a class="headerlink" href="#the-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
-<p>We will soon here more about the Jupyter Noteboo.  It is a particularly easy interface to run Python code, and display the results.</p>
-<p>The Notebook has two parts.  The first is the web application, that you
+<p>We will soon here more about the Jupyter Notebook.  It is a particularly easy interface to run Python code, and display the results.</p>
+<p>A jupyter notebook interface has two parts.  The first is the web application, that you
 interact with.  This is the web <em>client</em>.   The web client then sends commands
 to another process on your computer, called the <em>kernel</em>.  The kernel runs
 Python.  The client sends Python commands to the kernel, and the kernel runs
@@ -864,10 +871,15 @@ commands.</p>
 we will cover some of these later in the course.  The notebook is
 a particularly good way of running code for beginners, because it gets you
 started very quickly, in a familiar interface (the web browser).  As you gain
-experience, you will find that you will outgrow the Notebook, because it is not
+experience, you will find that you may outgrow the Notebook, because it is not
 a good interface for writing more than a small amount of code.  When you get
 there, you be much more efficient using a good code editor, such as
-<a class="reference external" href="https://atom.io">Atom</a>.</p>
+<a class="reference external" href="https://atom.io">Atom</a>.  For presenting a mixture of text and code outputs, however,
+some sort of notebook interface can be very useful (e.g. for reports).</p>
+<p>As a point of history, notebooks are a kind of “literate programming” developed
+by the American computer scientist Donald Knuth.   You might be interested in
+his description of what literate programming is in the opening of his paper
+describing it (no need to go beyond the first section) (<a class="reference external" href="http://www.literateprogramming.com/knuthweb.pdf0">http://www.literateprogramming.com/knuthweb.pdf0</a></p>
 </div>
 <div class="section" id="installing-python">
 <h2>Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">¶</a></h2>
@@ -891,7 +903,7 @@ various important Python libraries.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -917,14 +929,20 @@ various important Python libraries.</p>
     
     <div id="prev">
         <a class="left-prev" href="surviving_computers.html" title="previous page">
-            <p class="prevnext-label">previous</p>
-            <p class="prevnext-title">Surviving the computer</p>
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Surviving the computer</p>
+            </div>
         </a>
     </div>
      <div id="next">
         <a class="right-next" href="using_jupyter.html" title="next page">
-            <p class="prevnext-label">next</p>
-            <p class="prevnext-title">Using Jupyter notebooks</p>
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Using Jupyter notebooks</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
      </div>
 
@@ -932,7 +950,7 @@ various important Python libraries.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.87c02ae37f56c4029642757f348b8259.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/dsfe_logo.png" class="logo" alt="logo">
       
@@ -764,7 +768,7 @@
             href="https://github.com/uob-ds/cfd2021/issues/new?title=Issue%20on%20page%20%2Fmore-regression/logistic_flails.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/deepnote-build/more-regression/logistic_flails.ipynb"><button
+        <a class="edit-button" href="https://github.com/uob-ds/cfd2021/edit/main/more-regression/logistic_flails.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -784,7 +788,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/deepnote-build?urlpath=tree/more-regression/logistic_flails.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uob-ds/cfd2021/main?urlpath=tree/more-regression/logistic_flails.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -792,13 +796,13 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/deepnote-build/more-regression/logistic_flails.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/uob-ds/cfd2021/blob/main/more-regression/logistic_flails.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
         
-        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fdeepnote-build%2Fmore-regression/logistic_flails.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fuob-ds%2Fcfd2021%2Fblob%2Fmain%2Fmore-regression/logistic_flails.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Deepnote" data-toggle="tooltip" data-placement="left"><img class="deepnote-button-logo"
                     src="../_static/images/logo_deepnote.svg"
                     alt="Interact in Deepnote">Deepnote</button></a>
@@ -1051,21 +1055,21 @@ log-odds intercept and slope:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mb312/Library/Python/3.8/lib/python/site-packages/pandas/core/arraylike.py:358: RuntimeWarning: overflow encountered in exp
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Olsonac-admin/opt/anaconda3/lib/python3.8/site-packages/pandas/core/arraylike.py:364: RuntimeWarning: overflow encountered in exp
   result = getattr(ufunc, method)(*inputs, **kwargs)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 4.903124915254673
- hess_inv: array([[19.20408964, -0.90547701],
-       [-0.90547701,  0.04384903]])
-      jac: array([-1.78813934e-07, -2.50339508e-06])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 4.903124915254921
+ hess_inv: array([[19.31261058, -0.91067068],
+       [-0.91067068,  0.04409889]])
+      jac: array([-1.19209290e-07, -2.20537186e-06])
   message: &#39;Optimization terminated successfully.&#39;
      nfev: 120
       nit: 10
      njev: 40
    status: 0
   success: True
-        x: array([-6.16442306,  0.28186371])
+        x: array([-6.164422  ,  0.28186366])
 </pre></div>
 </div>
 </div>
@@ -1161,17 +1165,17 @@ log-odds intercept and slope:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 14.837583824120092
- hess_inv: array([[ 5.53690929, -0.26589687],
-       [-0.26589687,  0.01329405]])
-      jac: array([-2.38418579e-07, -4.05311584e-06])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 14.8375838241203
+ hess_inv: array([[ 5.57233541, -0.26759306],
+       [-0.26759306,  0.01337518]])
+      jac: array([-1.19209290e-07, -4.17232513e-06])
   message: &#39;Optimization terminated successfully.&#39;
      nfev: 57
       nit: 13
      njev: 19
    status: 0
   success: True
-        x: array([-6.60352255,  0.30702798])
+        x: array([-6.60352228,  0.30702797])
 </pre></div>
 </div>
 </div>
@@ -1232,10 +1236,10 @@ Statmodels and other packages use.</p>
   <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>  <td>     1</td>  
 </tr>
 <tr>
-  <th>Date:</th>            <td>Thu, 16 Sep 2021</td> <th>  Pseudo R-squ.:     </th>  <td>0.3135</td>  
+  <th>Date:</th>            <td>Tue, 28 Sep 2021</td> <th>  Pseudo R-squ.:     </th>  <td>0.3135</td>  
 </tr>
 <tr>
-  <th>Time:</th>                <td>16:17:07</td>     <th>  Log-Likelihood:    </th> <td> -14.838</td> 
+  <th>Time:</th>                <td>13:28:59</td>     <th>  Log-Likelihood:    </th> <td> -14.838</td> 
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td> -21.615</td> 
@@ -1265,7 +1269,7 @@ found with the MLE cost function and minimize.</p>
         requestKernel: true,
         binderOptions: {
             repo: "uob-ds/cfd2021",
-            ref: "deepnote-build",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1294,7 +1298,7 @@ found with the MLE cost function and minimize.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
