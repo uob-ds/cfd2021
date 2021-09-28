@@ -2,11 +2,15 @@ BUILD_DIR=_build/html
 RMDS:=$(wildcard */*.Rmd)
 IPYNBS:=$(patsubst %.Rmd,%.ipynb,$(RMDS))
 
+delete-ipynbs:
+	# Delete modified notebooks to force rebuild from .Rmd
+	./_scripts/delete_modified.sh
+
 %.ipynb: %.Rmd
 	# Convert newer .Rmd file to ipynb file.
 	jupytext --to ipynb $<
 
-html: bibliography $(IPYNBS)
+html: bibliography delete-ipynbs $(IPYNBS)
 	# For ucb_pages module
 	( export PYTHONPATH="${PYTHONPATH}:${PWD}" && jupyter-book build . )
 
