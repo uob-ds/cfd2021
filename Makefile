@@ -6,7 +6,7 @@ IPYNBS:=$(patsubst %.Rmd,%.ipynb,$(RMDS))
 	# Convert newer .Rmd file to ipynb file.
 	jupytext --to ipynb $<
 
-html: bibliography checkout-ipynbs $(IPYNBS)
+html: bibliography $(IPYNBS)
 	# For ucb_pages module
 	( export PYTHONPATH="${PYTHONPATH}:${PWD}" && jupyter-book build . )
 
