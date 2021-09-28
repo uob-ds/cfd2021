@@ -915,7 +915,8 @@ results.</p>
 </div>
 <p>I can ask the computer to sleep for much longer.  Try making a new code cell and executing the code <code class="docutils literal notranslate"><span class="pre">sleep(1000)</span></code>.</p>
 <p>When you do this, notice that the prompt gets an asterisk symbol <code class="docutils literal notranslate"><span class="pre">*</span></code> instead of a number, meaning that the kernel is busy doing something (busy sleeping).</p>
-<p>You can interrupt this long-running process by clicking on the stop icon in the toolbar, or selecting “Interrupt” from the “Kernel” menu.  Try it.</p>
+<p>You can interrupt this long-running process by clicking on “stop execution” button on the top of the
+page you are working on.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try running the code &quot;sleep(10000)&quot; below.</span>
@@ -923,11 +924,8 @@ results.</p>
 </div>
 </div>
 </div>
-<p>Very rarely, the kernel crashes, so you can’t interrupt it.  In that case you may want to “Restart” from the “Kernel” menu.  This will:</p>
-<ul class="simple">
-<li><p>Shut down the old kernel with extreme prejudice, therefore throwing away any variables you have stored in the workspace;</p></li>
-<li><p>Start a new kernel for the web client to talk to.</p></li>
-</ul>
+<p>Very rarely, the kernel crashes, so you can’t interrupt it.  In that case you may want click on the “Environment” button
+on the left sidebar (the spikey square) and then click on “Stop machine”.  This will shut down the old kernel with extreme prejudice, therefore throwing away any variables you have stored in the workspace.  To start a new kernel and continue work click on “Start machine”.</p>
 <p>If you do this, you will notice that all the variables you defined in the old kernel have disappeared.   Rerun the cells to create the variables, to re-create them.</p>
 </div>
 </div>
