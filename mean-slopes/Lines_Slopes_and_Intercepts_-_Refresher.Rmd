@@ -6,7 +6,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.10.1
+      jupytext_version: 1.10.0
   kernelspec:
     display_name: Python 3
     language: python
@@ -25,18 +25,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats
 import pandas as pd
-plt.figure(figsize = (8,8))
-x_axis = np.arange(-10, 11)
-y_axis = np.arange(-10, 11)
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.legend()
-plt.show()
+
+# a fucntion for a plot showing the origin
+def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, five_ticks = False):
+    if new_fig == True:
+        plt.figure(figsize = (fig_size_1,fig_size_2))
+    x_axis = np.arange(low_ax_lim, up_ax_lim)
+    y_axis = np.arange(low_ax_lim, up_ax_lim)
+    plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
+    plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
+    plt.xlabel('X Axis')
+    plt.ylabel('Y Axis')
+    plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
+    plt.xlim(min(x_axis), max(x_axis))
+    plt.ylim(min(y_axis), max(y_axis))
+    if five_ticks == False:
+        plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
+        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
+    else:
+        plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 5))
+        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
+    plt.legend()
+    
+    
+axes_func(8,8,-10,11);    
 ```
 
 (Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture: https://www.maplesoft.com/support/help/content/2092/ecplot162.gif ;
@@ -50,19 +62,8 @@ Let's plot the point (x = 5, y = 5), it is shown as a red 'x' on the graph below
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-plt.figure(figsize = (8,8))
-x_axis = np.arange(-10, 11)
-y_axis = np.arange(-10, 11)
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.plot(5,5, 'x', color = 'darkred', markersize = 8, label = '(x = 5, y = 5)')
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.legend()
-plt.show()
+axes_func(8,8,-10,11)
+plt.plot(5,5, 'x', color = 'darkred', markersize = 8, label = '(x = 5, y = 5)');
 ```
 
 In a sense, the simplest line we can draw is one where, for any point on the line, the x and y coordinate are the same number. 
@@ -79,20 +80,12 @@ The equation for this line is ```y = x```, and this line is shown in red below.
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-x = np.arange(-8, 9)
+x = np.arange(-10, 11)
 y = x
-plt.figure(figsize = (8,8))
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
+axes_func(8,8,-10,11)
 plt.plot(5,5, 'x', color = 'darkred', markersize = 8, label = '(x = 5, y = 5)')
 plt.plot(x,y, color = 'red', label = 'y = x')
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 You'll notice that the point (x = 5, y = 5) is on this line. A line can be thought of as a collection of infinitely close points. The equation for a line - in this case ```y = x``` - tells you which points are on the line. 
@@ -114,19 +107,12 @@ What happens if we change that '1' in ```y = 1 * x``` to another number? Let's c
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = 5*x
-plt.figure(figsize = (8,8))
+
+axes_func(8,8,-10,11)
 plt.plot(x,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.ylim(min(y_axis), max(y_axis))
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.legend()
-plt.show()
+plt.legend();
+
 ```
 
 The number we have changed -  from '1' to '5' - is the <b> slope </b>. Graphically, we can see that changing the slope changes the steepness of the line : the line for ```y = 5 * x``` is much steeper than the line for ```y = 1 * x```.
@@ -162,61 +148,39 @@ The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to
 (This graph shows slightly more of the x and y axes than the previous graphs, as we will need this for the line we plot after this one).
 
 ```{python}
-# do not worry about any of the code in this notebook, it is just here to generate the graphs
-plt.figure(figsize = (8,8))
-y_axis_ext = np.arange(-30, 31)
-x_axis_ext = np.arange(-30, 31)
-plt.plot(x_axis_ext , np.repeat(0, len(x_axis_ext)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis_ext)), y_axis_ext, color = 'black')
-plt.plot(x,y, color = 'red', label = 'y = 1 * x')
+axes_func(8,8,-30,31, five_ticks = True)
+x_long = np.arange(-30,31)
+y = 1 * x_long
+plt.plot(x_long, y, color = 'red', label = 'y = 1 * x')
 plt.plot([5, 0, 5], [5,5, 0], 'x', color = 'black')
 zer_5 = np.arange(0,6)
 plt.plot(np.repeat(5, len(zer_5)), zer_5, '--', color = 'darkgreen', label = 'Change in y')
 plt.plot(zer_5, np.repeat(5, len(zer_5)),'--', color = 'cyan', label = 'Change in x')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.ylim(min(y_axis_ext), max(y_axis_ext))
-plt.xlim(min(x_axis_ext), max(x_axis_ext))
-plt.xticks(np.arange(np.min(x_axis_ext), np.max(x_axis_ext)+1, 5))
-plt.yticks(np.arange(np.min(y_axis_ext), np.max(y_axis_ext)+1, 5))
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 The graph below shows the same change in x (from 0 to 5) for the line ```y = 5 * x```.
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-plt.figure(figsize = (8,8))
-plt.plot(x_axis_ext , np.repeat(0, len(x_axis_ext)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis_ext)), y_axis_ext, color = 'black')
+axes_func(8,8,-30,31, five_ticks = True)
 plt.plot([5, 0, 5], [25,25, 0], 'x', color = 'black')
-plt.plot(x,y, color = 'red', label = 'y = 1 * x')
+plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
 zer_25 = np.arange(0,26)
 plt.plot(np.repeat(5, len(zer_25)), zer_25, '--', color = 'darkgreen', label = 'Change in y')
 plt.plot(zer_5, np.repeat(25, len(zer_5)),'--', color = 'cyan', label = 'Change in x')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.ylim(min(y_axis_ext), max(y_axis_ext))
-plt.xlim(min(x_axis_ext), max(x_axis_ext))
-plt.xticks(np.arange(np.min(x_axis_ext), np.max(x_axis_ext)+1, 5))
-plt.yticks(np.arange(np.min(y_axis_ext), np.max(y_axis_ext)+1, 5))
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 If you compare the two graphs, you can see that, relative to the line ```y = 1 * x```, on the line ```y = 5 * x``` the value of y has changed a lot more for the same 5 point increase in x. It has changed by 5 times the amount. This may be clearer in the graph below:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-plt.figure(figsize = (8,8))
-plt.plot(x,y, color = 'red', label = 'y = 1 * x')
+
+axes_func(8,8,-30,31, five_ticks = True)
+plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
-plt.plot(x_axis_ext , np.repeat(0, len(x_axis_ext)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis_ext)), y_axis_ext, color = 'black')
 plt.plot([5, 0, 5], [25,25, 0], 'x', color = 'black')
 plt.plot([5, 0, 5], [5,5, 0], 'x', color = 'black')
 zer_25 = np.arange(0,26)
@@ -224,15 +188,8 @@ plt.plot(np.repeat(5, len(zer_25)), zer_25, '--', color = 'darkgreen', label = '
 plt.plot(zer_5, np.repeat(25, len(zer_5)),'--', color = 'cyan', label = 'Change in x')
 plt.plot(np.repeat(5, len(zer_5)), zer_5, '--', color = 'darkgreen')
 plt.plot(zer_5, np.repeat(5, len(zer_5)),'--', color = 'cyan')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.ylim(min(y_axis_ext), max(y_axis_ext))
-plt.xlim(min(x_axis_ext), max(x_axis_ext))
-plt.xticks(np.arange(np.min(x_axis_ext), np.max(x_axis_ext)+1, 5))
-plt.yticks(np.arange(np.min(y_axis_ext), np.max(y_axis_ext)+1, 5))
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.legend()
-plt.show()
+
+plt.legend();
 ```
 
 The change in x is the same for each line, but the change in y is much larger for the line with the larger slope, ```y = 5 * x```.
@@ -246,20 +203,11 @@ What would the graph look like if we change the slope of the line to 10, instead
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y2 = 10*x
-plt.figure(figsize = (8,8))
-plt.plot(x,y, color = 'red', label = 'y = 1 * x')
+axes_func(8,8,-30,31, five_ticks = True)
+plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
 plt.plot(x,y2, color = 'green', label = 'y = 10 * x')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis_ext)), y_axis_ext, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.ylim(min(y_axis_ext), max(y_axis_ext))
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis_ext), np.max(y_axis_ext)+1, 5))
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 As you can see, the take-home message is that if we increase the slope, the line gets steeper.
@@ -273,19 +221,11 @@ Let's try making the slope -5. The line for ```y = -5 * x``` is shown below, as 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y3 = -5 * x
-plt.figure(figsize = (8,8))
+axes_func(8,8,-10,11)
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
 plt.plot(x, y3, '--', color = 'darkblue', label = 'y = -5 * x')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
 plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.ylim(min(y_axis), max(y_axis))
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 As you can see, the lines are equally steep. However, for the line with the negative slope, when the x values are negative, the y values are positive. And when the x values are positive, the y values are negative. 
@@ -296,23 +236,15 @@ The graph below shows multiple lines, so that you can see the relationship betwe
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-y4 = -x
+y4 = -x_long
 y6 = -10 *x
-plt.figure(figsize = (8,8))
-plt.plot(x,y, color = 'red', label = 'y = 1 * x')
+axes_func(8,8,-10,11)
+plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y2, color = 'green', label = 'y = 10 * x')
-plt.plot(x,y4, '--', color = 'darkred', label = 'y = -1 * x')
+plt.plot(x_long,y4, '--', color = 'darkred', label = 'y = -1 * x')
 plt.plot(x, y6,'--',  color = 'darkgreen', label = 'y = -10 * x')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.ylim(min(y_axis), max(y_axis))
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.legend()
-plt.show()
+plt.legend();
+
 ```
 
 # What is an intercept?
@@ -327,21 +259,12 @@ The graph below shows two lines. One we have seen before, ```y = 1 * x``` (shown
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-y1 = x
-y2 = x + 5
-plt.figure(figsize = (8,8))
-plt.plot(x,y1, color = 'blue', label = 'y = 1 * x')
-plt.plot(x,y2, color = 'gold', label = 'y = 1 * x + 5')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.ylim(min(y_axis), max(y_axis))
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-plt.legend()
-plt.show()
+y1 = x_long
+y2 = x_long + 5
+axes_func(8,8,-10, 11)
+plt.plot(x_long,y1, color = 'blue', label = 'y = 1 * x')
+plt.plot(x_long,y2, color = 'gold', label = 'y = 1 * x + 5')
+plt.legend();
 ```
 
 We can see that the new line, ```y = 1 * x + 5```, crosses the y axis at 5, but the steepness of the line is the same as ```y = 1 * x``` - it is only the point that each line crosses the y axis that is different.
