@@ -26,6 +26,9 @@ import matplotlib.pyplot as plt
 import scipy.stats
 import pandas as pd
 
+# Make plots look a little bit more fancy
+plt.style.use('fivethirtyeight')
+
 # a fucntion for a plot showing the origin
 def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, five_ticks = False, double_y = False,
              five_ticks_y = False):
@@ -70,7 +73,7 @@ These axes provide us a way of visualising the relationship between two sets of 
 
 ><i><center>'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' </i> <br> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)<center>
 
-Let's plot the point `(x = 5, y = 5)`, it is shown as a red 'x' on the graph below:
+Let's plot the point `(x = 5, y = 5)`; it is shown as a red 'x' on the graph below:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -88,7 +91,7 @@ when `x = 5` then `y = 5`,
 
 when `x = 10` then `y = 10` and so on.
 
-The equation for this line is `y = x`~, and this line is shown in red below.
+The equation for this line is `y = x`, and this line is shown in red below.
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -100,7 +103,7 @@ plt.plot(x,y, color = 'red', label = 'y = x')
 plt.legend();
 ```
 
-You'll notice that the point `(x = 5, y = 5)` is on this line. A line can be thought of as a collection of infinitely close points. The equation for a line - in this case the line ```y = x``` - tells you which points are on the line. 
+You'll notice that the point `(x = 5, y = 5)` is on this line. A line can be thought of as a collection of infinitely close points. The equation for a line tells you which points are on the line. We can refer to the line on the graph above as `y = x`. 
 
 If we know the equation for the line, we can work out which points are on the line by taking any value of x and, using the equation, work out the y coordinate for that value of x.
 
@@ -119,12 +122,10 @@ What happens if we change that '1' in ```y = 1 * x``` to another number? Let's c
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = 5*x
-
 axes_func(8,8,-10,11)
 plt.plot(x,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
 plt.legend();
-
 ```
 
 The number we have changed -  from '1' to '5' - is the <b> slope </b>. Graphically, we can see that changing the slope changes the steepness of the line : the line for ```y = 5 * x``` is much steeper than the line for ```y = 1 * x```.
@@ -153,13 +154,17 @@ display(df)
 
 Another way of thinking of this is: if we take any two points on the line, and we calculate how much the x-value has changed between those points, then the slope tells us how much the y value has also changed.
 
-So for the line ```y = 1 * x```, if we follow the line from `x = 0` to `x = 5`, the slope tells us how much the y values have changed over this distance. 
+So for the line ```y = 1 * x```, if we follow the line from `x = 0` to `x = 5`, the slope tells us how much the y values have changed over this distance. One way of thinking of this is that the slope is the 'rise' (the change in y values along the line) dividied by the 'run' (the change in the x values along the line):
+
+<center> <br>$ \Large \text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}} $ <center>
+<br>
 
 The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to 5, y also changes from 0 to 5.
 
 (This graph shows slightly more of the x and y axes than the previous graphs, as we will need this for the line we plot after this one).
 
 ```{python}
+# do not worry about any of the code in this notebook, it is just here to generate the graphs
 axes_func(8,8,-30,31, five_ticks = True)
 x_long = np.arange(-30,31)
 y = 1 * x_long
@@ -189,7 +194,6 @@ If you compare the two graphs, you can see that, relative to the line ```y = 1 *
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-
 axes_func(8,8,-30,31, five_ticks = True)
 plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
@@ -200,7 +204,6 @@ plt.plot(np.repeat(5, len(zer_25)), zer_25, '--', color = 'darkgreen', label = '
 plt.plot(zer_5, np.repeat(25, len(zer_5)),'--', color = 'cyan', label = 'Change in x')
 plt.plot(np.repeat(5, len(zer_5)), zer_5, '--', color = 'darkgreen')
 plt.plot(zer_5, np.repeat(5, len(zer_5)),'--', color = 'cyan')
-
 plt.legend();
 ```
 
@@ -236,7 +239,6 @@ y3 = -5 * x
 axes_func(8,8,-10,11)
 plt.plot(x,y1, color = 'blue', label = 'y = 5 * x')
 plt.plot(x, y3, '--', color = 'darkblue', label = 'y = -5 * x')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
 plt.legend();
 ```
 
@@ -335,17 +337,19 @@ plt.legend();
 
 # Why do we care?
 
-Fitting a line to a set of datapoints can be used for description and prediction.
+We should care about the equations for lines, because fitting a line to a set of datapoints can be used for description and prediction. 'Fitting' in this sense means finding the values of the equation for a line which best captures the pattern in our data.
 
-The graph below shows some simulated data, where each point represents one person with a disease. 
-
-The x-coordinate of the point shows that person's pre-treatment symptom severity score (out of 100). And the y-coordinate of the point shows the dose of a drug (in micrograms) that was most effective for treating that person:
+The dataframe below shows some data from the [students ratings dataset](../data/rate_my_professors):
 
 ```{python}
 ratings = pd.read_csv('https://raw.githubusercontent.com/matthew-brett/cfd2020/master/data/rate_my_course.csv')
 ratings = ratings[['Discipline', 'Clarity', 'Overall Quality']]
-ratings.head()
+ratings.head(10)
 ```
+
+The scatterplot below shows the `Clarity` ratings and the `Overall Quality` ratings for each course (shown in the `Discipline` column).
+
+Each point on the graph shows both ratings for one course. The x-coordinate of the point shows that course's `Clarity` rating, and the y-coordinate shows the `Overall Quality` rating:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -354,13 +358,12 @@ quality = ratings['Overall Quality'].copy()
 plt.figure(figsize = (8,8))
 plt.scatter(clarity, quality)
 plt.xlabel('Calrity Rating')
-plt.ylabel('Overall Quality Rating')
-plt.show()
+plt.ylabel('Overall Quality Rating');
 ```
 
-We can fit a line to this data by using mathematical techniques which find the equation for the line which minimizes the collective vertical distance between the datapoints and the line.
+We can fit a line to this data by using mathematical or computational techniques which find the equation for the line which minimizes the collective vertical distance between the datapoints and the line (we will go into more detail on these techniques [elsewhere](finding_lines)).
 
-Fitting a line can help us describe the strength and direction of the relationship between initial symptom severity and the most effective dose:
+Fitting a line can help us describe the strength and direction of the relationship between `Clarity` and `Overall Quality`:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -369,53 +372,51 @@ slope = lin_reg[0]
 intercept = lin_reg[1]
 ols_line = intercept  + slope * clarity
 plt.figure(figsize = (8,8))
-plt.scatter(clarity, quality)
-plt.xlabel('Calrity Rating')
+plt.xlabel('Clarity Rating')
 plt.ylabel('Overall Quality Rating')
 plt.plot(clarity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
 plt.legend()
-plt.show()
+plt.scatter(clarity, quality);
 ```
 
 The equation for the best-fitting straight line is:
 
 $y =  0.92 * x +  0.32$
 
-(Remember that in this case "x" is the "Clarity" rating!)
+(Remember that in this case "x" is the `Clarity` rating!)
 
-0.92 is the slope.
+0.92 is the slope.<br>
 0.32 is the intercept.
 
 The steeper the slope of the best fitting line, the stronger the relationship between the two variables. The intercept is important too, we will explain why shortly.
 
 Once we have fitted a line, we can use it to predict things.
 
-In this hypothetical example, if we had a new patient, we could use their initial symptom severity score to predict which dose will be most effective for them, based on what we have observed in the previous patients.
+Let's say a new course is piloted at a university. Let's say we have data on it's `Clarity` ratings, but have not yet collected data on its `Overall Quality`.
 
-It is important to have good predictions in this case: if the dose is too low, the treatment will be ineffective. If the dose is too high, there will be more side effects.
+We could use the `Clarity` score to predict the `Overall Quality` rating for that course, based on the relationship between `Clarity` and `Overall Quality` in the ratings data we already have.
 
-The graph below shows how we would use an initial symptom severity score (for instance, of 70) to predict the most effective dose for that patient. We would do this by checking what the y coordinate is for the point on the line where x = 70:
+Let's say the `Clarity` rating of the new course is 3.6. The graph below shows how we would use this `Clarity` score to predict the `Overall Quality` score that the course would get. We would generate this prediction by checking what the y coordinate is for the point on the line where `x = 3.6`:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 predict = intercept + slope * 3.6
 plt.figure(figsize = (8,8))
-plt.scatter(clarity, quality)
-plt.xlabel('Calrity Rating')
+plt.xlabel('Clarity Rating')
 plt.ylabel('Overall Quality Rating')
 plt.plot(clarity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
 plt.plot(3.6, predict, 'X', markersize = 15, color = 'red', label = 'Predicted "Overall Quality" rating for "Clarity == 3.6"' )
-plt.legend(bbox_to_anchor = (1,1));
-
+plt.legend(bbox_to_anchor = (1,1))
+plt.scatter(clarity, quality);
 ```
 
-In this example, the predicted Overall Quality rating for Clarity rating of  3.6 is 3.64, as this is the y-coordinate for the point on the line where x = 70.
+In this example, the predicted `Overall Quality` rating for `Clarity` rating of 3.6 is 3.635, as this is the y-coordinate for the point on the line where x = 3.6.
 
 Look at the y-axis level with the red "x" to see that this is correct.
 
 The graph below shows the same prediction, but also shows the origin.
 
-Remember that all lines pass through the origin if they do not have a nonzero intercept (i.e. an intercept that is any other number apart from 0). 
+Remember that all lines pass through the origin if they do not have a nonzero intercept (i.e. an intercept that is any other number apart from 0, in the case of the scatterplot above it is 0.32). 
 
 So, we need a nonzero intercept - that is, we need to add or subtract a quantity from every value on the line - if the line which best fits the data does not pass through the origin. 
 
@@ -430,8 +431,7 @@ The graph below shows a green line which has the same slope as the best fitting 
 
 bad_line = slope*clarity
 axes_func(10,10, -5, 6)
-plt.scatter(clarity, quality)
-plt.xlabel('Calrity Rating')
+plt.xlabel('Clarity Rating')
 plt.ylabel('Overall Quality Rating')
 plt.plot(clarity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
 plt.plot(clarity, bad_line,  color = 'green', label = 'Line with the correct slope, but a 0 intercept: y = '+str(np.round(slope,2))+' * x + 0')
@@ -441,8 +441,7 @@ zer_to_3_point_6 = np.linspace(0, 3.6, num = len(zer_to_pred))
 plt.plot(np.repeat(3.6, len(zer_to_pred)), zer_to_pred, '--', color = 'darkred')
 plt.plot(zer_to_3_point_6, np.repeat(predict, len(zer_to_3_point_6)),'--', color = 'darkred')
 plt.legend(bbox_to_anchor = (1,1))
-plt.show()
-
+plt.scatter(clarity, quality);
 ```
 
 # Try it yourself
