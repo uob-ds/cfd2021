@@ -27,11 +27,15 @@ import scipy.stats
 import pandas as pd
 
 # a fucntion for a plot showing the origin
-def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, five_ticks = False):
+def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, five_ticks = False, double_y = False,
+             five_ticks_y = False):
     if new_fig == True:
         plt.figure(figsize = (fig_size_1,fig_size_2))
     x_axis = np.arange(low_ax_lim, up_ax_lim)
-    y_axis = np.arange(low_ax_lim, up_ax_lim)
+    if double_y == False:
+        y_axis = np.arange(low_ax_lim, up_ax_lim)
+    else:
+        y_axis = np.arange(low_ax_lim*2, up_ax_lim*2)
     plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
     plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
     plt.xlabel('X Axis')
@@ -44,6 +48,8 @@ def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, fiv
         plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
     else:
         plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 5))
+        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
+    if five_ticks_y == True:
         plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
     plt.legend()
     
@@ -238,13 +244,12 @@ The graph below shows multiple lines, so that you can see the relationship betwe
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y4 = -x_long
 y6 = -10 *x
-axes_func(8,8,-10,11)
+axes_func(8,8,-10,11) 
 plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
 plt.plot(x,y2, color = 'green', label = 'y = 10 * x')
 plt.plot(x_long,y4, '--', color = 'darkred', label = 'y = -1 * x')
 plt.plot(x, y6,'--',  color = 'darkgreen', label = 'y = -10 * x')
 plt.legend();
-
 ```
 
 # What is an intercept?
@@ -281,18 +286,10 @@ That's all there is to it. Adding or subtracting an intercept from a line simply
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = 10 * x
 y2 = 10 * x + 5
-plt.figure(figsize = (8,8))
+axes_func(8,8,-10, 11, double_y = True, five_ticks_y = True)
 plt.plot(x,y1, color = 'blue', label = 'y = 10 * x')
 plt.plot(x,y2, color = 'gold', label = 'y = 10 * x + 5')
-y_axis = np.arange(-20, 21)
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.ylim(min(y_axis), max(y_axis))
 plt.legend()
-plt.show()
 ```
 
 Let's see what happens if we set the intercept to -5, rather than postive 5:
@@ -302,18 +299,11 @@ Let's see what happens if we set the intercept to -5, rather than postive 5:
 y1 = 5 * x
 y2 = 5 *  x + 5
 y3 = 5 *  x - 5
-plt.figure(figsize = (8,8))
+axes_func(8,8,-10, 11, double_y = True, five_ticks_y = True)
 plt.plot(x,y1, color = 'orange', label = 'y =  5 * x')
 plt.plot(x,y2, color = 'crimson', label = 'y = 5 * x + 5')
 plt.plot(x,y3, color = 'darkred', label = 'y = 5 * x - 5')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.ylim(min(y_axis), max(y_axis))
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 You can see that a negative intercept moves the line downwards away from the origin. 
@@ -327,18 +317,11 @@ This is also true if the slope is negative, as can be seen from the graph below:
 y1 = -5 * x
 y2 = -5 *  x + 5
 y3= -5 *  x - 5
-plt.figure(figsize = (8,8))
+axes_func(8,8,-10, 11, double_y = True, five_ticks_y = True)
 plt.plot(x,y1,'--', color = 'darkblue',  label = 'y =  -5 * x')
 plt.plot(x,y2,'--', color = 'silver',  label = 'y = -5 * x + 5')
 plt.plot(x,y3, '--',color = 'darkred',  label = 'y = -5 * x - 5')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.ylim(min(y_axis), max(y_axis))
-plt.legend()
-plt.show()
+plt.legend();
 ```
 
 ### In summary: the slope determines the steepness of the line. The intercept moves the line up and down the y axis, relative to the origin.
@@ -353,41 +336,49 @@ The graph below shows some simulated data, where each point represents one perso
 The x-coordinate of the point shows that person's pre-treatment symptom severity score (out of 100). And the y-coordinate of the point shows the dose of a drug (in micrograms) that was most effective for treating that person:
 
 ```{python}
+ratings = pd.read_csv('https://raw.githubusercontent.com/matthew-brett/cfd2020/master/data/rate_my_course.csv')
+ratings = ratings[['Discipline', 'Clarity', 'Overall Quality']]
+ratings.head()
+```
+
+```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-samp_size = 30
-symptom_severity = np.random.normal(67, 10,  size = samp_size).astype('int')
-symptom_severity[symptom_severity > 100] = 100
-most_effect_dose = 50 + 1.4 * symptom_severity + np.random.normal(0, 5, size = samp_size)
-plt.figure(figsize = (10,6))
-plt.scatter(symptom_severity, most_effect_dose)
-plt.xlabel('Symptom Severity')
-plt.ylabel('Most Effective Dose')
+clarity = ratings['Clarity'].copy()
+quality = ratings['Overall Quality'].copy()
+plt.figure(figsize = (8,8))
+plt.scatter(clarity, quality)
+plt.xlabel('Calrity Rating')
+plt.ylabel('Overall Quality Rating')
 plt.show()
 ```
 
-We can fit a line to this data by using mathematical techniques which find the equation for the line which minimizes the collective distance between the datapoints and the line.
+We can fit a line to this data by using mathematical techniques which find the equation for the line which minimizes the collective vertical distance between the datapoints and the line.
 
 Fitting a line can help us describe the strength and direction of the relationship between initial symptom severity and the most effective dose:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-lin_reg = scipy.stats.linregress(symptom_severity, most_effect_dose)
+lin_reg = scipy.stats.linregress(clarity, quality)
 slope = lin_reg[0]
 intercept = lin_reg[1]
-ols_line = intercept  + slope * symptom_severity
-plt.figure(figsize = (10,6))
-plt.scatter(symptom_severity, most_effect_dose)
-plt.xlabel('Symptom Severity')
-plt.ylabel('Most Effective Dose')
-plt.plot(symptom_severity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
+ols_line = intercept  + slope * clarity
+plt.figure(figsize = (8,8))
+plt.scatter(clarity, quality)
+plt.xlabel('Calrity Rating')
+plt.ylabel('Overall Quality Rating')
+plt.plot(clarity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
 plt.legend()
 plt.show()
-print('The equation for the best-fitting straight line is:')
-print('\ny = ', np.round(slope,2), '* x + ', np.round(intercept, 2))
-print('\n(Remember that in this case "x" is the symptom severity score!)\n')
-print(np.round(slope,2), 'is the slope.')
-print(np.round(intercept,2), 'is the intercept.')
 ```
+
+The equation for the best-fitting straight line is:
+
+$y =  0.92 * x +  0.32$
+
+(Remember that in this case "x" is the "Clarity" rating!)
+
+0.92 is the slope.
+0.32 is the intercept.
 
 The steeper the slope of the best fitting line, the stronger the relationship between the two variables. The intercept is important too, we will explain why shortly.
 
@@ -401,19 +392,20 @@ The graph below shows how we would use an initial symptom severity score (for in
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-predict_70 = intercept + slope * 70
-plt.figure(figsize = (10,6))
-plt.scatter(symptom_severity, most_effect_dose)
-plt.xlabel('Symptom Severity')
-plt.ylabel('Most Effective Dose')
-plt.plot(symptom_severity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
-plt.plot(70, predict_70, 'X', markersize = 15, color = 'red', label = 'Predicted best dose for symptom severity = 70' )
-plt.yticks(np.arange(np.min(most_effect_dose).astype('int'), np.max(most_effect_dose)+1, 5))
-plt.legend()
-plt.show()
-print('In this example, the predicted most effective dose (for a symptom severity score of 70) is '+str(np.round(predict_70,2))+', as this is the y-coordinate for the point on the line where x = 70.')
-print('\nLook at the y-axis level with the red "x" to see that this is correct.')
+predict = intercept + slope * 3.6
+plt.figure(figsize = (8,8))
+plt.scatter(clarity, quality)
+plt.xlabel('Calrity Rating')
+plt.ylabel('Overall Quality Rating')
+plt.plot(clarity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
+plt.plot(3.6, predict, 'X', markersize = 15, color = 'red', label = 'Predicted "Overall Quality" rating for "Clarity == 3.6"' )
+plt.legend(bbox_to_anchor = (1,1));
+
 ```
+
+In this example, the predicted Overall Quality rating for Clarity rating of  3.6 is 3.64, as this is the y-coordinate for the point on the line where x = 70.
+
+Look at the y-axis level with the red "x" to see that this is correct.
 
 The graph below shows the same prediction, but also shows the origin.
 
@@ -429,25 +421,20 @@ The graph below shows a green line which has the same slope as the best fitting 
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
-predict_70 = intercept + slope * 70
-bad_line = slope*symptom_severity
-plt.figure(figsize = (14,10))
-plt.scatter(symptom_severity, most_effect_dose)
-plt.xlabel('Symptom Severity')
-plt.ylabel('Most Effective Dose')
-plt.plot(symptom_severity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
-plt.plot(symptom_severity, bad_line,  color = 'green', label = 'Line with the correct slope, but a 0 intercept: y = '+str(np.round(slope,2))+' * x + 0')
-plt.plot(70, predict_70, 'X', markersize = 15, color = 'red', label = 'Predicted best dose, for symptom severity = 70' )
-y_axis = np.arange(-np.max(most_effect_dose), np.max(most_effect_dose))
-x_axis = np.arange(-np.max(symptom_severity), np.max(symptom_severity))
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-zer_to_pred = np.arange(0,predict_70)
-zer_to_70 = np.arange(0,70)
-plt.plot(np.repeat(70, len(zer_to_pred)), zer_to_pred, '--', color = 'darkred')
-plt.plot(zer_to_70, np.repeat(predict_70, len(zer_to_70)),'--', color = 'darkred')
-plt.legend()
+
+bad_line = slope*clarity
+axes_func(10,10, -5, 6)
+plt.scatter(clarity, quality)
+plt.xlabel('Calrity Rating')
+plt.ylabel('Overall Quality Rating')
+plt.plot(clarity, ols_line, color = 'darkred', label = 'Best-fitting straight line:  y = '+str(np.round(slope,2))+' * x + '+str(np.round(intercept, 2)))
+plt.plot(clarity, bad_line,  color = 'green', label = 'Line with the correct slope, but a 0 intercept: y = '+str(np.round(slope,2))+' * x + 0')
+plt.plot(3.6, predict, 'X', markersize = 15, color = 'red', label = 'Predicted "Overall Quality" rating for "Clarity == 3.6"' )
+zer_to_pred = np.linspace(0,predict)
+zer_to_3_point_6 = np.linspace(0, 3.6, num = len(zer_to_pred))
+plt.plot(np.repeat(3.6, len(zer_to_pred)), zer_to_pred, '--', color = 'darkred')
+plt.plot(zer_to_3_point_6, np.repeat(predict, len(zer_to_3_point_6)),'--', color = 'darkred')
+plt.legend(bbox_to_anchor = (1,1))
 plt.show()
 
 ```
@@ -463,15 +450,9 @@ slope = 1
 
 intercept = 0
 
-
 # do not alter the code below this point
 
-import numpy as np
-import matplotlib.pyplot as plt
-import scipy.stats
-import pandas as pd
-
-plt.figure(figsize = (14,10))
+plt.figure(figsize = (8,8))
 x = np.arange(-10, 11)
 y = slope * x + intercept
 plt.plot(x, y, label = 'y = '+str(slope)+' * x + '+str(intercept))
