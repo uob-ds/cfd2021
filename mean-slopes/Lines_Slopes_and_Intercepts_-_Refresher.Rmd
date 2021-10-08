@@ -15,7 +15,7 @@ jupyter:
 
 # What is a slope?
 
-The graph below shows the x axis, the y axis and the origin. Any point on the graph can be specified by an x coordinate and a y coordinate. For instance, the origin is the point where x = 0 and y = 0. 
+The graph below shows the x axis, the y axis and the origin. Any point on the graph can be specified by an x coordinate and a y coordinate. For instance, the origin is the point where `x = 0` and `y = 0`. 
 
 Note: theoretically these axes (and all the lines we will plot on them) run infinitely in the directions they travel in. However, as your screen isn't infinite, they are truncated for the purpose of display).
 
@@ -57,14 +57,20 @@ def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, fiv
 axes_func(8,8,-10,11);    
 ```
 
-(Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture: https://www.maplesoft.com/support/help/content/2092/ecplot162.gif ;
-The graphs we will plot show the numbers on the side of the figure,  rather than on the axes themselves. This shows the same information, just in a different way.)
+Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture:
+<br>
+![](origin.gif) 
+<br>
+<center>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)<center>
+<br>
+
+The graphs we will plot show the numbers on the side of the figure,  rather than on the axes themselves. This shows the same information, just in a different way.
 
 These axes provide us a way of visualising the relationship between two sets of data. Why is this important?:
 
-<i> 'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' (p.51, Haslwanter, T., 2016, An Introduction to Statistics with Python) </i>
+><i><center>'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' </i> <br> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)<center>
 
-Let's plot the point (x = 5, y = 5), it is shown as a red 'x' on the graph below:
+Let's plot the point `(x = 5, y = 5)`, it is shown as a red 'x' on the graph below:
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -74,15 +80,15 @@ plt.plot(5,5, 'x', color = 'darkred', markersize = 8, label = '(x = 5, y = 5)');
 
 In a sense, the simplest line we can draw is one where, for any point on the line, the x and y coordinate are the same number. 
 
-So when x = 0 then y = 0,
+So when `x = 0` then `y = 0`,
 
-when x = 1 then y = 1, 
+when `x = 1` then `y = 1`, 
 
-when x = 5 then y = 5, 
+when `x = 5` then `y = 5`, 
 
-when x = 10 then y = 10 and so on.
+when `x = 10` then `y = 10` and so on.
 
-The equation for this line is ```y = x```, and this line is shown in red below.
+The equation for this line is `y = x`~, and this line is shown in red below.
 
 ```{python}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -94,7 +100,7 @@ plt.plot(x,y, color = 'red', label = 'y = x')
 plt.legend();
 ```
 
-You'll notice that the point (x = 5, y = 5) is on this line. A line can be thought of as a collection of infinitely close points. The equation for a line - in this case ```y = x``` - tells you which points are on the line. 
+You'll notice that the point `(x = 5, y = 5)` is on this line. A line can be thought of as a collection of infinitely close points. The equation for a line - in this case the line ```y = x``` - tells you which points are on the line. 
 
 If we know the equation for the line, we can work out which points are on the line by taking any value of x and, using the equation, work out the y coordinate for that value of x.
 
@@ -127,15 +133,15 @@ What the slope tells us is this: for the x-coordinate of any point on the line, 
 
 In the case of ```y = 1  * x```: 
 
-where x = 1, y equals 1 times the value of x ... so y = 1,
+where `x = 1`, `y` equals 1 times the value of `x` ... so `y = 1`,
 
-where x = 5, y equals 1 times the value of x ... so y = 5 etc.
+where `x = 5`, `y` equals 1 times the value of `x` ... so `y = 5` etc.
 
-In the case of ```y = 5 * x```, y equals 5 times the value of x. So: 
+In the case of ```y = 5 * x```, `y` equals 5 times the value of `x`. So: 
 
-where x = 1, y equals 5 times the value of x ... so y = 5,
+where `x = 1`, `y` equals 5 times the value of `x` ... so `y = 5`,
 
-where x = 5, y equals 5 times the value of x... so y = 25 etc.
+where `x = 5`, `y` equals 5 times the value of `x`... so `y = 25` etc.
 
 The table below shows this for a set of points on the line ```y = 5 * x```:
 
@@ -147,7 +153,7 @@ display(df)
 
 Another way of thinking of this is: if we take any two points on the line, and we calculate how much the x-value has changed between those points, then the slope tells us how much the y value has also changed.
 
-So for the line ```y = 1 * x```, if we follow the line from x = 0 to x = 5, the slope tells us how much the y values have changed over this distance. 
+So for the line ```y = 1 * x```, if we follow the line from `x = 0` to `x = 5`, the slope tells us how much the y values have changed over this distance. 
 
 The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to 5, y also changes from 0 to 5.
 
