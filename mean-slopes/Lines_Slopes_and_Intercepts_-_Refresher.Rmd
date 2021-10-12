@@ -178,7 +178,7 @@ The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to
 
 (This graph shows slightly more of the x and y axes than the previous graphs, as we will need this for the line we plot after this one).
 
-```{python}
+```{python tags=c("hide-cell")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 axes_func(8,8,-30,31, five_ticks = True)
 x_long = np.arange(-30,31)
