@@ -1,7 +1,7 @@
 ---
 jupyter:
   jupytext:
-    formats: Rmd,ipynb
+    formats: Rmd
     text_representation:
       extension: .Rmd
       format_name: rmarkdown
@@ -19,7 +19,7 @@ The graph below shows the $x$ axis, the $y$ axis and the *origin*. Any point on 
 
 Note: theoretically these axes (and all the lines we will plot on them) run infinitely in the directions they travel in. However, as your screen isn't infinite, they are truncated for the purpose of display.
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 import numpy as np
 import matplotlib.pyplot as plt
@@ -89,7 +89,7 @@ These axes provide us a way of visualising the relationship between two sets of 
 
 Let's plot the point `(x = 5, y = 5)`; it is shown as a red 'x' on the graph below:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 axes_func(8,8,-10,11)
 plt.plot(5,5, 'X', color = 'darkred', markersize = 12, label = '(x = 5, y = 5)')
@@ -108,7 +108,7 @@ when `x = 10` then `y = 10` and so on.
 
 The equation for this line is `y = x`, and this line is shown in red below.
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 x = np.arange(-10, 11)
 y = x
@@ -124,7 +124,7 @@ If we know the equation for the line, we can work out which points are on the li
 
 The table below shows the x and y coordinates for some of the points on the line ```y = x```. As you can see, whatever x equals, y equals the same number.
 
-```{python}
+```{python tags=c("hide-input")}
 df = pd.DataFrame({'x coordinate:': x, 'y coordinate:': y})
 df.index = np.repeat('', len(df))
 display(df)
@@ -134,7 +134,7 @@ Another way to write ```y = x``` is ```y = 1 * x```, as anything multiplied by 1
 
 What happens if we change that '1' in ```y = 1 * x``` to another number? Let's change that number from '1' to '5'. The graph below shows, in blue, the line for the equation ```y = 5 * x```. Our original line ```y = 1 * x``` is also shown, in red.
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = 5*x
 axes_func(8,8,-10,11)
@@ -161,7 +161,7 @@ where `x = 5`, `y` equals 5 times the value of `x`... so `y = 25` etc.
 
 The table below shows this for a set of points on the line ```y = 5 * x```:
 
-```{python}
+```{python tags=c("hide-input")}
 df = pd.DataFrame({'x coordinate:': x, 'y coordinate:': y1})
 df.index = np.repeat('', len(df))
 display(df)
@@ -178,7 +178,7 @@ The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to
 
 (This graph shows slightly more of the x and y axes than the previous graphs, as we will need this for the line we plot after this one).
 
-```{python tags=c("hide-cell")}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 axes_func(8,8,-30,31, five_ticks = True)
 x_long = np.arange(-30,31)
@@ -193,7 +193,7 @@ plt.legend();
 
 The graph below shows the same change in x (from 0 to 5) for the line ```y = 5 * x```.
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 axes_func(8,8,-30,31, five_ticks = True)
 plt.plot([5, 0, 5], [25,25, 0], 'x', color = 'black')
@@ -207,7 +207,7 @@ plt.legend();
 
 If you compare the two graphs, you can see that, relative to the line ```y = 1 * x```, on the line ```y = 5 * x``` the value of y has changed a lot more for the same 5 point increase in x. It has changed by 5 times the amount. This may be clearer in the graph below:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 axes_func(8,8,-30,31, five_ticks = True)
 plt.plot(x_long,y, color = 'red', label = 'y = 1 * x')
@@ -230,7 +230,7 @@ Conversely, for the line ```y = 1 * x```, as the line moves 5 points along the x
 
 What would the graph look like if we change the slope of the line to 10, instead of 1? This new line, ```y = 10 * x```, is shown below, in green.
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y2 = 10*x
 axes_func(8,8,-30,31, five_ticks = True)
@@ -248,7 +248,7 @@ But what about if we make the slope negative?
 
 Let's try making the slope -5. The line for ```y = -5 * x``` is shown below, as a dashed line in dark blue. For comparison, the line ```y = 5 * x``` is also shown, as a solid line in lighter blue.
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y3 = -5 * x
 axes_func(8,8,-10,11)
@@ -263,7 +263,7 @@ So changing the sign of the slope (from positive 5 to negative 5) has reversed t
 
 The graph below shows multiple lines, so that you can see the relationship between the size of the slope (large or small), and the sign of the slope (positive or negative - lines with negative slopes are shown as dashed lines).
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y4 = -x_long
 y6 = -10 *x
@@ -285,7 +285,7 @@ We can change the intercept of a line by adding or subtracting a quantity in the
 
 The graph below shows two lines. One we have seen before, ```y = 1 * x``` (shown in blue), and a new line ```y = 1 * x + 5``` (shown in gold).
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = x_long
 y2 = x_long + 5
@@ -305,7 +305,7 @@ If `x = 2`, y equals 1 times the value of x, plus the intercept: so `y = 2 + 5 =
 
 That's all there is to it. Adding or subtracting an intercept from a line simply moves the line up and down the y axis. If the rest of the equation is the same, that is all that changes. This is true regardless of what the slope is:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = 10 * x
 y2 = 10 * x + 5
@@ -317,7 +317,7 @@ plt.legend();
 
 Let's see what happens if we set the intercept to -5, rather than postive 5:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = 5 * x
 y2 = 5 *  x + 5
@@ -335,7 +335,7 @@ A positive intercept moves the line upwards away from the origin.
 
 This is also true if the slope is negative, as can be seen from the graph below:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 y1 = -5 * x
 y2 = -5 *  x + 5
@@ -366,7 +366,7 @@ The scatterplot below shows the `Clarity` ratings and the `Overall Quality` rati
 
 Each point on the graph shows both ratings for one course. The x-coordinate of the point shows that course's `Clarity` rating, and the y-coordinate shows the `Overall Quality` rating:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 clarity = ratings['Clarity'].copy()
 quality = ratings['Overall Quality'].copy()
@@ -381,7 +381,7 @@ We can fit a line to this data by using mathematical or computational techniques
 
 Fitting a line can help us describe the strength and direction of the relationship between `Clarity` and `Overall Quality`:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 lin_reg = scipy.stats.linregress(clarity, quality)
 slope = lin_reg[0]
@@ -414,7 +414,7 @@ We could use the `Clarity` score to predict the `Overall Quality` rating for tha
 
 Let's say the `Clarity` rating of the new course is 3.6. The graph below shows how we would use this `Clarity` score to predict the `Overall Quality` score that the course would get. We would generate this prediction by checking what the y coordinate is for the point on the line where `x = 3.6`:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 predict = intercept + slope * 3.6
 plt.figure(figsize = (8,8))
@@ -443,7 +443,7 @@ With an intercept of 0, the line would have the correct slope, but it would be t
 The graph below shows a green line which has the same slope as the best fitting line, but has an intercept of 0. You can see that it does not fit the data well at all. If we use that line to make predictions, they would be very inaccurate.
 <!-- #endregion -->
 
-```{python}
+```{python tags=c("hide-input")}
 bad_line = slope*clarity
 bad_predict = 3.6 * slope
 plt.figure(figsize = (8,8))
@@ -459,7 +459,7 @@ plt.legend(bbox_to_anchor = (1,1));
 
 Let's plot the `Clarity` ratings, the `Overall Quality` ratings, the best-fitting line, and the line with the incorrect intercept on a graph which also shows the origin, to see more clearly how they relate to the lines we plotted earlier:
 
-```{python}
+```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
 x_points = np.linspace(-5, 5)
 good_line = intercept + slope * x_points
