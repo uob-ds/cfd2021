@@ -10,7 +10,7 @@ delete-ipynbs:
 	# Convert newer .Rmd file to ipynb file.
 	jupytext --to ipynb $<
 
-html: bibliography delete-ipynbs $(IPYNBS)
+html: suid bibliography delete-ipynbs $(IPYNBS)
 	# For ucb_pages module
 	( export PYTHONPATH="${PYTHONPATH}:${PWD}" && jupyter-book build . )
 
@@ -29,3 +29,6 @@ BIBLIOGRAPHIES= bib/data-science-bib/data_science.bib \
 
 bibliography: $(BIBLIOGRAPHIES)
 	cat $(BIBLIOGRAPHIES) > _references.bib
+
+suid:
+	git submodule update --init --recursive
