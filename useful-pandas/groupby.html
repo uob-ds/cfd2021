@@ -988,7 +988,7 @@ by <a class="reference external" href="http://vanderplas.com">Jake Vanderplas</a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x10b1e0b50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fa278b041f0&gt;
 </pre></div>
 </div>
 </div>
@@ -1232,6 +1232,14 @@ fare    12.649753
 dtype: float64
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_43175/3168374954.py:1: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  print(&#39;1st mean&#39;, df[df[&#39;class&#39;] == &#39;1st&#39;].mean())
+/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_43175/3168374954.py:2: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  print(&#39;2nd mean&#39;, df[df[&#39;class&#39;] == &#39;2nd&#39;].mean())
+/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_43175/3168374954.py:3: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  print(&#39;3rd mean&#39;, df[df[&#39;class&#39;] == &#39;3rd&#39;].mean())
+</pre></div>
+</div>
 </div>
 </div>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">mean</span></code> function only returned results for the numerical
@@ -1257,40 +1265,40 @@ Canada                    33
 Norway                    26
 France                    23
 Belgium                   22
-Switzerland               17
 Bulgaria                  17
+Switzerland               17
 Scotland                  16
 Croatia (Modern)          12
 Croatia                   11
 Channel Islands           10
-Wales                      8
 Spain                      8
+Wales                      8
 Hungary                    7
 Denmark                    7
 India                      7
 Argentina                  7
-South Africa               6
 Turkey                     6
+South Africa               6
 Germany                    5
-Slovenia                   4
 Italy                      4
 Bosnia                     4
+Slovenia                   4
 Poland                     3
+Austria                    2
 Russia                     2
-Australia                  2
 Greece                     2
 Siam                       2
 Peru                       2
+Australia                  2
 Uruguay                    2
-Austria                    2
-Egypt                      1
-Cuba                       1
 Syria                      1
 Japan                      1
-Latvia                     1
-Slovakia (Modern day)      1
+Egypt                      1
 China/Hong Kong            1
+Latvia                     1
 Yugoslavia                 1
+Slovakia (Modern day)      1
+Cuba                       1
 Mexico                     1
 Name: country, dtype: int64
 </pre></div>
@@ -1758,7 +1766,7 @@ we can get a new GroupBy object, that contains only the <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x113b35490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x7fa278b282e0&gt;
 </pre></div>
 </div>
 </div>
@@ -1865,7 +1873,7 @@ by:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x10b1e08b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fa2887b7df0&gt;
 </pre></div>
 </div>
 </div>
