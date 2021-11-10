@@ -185,6 +185,18 @@ You might want to check the instructions for configuring the build at
   files, and rebuild `.md` files from more recent `.ipynb` files.
 * Review in browser
 
+>> Peter: if config is ok, can start here
+
+need to do
+conda install nbconvert
+[to install library needed for deepnote links]
+
+before make html:
+git submodule update --init
+make html
+make github
+(to push changes to github repo)
+
 ### Shipping
 
 * Final check
