@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Logistic regression &#8212; Coding for Data - 2021 edition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,19 +34,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -90,7 +91,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   Coding for data
  </span>
@@ -176,7 +177,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   On code
  </span>
@@ -228,7 +229,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data types
  </span>
@@ -270,7 +271,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Arrays
  </span>
@@ -317,7 +318,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Iteration
  </span>
@@ -344,7 +345,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data frames
  </span>
@@ -381,7 +382,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Population and permutation
  </span>
@@ -413,7 +414,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More building blocks
  </span>
@@ -450,7 +451,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
@@ -482,7 +483,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The mean and straight lines
  </span>
@@ -549,7 +550,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Classification
  </span>
@@ -596,7 +597,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Useful pandas
  </span>
@@ -618,7 +619,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More on regression
  </span>
@@ -630,7 +631,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Confidence
  </span>
@@ -697,7 +698,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The end of the beginning
  </span>
@@ -904,7 +905,7 @@
         
               <div>
                 
-  <div class="section" id="logistic-regression">
+  <section id="logistic-regression">
 <h1>Logistic regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h1>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
@@ -1206,7 +1207,7 @@ in:</p>
 </table>
 </div></div></div>
 </div>
-<div class="section" id="dummy-variables">
+<section id="dummy-variables">
 <h2>Dummy Variables<a class="headerlink" href="#dummy-variables" title="Permalink to this headline">¶</a></h2>
 <p>We will soon find ourselves wanting to do calculations on the values in the
 “Appetite” column, and we cannot easily do that with the current string values
@@ -1302,8 +1303,8 @@ with higher hemoglobin tend to have good appetite (<code class="docutils literal
 1).</p>
 <p>Now we start to get more formal, and develop a model with which we predict the
 <code class="docutils literal notranslate"><span class="pre">appetite_dummy</span></code> values from the  <code class="docutils literal notranslate"><span class="pre">Hemoglobin</span></code> values.</p>
-</div>
-<div class="section" id="how-about-linear-regression">
+</section>
+<section id="how-about-linear-regression">
 <h2>How about linear regression?<a class="headerlink" href="#how-about-linear-regression" title="Permalink to this headline">¶</a></h2>
 <p>Remember that, in linear regression, we predict scores on the <em>outcome</em>
 variable (or column) using a straight-line relationship of the <em>predictor</em>
@@ -1477,8 +1478,8 @@ course, cannot occur in the <code class="docutils literal notranslate"><span cla
 fairly confident of predicting a 1 (“good”) value for a hemoglobin above 12.5, but we are increasingly less confident about predicting a 1 value as hemoglobin drops down to about 7.5, at which point we become confident about predicting a 0 value.</p>
 <p>These reflections make as wonder whether we should be using something other
 than a simple, unconstrained straight line for our predictions.</p>
-</div>
-<div class="section" id="another-prediction-line">
+</section>
+<section id="another-prediction-line">
 <h2>Another prediction line<a class="headerlink" href="#another-prediction-line" title="Permalink to this headline">¶</a></h2>
 <p>Here’s another prediction line we might use for <code class="docutils literal notranslate"><span class="pre">appetite_d</span></code>, with the
 predicted values.</p>
@@ -1591,8 +1592,8 @@ the logit transformation:</p>
 <p>Now we have a straight line, with an intercept and slope, suitable for
 <code class="docutils literal notranslate"><span class="pre">minimize</span></code>.  The next few sections go into more detail on the odds-ratio and
 logarithm steps.</p>
-</div>
-<div class="section" id="probability-and-odds">
+</section>
+<section id="probability-and-odds">
 <h2>Probability and Odds<a class="headerlink" href="#probability-and-odds" title="Permalink to this headline">¶</a></h2>
 <p>For logistic regression, in contrast to linear regression, we are interested in
 predicting the <em>probability of an observation falling into a particular outcome
@@ -1711,8 +1712,8 @@ values to odds ratios for our appetite predictions, we get the following:</p>
 predictions very close to 0) to very large (for p values very close to 1).</p>
 <p>Notice too that our graph looks exponential, and we want it to be a straight
 line.   Our next step is to apply a <em>logarithm</em> transformation.</p>
-</div>
-<div class="section" id="the-logarithm-transform">
+</section>
+<section id="the-logarithm-transform">
 <h2>The logarithm transform<a class="headerlink" href="#the-logarithm-transform" title="Permalink to this headline">¶</a></h2>
 <p>See the <a class="reference internal" href="logarithms_refreshed.html"><span class="doc std std-doc">logarithm refresher</span></a> page for more background on
 logarithms.</p>
@@ -1730,8 +1731,8 @@ transformations that convert an exponential curve into a straight line.</p>
 <img alt="../_images/logistic_regression_58_0.png" src="../_images/logistic_regression_58_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="the-logit-transform-and-its-inverse">
+</section>
+<section id="the-logit-transform-and-its-inverse">
 <h2>The logit transform and its inverse<a class="headerlink" href="#the-logit-transform-and-its-inverse" title="Permalink to this headline">¶</a></h2>
 <p>The logit transformation from the sigmoid curve to the straight line consists
 of two steps:</p>
@@ -1818,8 +1819,8 @@ results of applying <code class="docutils literal notranslate"><span class="pre"
 <img alt="../_images/logistic_regression_70_0.png" src="../_images/logistic_regression_70_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="effect-of-the-logit-slope-and-intercept-on-the-sigmoid">
+</section>
+<section id="effect-of-the-logit-slope-and-intercept-on-the-sigmoid">
 <h2>Effect of the Logit slope and intercept on the sigmoid<a class="headerlink" href="#effect-of-the-logit-slope-and-intercept-on-the-sigmoid" title="Permalink to this headline">¶</a></h2>
 <p>Changing the intercept of the logit (log-odds) straight line moves the
 corresponding inverse logit sigmoid curve left and right on the horizontal
@@ -1864,8 +1865,8 @@ flatter or steeper:</p>
 <img alt="../_images/logistic_regression_74_0.png" src="../_images/logistic_regression_74_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="a-first-pass-at-logistic-regression">
+</section>
+<section id="a-first-pass-at-logistic-regression">
 <h2>A first-pass at logistic regression<a class="headerlink" href="#a-first-pass-at-logistic-regression" title="Permalink to this headline">¶</a></h2>
 <p>You may now see how we could use <code class="docutils literal notranslate"><span class="pre">minimize</span></code> with a slope and intercept.</p>
 <p>Remember that <code class="docutils literal notranslate"><span class="pre">minimize</span></code> needs a <em>cost function</em> that takes some parameters -
@@ -2011,8 +2012,8 @@ our guessed intercept an slope of -7 and 0.8?</p>
 <img alt="../_images/logistic_regression_90_0.png" src="../_images/logistic_regression_90_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="a-different-measure-of-prediction-error">
+</section>
+<section id="a-different-measure-of-prediction-error">
 <h2>A different measure of prediction error<a class="headerlink" href="#a-different-measure-of-prediction-error" title="Permalink to this headline">¶</a></h2>
 <p>Our sigmoid prediction from sum of squares above looks convincing enough, but,
 is there a better way of scoring the predictions from our line, than sum of
@@ -2813,8 +2814,8 @@ to see if they are reasonable.</p>
 <img alt="../_images/logistic_regression_121_0.png" src="../_images/logistic_regression_121_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="a-computation-trick-for-the-likelihood">
+</section>
+<section id="a-computation-trick-for-the-likelihood">
 <h2>A computation trick for the likelihood<a class="headerlink" href="#a-computation-trick-for-the-likelihood" title="Permalink to this headline">¶</a></h2>
 <p>As you have seen, the likelihood values can be, and often are, very small, and
 close to zero.</p>
@@ -2930,7 +2931,7 @@ instead of the likelihood, in our cost function.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_43054/4100043809.py:2: RuntimeWarning: divide by zero encountered in log
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_7/h5j1wn6n2b5c2qwh5dtr3jlm0000gq/T/ipykernel_76145/4100043809.py:2: RuntimeWarning: divide by zero encountered in log
   plt.plot(likelihood_values, np.log(likelihood_values))
 </pre></div>
 </div>
@@ -3025,8 +3026,8 @@ version that used the likelihood:</p>
 <p>You have just seen the standard calculations behind most packages that
 implement logistic regression.</p>
 <p>To show this is standard, let us do the same regression in Statsmodels</p>
-</div>
-<div class="section" id="logistic-regression-with-statsmodes">
+</section>
+<section id="logistic-regression-with-statsmodes">
 <h2>Logistic Regression with Statsmodes<a class="headerlink" href="#logistic-regression-with-statsmodes" title="Permalink to this headline">¶</a></h2>
 <p>As with linear regression, we can easily perform logistic regression using
 Statsmodels.</p>
@@ -3066,10 +3067,10 @@ Statsmodels.</p>
   <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>  <td>     1</td>  
 </tr>
 <tr>
-  <th>Date:</th>            <td>Mon, 08 Nov 2021</td> <th>  Pseudo R-squ.:     </th>  <td>0.4976</td>  
+  <th>Date:</th>            <td>Fri, 12 Nov 2021</td> <th>  Pseudo R-squ.:     </th>  <td>0.4976</td>  
 </tr>
 <tr>
-  <th>Time:</th>                <td>16:50:15</td>     <th>  Log-Likelihood:    </th> <td> -29.168</td> 
+  <th>Time:</th>                <td>19:28:36</td>     <th>  Log-Likelihood:    </th> <td> -29.168</td> 
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td> -58.054</td> 
@@ -3153,12 +3154,12 @@ the two methods is:</p>
 </div>
 </div>
 <p>That is very close to 0. The models are making almost identical predictions.</p>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial has shown you how to do binary logistic regression with one numerical predictor variable.</p>
-</div>
-<div class="section" id="exercises-for-reflection">
+</section>
+<section id="exercises-for-reflection">
 <h2>Exercises for reflection<a class="headerlink" href="#exercises-for-reflection" title="Permalink to this headline">¶</a></h2>
 <p>You might want to read the <a class="reference internal" href="logarithms_refreshed.html"><span class="doc std std-doc">logarithm refresher</span></a> page for
 these questions.</p>
@@ -3185,8 +3186,8 @@ base <code class="docutils literal notranslate"><span class="pre">np.e</span></c
 <p>Reflect, using the reasoning here, then try it and see.</p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
