@@ -169,16 +169,18 @@ df.index = np.repeat('', len(df))
 display(df)
 ```
 
+<!-- #region -->
 Another way of thinking of this is: if we take any two points on the line, and we calculate how much the x-value has changed between those points, then the slope tells us how much the y value has also changed.
 
 So for the line ```y = 1 * x```, if we follow the line from `x = 0` to `x = 5`, the slope tells us how much the y values have changed over this distance. One way of thinking of this is that the slope is the 'rise' (the change in y values along the line) dividied by the 'run' (the change in the x values along the line):
 
-<center> <br>$$\text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}}$$ </center>
-<br>
+$$\text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}}$$
+
 
 The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to 5, y also changes from 0 to 5.
 
 (This graph shows slightly more of the x and y axes than the previous graphs, as we will need this for the line we plot after this one).
+<!-- #endregion -->
 
 ```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -399,7 +401,7 @@ plt.legend();
 
 The equation for the best-fitting straight line is:
 
-$y =  0.92 * x +  0.32$
+$$y =  0.92 * x +  0.32$$
 
 (Remember that in this case "x" is the `Clarity` rating!)
 
