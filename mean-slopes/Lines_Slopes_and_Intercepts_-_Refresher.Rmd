@@ -36,11 +36,15 @@ plt.style.use('fivethirtyeight')
 axes_func(8,8,-10,11);    
 ```
 
-Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture:
 <br>
-<img src="origin.gif" align="center">
+You may be more familiar with seeing the numbers appear on the axes, as in this picture:
 <br>
-<center><i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)</center></i>
+
+![](origin.gif)
+
+<br>
+
+<i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)</i>
 <br>
 
 The graphs we will plot in this notebook display the numbers on the side of the figure, rather than on the axes themselves. This shows the same information, just in a different way.
