@@ -351,6 +351,7 @@ plt.legend();
 ```
 
 ### In summary: the slope determines the steepness of the line. The intercept moves the line up and down the y axis, relative to the origin.
+<br>
 
 
 # Why do we care?
