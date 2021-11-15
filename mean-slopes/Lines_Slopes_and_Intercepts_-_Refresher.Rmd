@@ -1,7 +1,7 @@
 ---
 jupyter:
   jupytext:
-    formats: Rmd,ipynb
+    formats: Rmd
     text_representation:
       extension: .Rmd
       format_name: rmarkdown
@@ -27,58 +27,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats
 import pandas as pd
+from refresher_plots import axes_func, interactive_plot
 
 # Make plots look a little bit more fancy
 plt.style.use('fivethirtyeight')
-
-# a fucntion for a plot showing the origin, with arguments to adjust the display options as needed by this tutorial
-def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, five_ticks = False, double_y = False,
-             five_ticks_y = False):
-  
-    # create a new figure?
-    if new_fig == True:
-        plt.figure(figsize = (fig_size_1,fig_size_2))
-        
-    # create points for the x axis
-    x_axis = np.arange(low_ax_lim, up_ax_lim)
     
-    # should the y axis been double the length of the x axis?
-    if double_y == False:
-        y_axis = np.arange(low_ax_lim, up_ax_lim)
-    else:
-        y_axis = np.arange(low_ax_lim*2, up_ax_lim*2)
-        
-    # plot and label the axes and the origin
-    plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-    plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-    plt.xlabel('X Axis')
-    plt.ylabel('Y Axis')
-    plt.plot(0,0, 'o', color = 'black', markersize = 14, label = 'The Origin (x = 0, y = 0)')
-    
-    # set the limits of the axes
-    plt.xlim(min(x_axis), max(x_axis))
-    plt.ylim(min(y_axis), max(y_axis))
-    
-    # show the axes ticks in intervals of 5?
-    if five_ticks == False:
-        plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-    else:
-        plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 5))
-        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
-    if five_ticks_y == True:
-        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
-    
-    # show the legend
-    plt.legend()
-    
-    
+# create a plot    
 axes_func(8,8,-10,11);    
 ```
 
 Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture:
 <br>
-![](origin.gif) 
+<img src="origin.gif" align="center">
 <br>
 <center><i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)</center></i>
 <br>
@@ -87,7 +47,7 @@ The graphs we will plot in this notebook display the numbers on the side of the 
 
 These axes provide us a way of visualising the relationship between two sets of data. Why is this important?:
 
-><i><center>'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' </i> <br> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)</center>
+><i><center>'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' </i> <br> </center> <center> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)</center>
 
 Let's plot the point `(x = 5, y = 5)`; it is shown as a red 'x' on the graph below: 
 
@@ -352,6 +312,7 @@ plt.legend();
 ```
 
 ### In summary: the slope determines the steepness of the line. The intercept moves the line up and down the y axis, relative to the origin.
+<br>
 
 
 # Why do we care?
@@ -361,7 +322,7 @@ We should care about the equations for lines, because fitting a line to a set of
 The dataframe below shows some data from the [students ratings dataset](../data/rate_my_professors):
 
 ```{python}
-ratings = pd.read_csv('https://raw.githubusercontent.com/matthew-brett/cfd2020/master/data/rate_my_course.csv')
+ratings = pd.read_csv('student_ratings.csv')
 ratings = ratings[['Discipline', 'Clarity', 'Overall Quality']]
 ratings.head(10)
 ```
@@ -494,33 +455,7 @@ slope = 1
 intercept = 0
 
 # do not alter the code below this point
-
-plt.figure(figsize = (8,8))
-x = np.arange(-10, 11)
-y = slope * x + intercept
-plt.plot(x, y, label = 'y = '+str(slope)+' * x + '+str(intercept))
-biggest_abs_x = np.max(np.abs([np.min(x), np.max(x)]))
-biggest_abs_y = np.max(np.abs([np.min(y), np.max(y)]))
-x_axis = np.arange(-biggest_abs_x, biggest_abs_x+1)
-y_axis = np.arange(-biggest_abs_y , biggest_abs_y +1)
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-
-max_x_axis = np.max(x_axis)
-if max_x_axis == 0:
-    max_x_axis = max_x_axis + 0.05
-    
-max_y_axis = np.max(y_axis)
-if max_y_axis == 0:
-    max_y_axis = max_y_axis + 0.05
-    
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, max_x_axis/10))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, max_y_axis/10))
-plt.legend()
-plt.show()
+interactive_plot(intercept, slope)
 ```
 
 ```{python}
