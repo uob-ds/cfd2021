@@ -876,52 +876,12 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">refresher_plots</span> <span class="kn">import</span> <span class="n">axes_func</span><span class="p">,</span> <span class="n">interactive_plot</span>
 
 <span class="c1"># Make plots look a little bit more fancy</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
-
-<span class="c1"># a fucntion for a plot showing the origin, with arguments to adjust the display options as needed by this tutorial</span>
-<span class="k">def</span> <span class="nf">axes_func</span><span class="p">(</span><span class="n">fig_size_1</span><span class="p">,</span> <span class="n">fig_size_2</span><span class="p">,</span> <span class="n">low_ax_lim</span><span class="p">,</span> <span class="n">up_ax_lim</span><span class="p">,</span> <span class="n">new_fig</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">five_ticks</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">double_y</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-             <span class="n">five_ticks_y</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-  
-    <span class="c1"># create a new figure?</span>
-    <span class="k">if</span> <span class="n">new_fig</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="n">fig_size_1</span><span class="p">,</span><span class="n">fig_size_2</span><span class="p">))</span>
-        
-    <span class="c1"># create points for the x axis</span>
-    <span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">low_ax_lim</span><span class="p">,</span> <span class="n">up_ax_lim</span><span class="p">)</span>
     
-    <span class="c1"># should the y axis been double the length of the x axis?</span>
-    <span class="k">if</span> <span class="n">double_y</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-        <span class="n">y_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">low_ax_lim</span><span class="p">,</span> <span class="n">up_ax_lim</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">y_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">low_ax_lim</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">up_ax_lim</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-        
-    <span class="c1"># plot and label the axes and the origin</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_axis</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)),</span> <span class="n">y_axis</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X Axis&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y Axis&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;The Origin (x = 0, y = 0)&#39;</span><span class="p">)</span>
-    
-    <span class="c1"># set the limits of the axes</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x_axis</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_axis</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">y_axis</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">y_axis</span><span class="p">))</span>
-    
-    <span class="c1"># show the axes ticks in intervals of 5?</span>
-    <span class="k">if</span> <span class="n">five_ticks</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">five_ticks_y</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-    
-    <span class="c1"># show the legend</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-    
-    
+<span class="c1"># create a plot    </span>
 <span class="n">axes_func</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">);</span>    
 </pre></div>
 </div>
@@ -932,14 +892,14 @@
 </div>
 <p>Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture:
 <br>
-<img alt="" src="../_images/origin.gif" />
+<img src="origin.gif" align="center">
 <br></p>
 <center><i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)</center></i>
 <br>
 <p>The graphs we will plot in this notebook display the numbers on the side of the figure, rather than on the axes themselves. This shows the same information, just in a different way.</p>
 <p>These axes provide us a way of visualising the relationship between two sets of data. Why is this important?:</p>
 <blockquote>
-<div><p><i><center>’The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by […] mistakes in the data acquisition.’ </i> <br> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)</center></p>
+<div><p><i><center>’The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by […] mistakes in the data acquisition.’ </i> <br> </center> <center> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)</center></p>
 </div></blockquote>
 <p>Let’s plot the point <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">=</span> <span class="pre">5,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">5)</span></code>; it is shown as a red ‘x’ on the graph below:</p>
 <div class="cell tag_hide-input docutils container">
@@ -1290,8 +1250,8 @@
 </div>
 <p>Another way of thinking of this is: if we take any two points on the line, and we calculate how much the x-value has changed between those points, then the slope tells us how much the y value has also changed.</p>
 <p>So for the line <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">*</span> <span class="pre">x</span></code>, if we follow the line from <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code>, the slope tells us how much the y values have changed over this distance. One way of thinking of this is that the slope is the ‘rise’ (the change in y values along the line) dividied by the ‘run’ (the change in the x values along the line):</p>
-<center> <br>$ \text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}} $ </center>
-<br>
+<div class="math notranslate nohighlight">
+\[\text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}}\]</div>
 <p>The graph below shows that, for the line <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">*</span> <span class="pre">x</span></code>, as x changes from 0 to 5, y also changes from 0 to 5.</p>
 <p>(This graph shows slightly more of the x and y axes than the previous graphs, as we will need this for the line we plot after this one).</p>
 <div class="cell tag_hide-input docutils container">
@@ -1500,7 +1460,7 @@
 </div>
 <div class="section" id="in-summary-the-slope-determines-the-steepness-of-the-line-the-intercept-moves-the-line-up-and-down-the-y-axis-relative-to-the-origin">
 <h2>In summary: the slope determines the steepness of the line. The intercept moves the line up and down the y axis, relative to the origin.<a class="headerlink" href="#in-summary-the-slope-determines-the-steepness-of-the-line-the-intercept-moves-the-line-up-and-down-the-y-axis-relative-to-the-origin" title="Permalink to this headline">¶</a></h2>
-</div>
+<br></div>
 </div>
 <div class="section" id="why-do-we-care">
 <h1>Why do we care?<a class="headerlink" href="#why-do-we-care" title="Permalink to this headline">¶</a></h1>
@@ -1508,7 +1468,7 @@
 <p>The dataframe below shows some data from the <a class="reference internal" href="../data/rate_my_professors.html"><span class="doc std std-doc">students ratings dataset</span></a>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/matthew-brett/cfd2020/master/data/rate_my_course.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;student_ratings.csv&#39;</span><span class="p">)</span>
 <span class="n">ratings</span> <span class="o">=</span> <span class="n">ratings</span><span class="p">[[</span><span class="s1">&#39;Discipline&#39;</span><span class="p">,</span> <span class="s1">&#39;Clarity&#39;</span><span class="p">,</span> <span class="s1">&#39;Overall Quality&#39;</span><span class="p">]]</span>
 <span class="n">ratings</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -1645,7 +1605,8 @@
 </div>
 </div>
 <p>The equation for the best-fitting straight line is:</p>
-<p><span class="math notranslate nohighlight">\(y =  0.92 * x +  0.32\)</span></p>
+<div class="math notranslate nohighlight">
+\[y =  0.92 * x +  0.32\]</div>
 <p>(Remember that in this case “x” is the <code class="docutils literal notranslate"><span class="pre">Clarity</span></code> rating!)</p>
 <p>0.92 is the slope.<br>
 0.32 is the intercept.</p>
@@ -1735,33 +1696,7 @@
 <span class="n">intercept</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># do not alter the code below this point</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">intercept</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;y = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; * x + &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">intercept</span><span class="p">))</span>
-<span class="n">biggest_abs_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)]))</span>
-<span class="n">biggest_abs_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)]))</span>
-<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">biggest_abs_x</span><span class="p">,</span> <span class="n">biggest_abs_x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">y_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">biggest_abs_y</span> <span class="p">,</span> <span class="n">biggest_abs_y</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_axis</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)),</span> <span class="n">y_axis</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X Axis&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y Axis&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;The Origin (x = 0, y = 0)&#39;</span><span class="p">)</span>
-
-<span class="n">max_x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x_axis</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">max_x_axis</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">max_x_axis</span> <span class="o">=</span> <span class="n">max_x_axis</span> <span class="o">+</span> <span class="mf">0.05</span>
-    
-<span class="n">max_y_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">max_y_axis</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">max_y_axis</span> <span class="o">=</span> <span class="n">max_y_axis</span> <span class="o">+</span> <span class="mf">0.05</span>
-    
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_x_axis</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_axis</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_axis</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_y_axis</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">interactive_plot</span><span class="p">(</span><span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
