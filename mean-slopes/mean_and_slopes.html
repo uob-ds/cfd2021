@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The mean and slopes &#8212; Coding for Data - 2021 edition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,19 +33,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -91,7 +90,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   Coding for data
  </span>
@@ -177,7 +176,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   On code
  </span>
@@ -229,7 +228,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Data types
  </span>
@@ -271,7 +270,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Arrays
  </span>
@@ -318,7 +317,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Iteration
  </span>
@@ -345,7 +344,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Data frames
  </span>
@@ -382,7 +381,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Population and permutation
  </span>
@@ -414,7 +413,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   More building blocks
  </span>
@@ -451,7 +450,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
@@ -483,7 +482,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   The mean and straight lines
  </span>
@@ -550,7 +549,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Classification
  </span>
@@ -597,7 +596,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Useful pandas
  </span>
@@ -619,7 +618,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   More on regression
  </span>
@@ -631,7 +630,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Confidence
  </span>
@@ -698,7 +697,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   The end of the beginning
  </span>
@@ -885,7 +884,7 @@
         
               <div>
                 
-  <section id="the-mean-and-slopes">
+  <div class="section" id="the-mean-and-slopes">
 <h1>The mean and slopes<a class="headerlink" href="#the-mean-and-slopes" title="Permalink to this headline">¶</a></h1>
 <p>In <a class="reference internal" href="mean_meaning.html"><span class="doc std std-doc">The Mean as Predictor</span></a>, we found that the mean had some good
 properties as a single best predictor for a whole distribution.</p>
@@ -1147,7 +1146,7 @@ of object.</p>
 </div>
 </div>
 </div>
-<section id="looking-for-straight-lines">
+<div class="section" id="looking-for-straight-lines">
 <h2>Looking for straight lines<a class="headerlink" href="#looking-for-straight-lines" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Hematocrit">Wikipedia page for PCV</a> says (at
 the time of writing):</p>
@@ -1186,8 +1185,8 @@ ask for other symbols such as plus marks (with <code class="docutils literal not
 <p>The line does look a bit like it has a slope of about 3.  But - is that true?
 Is the <em>best</em> slope 3?  What slope would we find, if we looked for the <em>best</em>
 slope?  What could <em>best</em> mean, for <em>best slope</em>?</p>
-</section>
-<section id="adjusting-axes">
+</div>
+<div class="section" id="adjusting-axes">
 <h2>Adjusting axes<a class="headerlink" href="#adjusting-axes" title="Permalink to this headline">¶</a></h2>
 <p>We would like to see what this graph looks like in relation to the origin -
 x=0, y=0.  In order to this, we can add a <code class="docutils literal notranslate"><span class="pre">plt.axis</span></code> function call, like this:</p>
@@ -1212,8 +1211,8 @@ x=0, y=0.  In order to this, we can add a <code class="docutils literal notransl
 <p>It does look plausible that this line goes through the origin, and that makes
 sense.  All hemoglobin is in red blood cells; we might expect the volume of red
 blood cells to be zero when the hemoglobin concentration is zero.</p>
-</section>
-<section id="putting-points-on-plots">
+</div>
+<div class="section" id="putting-points-on-plots">
 <h2>Putting points on plots<a class="headerlink" href="#putting-points-on-plots" title="Permalink to this headline">¶</a></h2>
 <p>Before we go on, we will need some machinery to plot arbitrary points on plots.</p>
 <p>In fact this works in exactly the same way as the points you have already seen
@@ -1230,7 +1229,7 @@ the second.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe280f1dfa0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fce60ee0ee0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/mean_and_slopes_17_1.png" src="../_images/mean_and_slopes_17_1.png" />
@@ -1246,14 +1245,14 @@ the second.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe2810239d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fce80ca8790&gt;]
 </pre></div>
 </div>
 <img alt="../_images/mean_and_slopes_19_1.png" src="../_images/mean_and_slopes_19_1.png" />
 </div>
 </div>
-</section>
-<section id="the-mean-as-applied-to-plots">
+</div>
+<div class="section" id="the-mean-as-applied-to-plots">
 <h2>The mean as applied to plots<a class="headerlink" href="#the-mean-as-applied-to-plots" title="Permalink to this headline">¶</a></h2>
 <p>We want a straight line that fits these points.</p>
 <p>The straight line should do the best job it can in <em>predicting</em> the PCV values from the HGB values.</p>
@@ -1300,7 +1299,7 @@ and 8, 8 and 9, and so on.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe260abf190&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fce80d8a0a0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/mean_and_slopes_24_1.png" src="../_images/mean_and_slopes_24_1.png" />
@@ -1339,14 +1338,14 @@ prediction.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe260a04910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fce60f23cd0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/mean_and_slopes_28_1.png" src="../_images/mean_and_slopes_28_1.png" />
 </div>
 </div>
-</section>
-<section id="finding-a-predicting-line">
+</div>
+<div class="section" id="finding-a-predicting-line">
 <h2>Finding a predicting line<a class="headerlink" href="#finding-a-predicting-line" title="Permalink to this headline">¶</a></h2>
 <p>The means per bin give some prediction of the PCV values from the HGB.  Can we
 do better?  Can we find a line that predicts the PCV data from the HGB data?</p>
@@ -1394,7 +1393,7 @@ y = c + x * s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe250c20310&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fce9089c7c0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/mean_and_slopes_34_1.png" src="../_images/mean_and_slopes_34_1.png" />
@@ -1435,8 +1434,8 @@ of PCV for each point, and its actual value.</p>
 <img alt="../_images/mean_and_slopes_38_0.png" src="../_images/mean_and_slopes_38_0.png" />
 </div>
 </div>
-</section>
-<section id="what-is-a-good-line">
+</div>
+<div class="section" id="what-is-a-good-line">
 <h2>What is a good line?<a class="headerlink" href="#what-is-a-good-line" title="Permalink to this headline">¶</a></h2>
 <p>We have guessed a slope, and so defined a line. We calculated the errors from
 our guessed line.</p>
@@ -1451,8 +1450,8 @@ us how good the line is, in terms of fitting the data.</p>
 <p>We will try and find a score (metric) that is <em>low</em> when the line is good, and
 <em>high</em> when the line is bad.   A low  means that the errors are low, in some
 sense, and a high score means the errors are high, in the same sense.</p>
-</section>
-<section id="a-dangerous-but-attractive-metric-for-the-line">
+</div>
+<div class="section" id="a-dangerous-but-attractive-metric-for-the-line">
 <h2>A dangerous, but attractive metric for the line<a class="headerlink" href="#a-dangerous-but-attractive-metric-for-the-line" title="Permalink to this headline">¶</a></h2>
 <p>One obvious idea for a metric is to add up all the errors, like this:</p>
 <div class="cell docutils container">
@@ -1532,8 +1531,8 @@ be negative, and the error will be large.</p>
 a line where we allow the intercept to be something other than zero, because we
 can fit all sorts of obviously bad lines by changing the intercept and the
 slope.  So, for now, let us choose another metric.</p>
-</section>
-<section id="a-better-metric-for-the-line">
+</div>
+<div class="section" id="a-better-metric-for-the-line">
 <h2>A better metric for the line<a class="headerlink" href="#a-better-metric-for-the-line" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="mean_meaning.html"><span class="doc std std-doc">The Mean as Predictor</span></a> section showed that the mean is the value
 with the smallest squared distance from the other values in the distribution.
@@ -1774,8 +1773,8 @@ best slope:</p>
 </div>
 </div>
 </div>
-</section>
-<section id="the-magic-of-maths">
+</div>
+<div class="section" id="the-magic-of-maths">
 <h2>The magic of maths<a class="headerlink" href="#the-magic-of-maths" title="Permalink to this headline">¶</a></h2>
 <p>We found the best (sum of squares) slope by trying lots of slopes, above, and then, rather more efficiently, by using <code class="docutils literal notranslate"><span class="pre">minimize</span></code> to do that job for us.</p>
 <p>You don’t need to understand the argument below, to follow this class, but in
@@ -1798,8 +1797,8 @@ algebra</span></a>.  It turns out like this:</p>
 values, where the intercept is zero.</p>
 <p>But - we won’t be using these mathematical short cuts in this course, we will
 be using <code class="docutils literal notranslate"><span class="pre">minimize</span></code> and friends to find the best slope by trial and error.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

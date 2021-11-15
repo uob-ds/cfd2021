@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Implementing the classifier &#8212; Coding for Data - 2021 edition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,19 +33,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -91,7 +90,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   Coding for data
  </span>
@@ -177,7 +176,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   On code
  </span>
@@ -229,7 +228,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Data types
  </span>
@@ -271,7 +270,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Arrays
  </span>
@@ -318,7 +317,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Iteration
  </span>
@@ -345,7 +344,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Data frames
  </span>
@@ -382,7 +381,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Population and permutation
  </span>
@@ -414,7 +413,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   More building blocks
  </span>
@@ -451,7 +450,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
@@ -483,7 +482,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   The mean and straight lines
  </span>
@@ -550,7 +549,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Classification
  </span>
@@ -597,7 +596,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Useful pandas
  </span>
@@ -619,7 +618,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   More on regression
  </span>
@@ -631,7 +630,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Confidence
  </span>
@@ -698,7 +697,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   The end of the beginning
  </span>
@@ -870,7 +869,7 @@
         
               <div>
                 
-  <section id="implementing-the-classifier">
+  <div class="section" id="implementing-the-classifier">
 <h1>Implementing the classifier<a class="headerlink" href="#implementing-the-classifier" title="Permalink to this headline">¶</a></h1>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
@@ -885,7 +884,7 @@
 </div>
 </div>
 <p>We are now ready to implement a <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbor classifier based on multiple attributes. We have used only two attributes so far, for ease of visualization. But usually predictions will be based on many attributes. Here is an example that shows how multiple attributes can be better than pairs.</p>
-<section id="banknote-authentication">
+<div class="section" id="banknote-authentication">
 <h2>Banknote authentication<a class="headerlink" href="#banknote-authentication" title="Permalink to this headline">¶</a></h2>
 <p>This time we’ll look at predicting whether a banknote (e.g., a $20 bill) is counterfeit or legitimate.  Researchers have put together a data set for us, based on photographs of many individual banknotes: some counterfeit, some legitimate.  They computed a few numbers from each image, using techniques that we won’t worry about for this course.  So, for each banknote, we know a few numbers that were computed from a photograph of it as well as its class (whether it is counterfeit or not).  Let’s load it into a table and take a look.</p>
 <p>If you are running on your laptop, you should download the
@@ -1005,8 +1004,8 @@ same directory as this notebook.</p>
 </div>
 </div>
 <p>There does seem to be a pattern, but it’s a pretty complex one.  Nonetheless, the <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbors classifier can still be used and will effectively “discover” patterns out of this.  This illustrates how powerful machine learning can be: it can effectively take advantage of even patterns that we would not have anticipated, or that we would have thought to “program into” the computer.</p>
-</section>
-<section id="multiple-attributes">
+</div>
+<div class="section" id="multiple-attributes">
 <h2>Multiple attributes<a class="headerlink" href="#multiple-attributes" title="Permalink to this headline">¶</a></h2>
 <p>So far I’ve been assuming that we have exactly 2 attributes that we can use to help us make our prediction.  What if we have more than 2?  For instance, what if we have 3 attributes?</p>
 <p>Here’s the cool part: you can use the same ideas for this case, too.  All you have to do is make a 3-dimensional scatterplot, instead of a 2-dimensional plot.  You can still use the <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbors classifier, but now computing distances in 3 dimensions instead of just 2.  It just works.  Very cool!</p>
@@ -1035,8 +1034,8 @@ same directory as this notebook.</p>
 <li><p>Gather a training set of examples where you know the values of the attributes as well as the correct prediction.</p></li>
 <li><p>To make predictions in the future, measure the value of the attributes and then use <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbor classification to predict the answer to the question.</p></li>
 </ol>
-</section>
-<section id="distance-in-multiple-dimensions">
+</div>
+<div class="section" id="distance-in-multiple-dimensions">
 <h2>Distance in Multiple Dimensions<a class="headerlink" href="#distance-in-multiple-dimensions" title="Permalink to this headline">¶</a></h2>
 <p>We know how to compute distance in 2-dimensional space. If we have a point at coordinates <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> and another at <span class="math notranslate nohighlight">\((x_1,y_1)\)</span>, the distance between them is</p>
 <div class="math notranslate nohighlight">
@@ -1543,8 +1542,8 @@ Name: Class, dtype: int64
 </div>
 </div>
 <p>Let’s see if we can implement a classifier based on all of the attributes. After that, we’ll see how accurate it is.</p>
-</section>
-<section id="a-plan-for-the-implementation">
+</div>
+<div class="section" id="a-plan-for-the-implementation">
 <h2>A Plan for the Implementation<a class="headerlink" href="#a-plan-for-the-implementation" title="Permalink to this headline">¶</a></h2>
 <p>It’s time to write some code to implement the classifier.  The input is a <code class="docutils literal notranslate"><span class="pre">point</span></code> that we want to classify.  The classifier works by finding the <span class="math notranslate nohighlight">\(k\)</span> nearest neighbors of <code class="docutils literal notranslate"><span class="pre">point</span></code> from the training set.  So, our approach will go like this:</p>
 <ol class="simple">
@@ -1568,8 +1567,8 @@ Name: Class, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="implementation-step-1">
+</div>
+<div class="section" id="implementation-step-1">
 <h2>Implementation Step 1<a class="headerlink" href="#implementation-step-1" title="Permalink to this headline">¶</a></h2>
 <p>To implement the first step for the kidney disease data, we had to compute the distance from each patient in the training set to <code class="docutils literal notranslate"><span class="pre">point</span></code>, sort them by distance, and take the <span class="math notranslate nohighlight">\(k\)</span> closest patients in the training set.</p>
 <p>That’s what we did in the previous section with the point corresponding to Alice. Let’s generalize that code. We’ll redefine <code class="docutils literal notranslate"><span class="pre">distance</span></code> here, just for convenience.</p>
@@ -1756,8 +1755,8 @@ Name: Class, dtype: int64
 </div></div></div>
 </div>
 <p>Bingo! The first row is the nearest neighbor, which is itself – there’s a 0 in the <code class="docutils literal notranslate"><span class="pre">Distance</span></code> column as expected. All five nearest neighbors are of Class 1, which is consistent with our earlier observation that Class 1 wines appear to be clumped together in some dimensions.</p>
-</section>
-<section id="implementation-steps-2-and-3">
+</div>
+<div class="section" id="implementation-steps-2-and-3">
 <h2>Implementation Steps 2 and 3<a class="headerlink" href="#implementation-steps-2-and-3" title="Permalink to this headline">¶</a></h2>
 <p>Next we need to take a “majority vote” of the nearest neighbors and assign our point the same class as the majority.</p>
 <div class="cell docutils container">
@@ -1810,8 +1809,8 @@ Name: Class, dtype: int64
 <p>This page has content from the <a class="reference external" href="https://github.com/data-8/textbook/blob/64b20f0/notebooks/Implementing_the_Classifier.ipynb">Implementing_the_Classifier</a> notebook of an older version of the <a class="reference external" href="https://inferentialthinking.com">UC Berkeley data science course</a>. See the Berkeley course section of the <a class="reference external" href="https://uob-ds.github.io/cfd2021/license">license file</a>.</p>
 </div>
 </p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
