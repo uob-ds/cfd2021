@@ -1,7 +1,7 @@
 ---
 jupyter:
   jupytext:
-    formats: Rmd,ipynb
+    formats: Rmd
     text_representation:
       extension: .Rmd
       format_name: rmarkdown
@@ -27,53 +27,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats
 import pandas as pd
-from interactive_plots import interactive_plot
+from refresher_plots import axes_func, interactive_plot
 
 # Make plots look a little bit more fancy
 plt.style.use('fivethirtyeight')
-
-# a fucntion for a plot showing the origin, with arguments to adjust the display options as needed by this tutorial
-def axes_func(fig_size_1, fig_size_2, low_ax_lim, up_ax_lim, new_fig = True, five_ticks = False, double_y = False,
-             five_ticks_y = False):
-  
-    # create a new figure?
-    if new_fig == True:
-        plt.figure(figsize = (fig_size_1,fig_size_2))
-        
-    # create points for the x axis
-    x_axis = np.arange(low_ax_lim, up_ax_lim)
     
-    # should the y axis been double the length of the x axis?
-    if double_y == False:
-        y_axis = np.arange(low_ax_lim, up_ax_lim)
-    else:
-        y_axis = np.arange(low_ax_lim*2, up_ax_lim*2)
-        
-    # plot and label the axes and the origin
-    plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-    plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-    plt.xlabel('X Axis')
-    plt.ylabel('Y Axis')
-    plt.plot(0,0, 'o', color = 'black', markersize = 14, label = 'The Origin (x = 0, y = 0)')
-    
-    # set the limits of the axes
-    plt.xlim(min(x_axis), max(x_axis))
-    plt.ylim(min(y_axis), max(y_axis))
-    
-    # show the axes ticks in intervals of 5?
-    if five_ticks == False:
-        plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 1))
-        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 1))
-    else:
-        plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, 5))
-        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
-    if five_ticks_y == True:
-        plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, 5))
-    
-    # show the legend
-    plt.legend()
-    
-    
+# create a plot    
 axes_func(8,8,-10,11);    
 ```
 
