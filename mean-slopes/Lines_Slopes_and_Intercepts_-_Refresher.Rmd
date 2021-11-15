@@ -6,7 +6,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.10.0
+      jupytext_version: 1.10.1
   kernelspec:
     display_name: Python 3
     language: python
@@ -14,6 +14,8 @@ jupyter:
 ---
 
 # What is a slope?
+
+By Peter Rush
 
 The graph below shows the $x$ axis, the $y$ axis and the *origin*. Any point on the graph can be specified by an $x$ coordinate and a $y$ coordinate. For instance, the origin is the point where `x = 0` and `y = 0`. 
 
@@ -78,16 +80,16 @@ Note: you may be more familiar with seeing the numbers appear on the axes, as in
 <br>
 ![](origin.gif) 
 <br>
-<center><i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)<center></i>
+<center><i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)</center></i>
 <br>
 
 The graphs we will plot in this notebook display the numbers on the side of the figure, rather than on the axes themselves. This shows the same information, just in a different way.
 
 These axes provide us a way of visualising the relationship between two sets of data. Why is this important?:
 
-><i><center>'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' </i> <br> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)<center>
+><i><center>'The dominant task of the human cortex is to extract visual information from the activity patterns on the retina. Our visual system is therefore exceedingly good at detecting patterns in visualized data sets. As a result, one can almost always see what is happening before it can be demonstrated through a quantitative analysis of the data. Visual data displays are also helpful at finding extreme data values, which are often caused by [...] mistakes in the data acquisition.' </i> <br> (page 51, Haslwanter, 2016, An Introduction to Statistics with Python)</center>
 
-Let's plot the point `(x = 5, y = 5)`; it is shown as a red 'x' on the graph below:
+Let's plot the point `(x = 5, y = 5)`; it is shown as a red 'x' on the graph below: 
 
 ```{python tags=c("hide-input")}
 # do not worry about any of the code in this notebook, it is just here to generate the graphs
@@ -171,7 +173,7 @@ Another way of thinking of this is: if we take any two points on the line, and w
 
 So for the line ```y = 1 * x```, if we follow the line from `x = 0` to `x = 5`, the slope tells us how much the y values have changed over this distance. One way of thinking of this is that the slope is the 'rise' (the change in y values along the line) dividied by the 'run' (the change in the x values along the line):
 
-<center> <br>$ \Large \text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}} $ <center>
+<center> <br>$ \text{slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\text{rise}}{\text{run}} $ </center>
 <br>
 
 The graph below shows that, for the line ```y = 1 * x```, as x changes from 0 to 5, y also changes from 0 to 5.
