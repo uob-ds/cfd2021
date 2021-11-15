@@ -27,6 +27,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats
 import pandas as pd
+from interactive_plots import interactive_plot
 
 # Make plots look a little bit more fancy
 plt.style.use('fivethirtyeight')
@@ -359,7 +360,7 @@ We should care about the equations for lines, because fitting a line to a set of
 The dataframe below shows some data from the [students ratings dataset](../data/rate_my_professors):
 
 ```{python}
-ratings = pd.read_csv('https://raw.githubusercontent.com/matthew-brett/cfd2020/master/data/rate_my_course.csv')
+ratings = pd.read_csv('student_ratings.csv')
 ratings = ratings[['Discipline', 'Clarity', 'Overall Quality']]
 ratings.head(10)
 ```
@@ -492,33 +493,7 @@ slope = 1
 intercept = 0
 
 # do not alter the code below this point
-
-plt.figure(figsize = (8,8))
-x = np.arange(-10, 11)
-y = slope * x + intercept
-plt.plot(x, y, label = 'y = '+str(slope)+' * x + '+str(intercept))
-biggest_abs_x = np.max(np.abs([np.min(x), np.max(x)]))
-biggest_abs_y = np.max(np.abs([np.min(y), np.max(y)]))
-x_axis = np.arange(-biggest_abs_x, biggest_abs_x+1)
-y_axis = np.arange(-biggest_abs_y , biggest_abs_y +1)
-plt.plot(x_axis, np.repeat(0, len(x_axis)), color = 'black')
-plt.plot(np.repeat(0, len(y_axis)), y_axis, color = 'black')
-plt.xlabel('X Axis')
-plt.ylabel('Y Axis')
-plt.plot(0,0, 'o', color = 'black', markersize = 8, label = 'The Origin (x = 0, y = 0)')
-
-max_x_axis = np.max(x_axis)
-if max_x_axis == 0:
-    max_x_axis = max_x_axis + 0.05
-    
-max_y_axis = np.max(y_axis)
-if max_y_axis == 0:
-    max_y_axis = max_y_axis + 0.05
-    
-plt.xticks(np.arange(np.min(x_axis), np.max(x_axis)+1, max_x_axis/10))
-plt.yticks(np.arange(np.min(y_axis), np.max(y_axis)+1, max_y_axis/10))
-plt.legend()
-plt.show()
+interactive_plot(intercept, slope)
 ```
 
 ```{python}
