@@ -13,9 +13,11 @@ jupyter:
     name: python3
 ---
 
-# What is a slope?
+# Lines, Slopes and Intercepts
 
 By Peter Rush
+
+# What is a slope?
 
 The graph below shows the $x$ axis, the $y$ axis and the *origin*. Any point on the graph can be specified by an $x$ coordinate and a $y$ coordinate. For instance, the origin is the point where `x = 0` and `y = 0`. 
 
