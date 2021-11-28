@@ -118,6 +118,8 @@ parts:
   - file: mean-slopes/optimization
   - file: mean-slopes/where_2d
   - file: mean-slopes/finding_lines
+    sections:
+    - file: mean-slopes/Lines_Slopes_and_Intercepts_-_Refresher
   - file: mean-slopes/using_minimize
   # isloping
   - file: mean-slopes/inference_on_slopes
