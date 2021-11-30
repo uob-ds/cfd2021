@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Testing the t test &#8212; Coding for Data - 2021 edition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,19 +34,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -88,7 +89,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   Coding for data
  </span>
@@ -174,7 +175,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   On code
  </span>
@@ -226,7 +227,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data types
  </span>
@@ -268,7 +269,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Arrays
  </span>
@@ -315,7 +316,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Iteration
  </span>
@@ -342,7 +343,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data frames
  </span>
@@ -379,7 +380,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Population and permutation
  </span>
@@ -411,7 +412,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More building blocks
  </span>
@@ -448,7 +449,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
@@ -480,7 +481,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The mean and straight lines
  </span>
@@ -516,10 +517,22 @@
    Where in 2D
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../mean-slopes/finding_lines.html">
    Finding lines
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mean-slopes/Lines_Slopes_and_Intercepts_-_Refresher.html">
+     Lines, Slopes and Intercepts - Refresher
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../mean-slopes/using_minimize.html">
@@ -547,7 +560,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Classification
  </span>
@@ -594,7 +607,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Useful pandas
  </span>
@@ -616,7 +629,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More on regression
  </span>
@@ -628,7 +641,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Confidence
  </span>
@@ -695,7 +708,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The end of the beginning
  </span>
@@ -829,7 +842,7 @@
         
               <div>
                 
-  <div class="section" id="testing-the-t-test">
+  <section id="testing-the-t-test">
 <h1>Testing the t test<a class="headerlink" href="#testing-the-t-test" title="Permalink to this headline">¶</a></h1>
 <p>One of the great advantages of using simulation is that you can test the
 assertions your teachers make.</p>
@@ -1008,7 +1021,7 @@ surprising at the 5% level — about 5% of the time.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.9859097 , 0.46461599, 0.91930718, 0.82069984, 0.14252943])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.14317497, 0.72169786, 0.74145918, 0.52551804, 0.39747255])
 </pre></div>
 </div>
 </div>
@@ -1023,7 +1036,7 @@ or smaller about 5% of the time.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.053
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.05
 </pre></div>
 </div>
 </div>
@@ -1050,7 +1063,7 @@ group of 3 and another of 37:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.25378569, 0.8227288 , 0.65639963, 0.01156432, 0.5777555 ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.31845234, 0.47926844, 0.69834161, 0.36966259, 0.37944532])
 </pre></div>
 </div>
 </div>
@@ -1065,7 +1078,7 @@ group of 3 and another of 37:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0504
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0542
 </pre></div>
 </div>
 </div>
@@ -1105,8 +1118,7 @@ distribution looks like this, with a <span class="math notranslate nohighlight">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4.72845568e-01, 4.49540316e-05, 1.75698939e-01, 8.72880932e-01,
-       8.46276468e-01])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.77762281, 0.94398665, 0.7728934 , 0.79854438, 0.70835666])
 </pre></div>
 </div>
 </div>
@@ -1122,7 +1134,7 @@ random differences as being surprising at the 5% level:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0679
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0722
 </pre></div>
 </div>
 </div>
@@ -1153,7 +1165,7 @@ random differences as being surprising at the 5% level:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0589
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0572
 </pre></div>
 </div>
 </div>
@@ -1197,7 +1209,7 @@ loop.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.836, 0.633, 0.728, 0.21 , 0.467])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.062, 0.206, 0.587, 0.652, 0.479])
 </pre></div>
 </div>
 </div>
@@ -1212,7 +1224,7 @@ loop.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.04
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.048
 </pre></div>
 </div>
 </div>
@@ -1220,7 +1232,7 @@ loop.</p>
 <p>It is more accurate than the t-test.   In general the permutation method is
 more accurate for data from not-normal distributions, as well being accurate
 for normal distributions.</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

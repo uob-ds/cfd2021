@@ -4,8 +4,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What is a slope? &#8212; Coding for Data - 2021 edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lines, Slopes and Intercepts - Refresher &#8212; Coding for Data - 2021 edition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,19 +34,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -55,6 +56,8 @@
     <link rel="shortcut icon" href="../_static/dsfe_favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using minimize" href="using_minimize.html" />
+    <link rel="prev" title="Finding lines" href="finding_lines.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,7 +91,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   Coding for data
  </span>
@@ -174,7 +177,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   On code
  </span>
@@ -226,7 +229,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data types
  </span>
@@ -268,7 +271,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Arrays
  </span>
@@ -315,7 +318,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Iteration
  </span>
@@ -342,7 +345,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data frames
  </span>
@@ -379,7 +382,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Population and permutation
  </span>
@@ -411,7 +414,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More building blocks
  </span>
@@ -448,7 +451,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
@@ -480,12 +483,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The mean and straight lines
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="mean.html">
    The mean
@@ -516,10 +519,22 @@
    Where in 2D
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="finding_lines.html">
    Finding lines
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lines, Slopes and Intercepts - Refresher
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="using_minimize.html">
@@ -547,7 +562,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Classification
  </span>
@@ -594,7 +609,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Useful pandas
  </span>
@@ -616,7 +631,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More on regression
  </span>
@@ -628,7 +643,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Confidence
  </span>
@@ -695,7 +710,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The end of the beginning
  </span>
@@ -828,6 +843,11 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
+   Lines, Slopes and Intercepts - Refresher
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-slope">
    What is a slope?
   </a>
  </li>
@@ -864,9 +884,12 @@
         
               <div>
                 
-  <div class="section" id="what-is-a-slope">
-<h1>What is a slope?<a class="headerlink" href="#what-is-a-slope" title="Permalink to this headline">¶</a></h1>
+  <section id="lines-slopes-and-intercepts-refresher">
+<h1>Lines, Slopes and Intercepts - Refresher<a class="headerlink" href="#lines-slopes-and-intercepts-refresher" title="Permalink to this headline">¶</a></h1>
 <p>By Peter Rush</p>
+</section>
+<section id="what-is-a-slope">
+<h1>What is a slope?<a class="headerlink" href="#what-is-a-slope" title="Permalink to this headline">¶</a></h1>
 <p>The graph below shows the <span class="math notranslate nohighlight">\(x\)</span> axis, the <span class="math notranslate nohighlight">\(y\)</span> axis and the <em>origin</em>. Any point on the graph can be specified by an <span class="math notranslate nohighlight">\(x\)</span> coordinate and a <span class="math notranslate nohighlight">\(y\)</span> coordinate. For instance, the origin is the point where <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <p>Note: theoretically these axes (and all the lines we will plot on them) run infinitely in the directions they travel in. However, as your screen isn’t infinite, they are truncated for the purpose of display.</p>
 <div class="cell tag_hide-input docutils container">
@@ -890,12 +913,13 @@
 <img alt="../_images/Lines_Slopes_and_Intercepts_-_Refresher_1_0.png" src="../_images/Lines_Slopes_and_Intercepts_-_Refresher_1_0.png" />
 </div>
 </div>
-<p>Note: you may be more familiar with seeing the numbers appear on the axes, as in this picture:
 <br>
-<img src="origin.gif" align="center">
+You may be more familiar with seeing the numbers appear on the axes, as in this picture:
+<br>
+<p><img alt="" src="../_images/origin.gif" /></p>
+<br>
+<p><i>(Image from <a class="reference external" href="https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin">https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin</a>)</i>
 <br></p>
-<center><i>(Image from https://www.varsitytutors.com/hotmath/hotmath_help/topics/graphing-scale-and-origin)</center></i>
-<br>
 <p>The graphs we will plot in this notebook display the numbers on the side of the figure, rather than on the axes themselves. This shows the same information, just in a different way.</p>
 <p>These axes provide us a way of visualising the relationship between two sets of data. Why is this important?:</p>
 <blockquote>
@@ -1374,8 +1398,8 @@
 <img alt="../_images/Lines_Slopes_and_Intercepts_-_Refresher_23_0.png" src="../_images/Lines_Slopes_and_Intercepts_-_Refresher_23_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="what-is-an-intercept">
+</section>
+<section id="what-is-an-intercept">
 <h1>What is an intercept?<a class="headerlink" href="#what-is-an-intercept" title="Permalink to this headline">¶</a></h1>
 <p>Look at the graph above. Despite having different sizes of slope, with different signs, all of the lines pass through the origin at <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">0)</span></code>.</p>
 <p>The <b>intercept</b> is the term for where a line crosses the y axis. The intercept for all the lines in the above graph is 0, as they all cross the y axis where <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
@@ -1458,11 +1482,11 @@
 <img alt="../_images/Lines_Slopes_and_Intercepts_-_Refresher_31_0.png" src="../_images/Lines_Slopes_and_Intercepts_-_Refresher_31_0.png" />
 </div>
 </div>
-<div class="section" id="in-summary-the-slope-determines-the-steepness-of-the-line-the-intercept-moves-the-line-up-and-down-the-y-axis-relative-to-the-origin">
+<section id="in-summary-the-slope-determines-the-steepness-of-the-line-the-intercept-moves-the-line-up-and-down-the-y-axis-relative-to-the-origin">
 <h2>In summary: the slope determines the steepness of the line. The intercept moves the line up and down the y axis, relative to the origin.<a class="headerlink" href="#in-summary-the-slope-determines-the-steepness-of-the-line-the-intercept-moves-the-line-up-and-down-the-y-axis-relative-to-the-origin" title="Permalink to this headline">¶</a></h2>
-<br></div>
-</div>
-<div class="section" id="why-do-we-care">
+<br></section>
+</section>
+<section id="why-do-we-care">
 <h1>Why do we care?<a class="headerlink" href="#why-do-we-care" title="Permalink to this headline">¶</a></h1>
 <p>We should care about the equations for lines, because fitting a line to a set of datapoints can be used for description and prediction. ‘Fitting’ in this sense means finding the values of the equation for a line which best captures the pattern in our data.</p>
 <p>The dataframe below shows some data from the <a class="reference internal" href="../data/rate_my_professors.html"><span class="doc std std-doc">students ratings dataset</span></a>:</p>
@@ -1683,8 +1707,8 @@
 </div>
 <p>You can see that the line with the (incorrect) 0 intercept passes through the origin, and is too low down the y axis to pass through any of the datapoints (shown in blue).</p>
 <p>The best fitting line does not pass through the origin; it crosses the y axis at <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">0.32</span></code>. As a result, it captures the pattern in the datapoints much better, and therefore is more useful for making predictions based on the pattern in the data.</p>
-</div>
-<div class="section" id="try-it-yourself">
+</section>
+<section id="try-it-yourself">
 <h1>Try it yourself<a class="headerlink" href="#try-it-yourself" title="Permalink to this headline">¶</a></h1>
 <p>If you are using an interactive version of this notebook, try changing the values of the slope and intercept in the cell below, and then running the cell, to plot your own lines:</p>
 <div class="cell docutils container">
@@ -1704,7 +1728,7 @@
 <img alt="../_images/Lines_Slopes_and_Intercepts_-_Refresher_47_0.png" src="../_images/Lines_Slopes_and_Intercepts_-_Refresher_47_0.png" />
 </div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1735,6 +1759,24 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="finding_lines.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Finding lines</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="using_minimize.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Using minimize</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

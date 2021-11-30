@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Permutation and the t-test &#8212; Coding for Data - 2021 edition</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -22,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +34,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -88,7 +89,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   Coding for data
  </span>
@@ -174,7 +175,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   On code
  </span>
@@ -226,7 +227,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data types
  </span>
@@ -268,7 +269,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Arrays
  </span>
@@ -315,7 +316,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Iteration
  </span>
@@ -342,7 +343,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Data frames
  </span>
@@ -379,7 +380,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Population and permutation
  </span>
@@ -411,7 +412,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More building blocks
  </span>
@@ -448,7 +449,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Pandas, indices and labels
  </span>
@@ -480,7 +481,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The mean and straight lines
  </span>
@@ -516,10 +517,22 @@
    Where in 2D
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../mean-slopes/finding_lines.html">
    Finding lines
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mean-slopes/Lines_Slopes_and_Intercepts_-_Refresher.html">
+     Lines, Slopes and Intercepts - Refresher
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../mean-slopes/using_minimize.html">
@@ -547,7 +560,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Classification
  </span>
@@ -594,7 +607,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Useful pandas
  </span>
@@ -616,7 +629,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   More on regression
  </span>
@@ -628,7 +641,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Confidence
  </span>
@@ -695,7 +708,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The end of the beginning
  </span>
@@ -829,7 +842,7 @@
         
               <div>
                 
-  <div class="section" id="permutation-and-the-t-test">
+  <section id="permutation-and-the-t-test">
 <h1>Permutation and the t-test<a class="headerlink" href="#permutation-and-the-t-test" title="Permalink to this headline">¶</a></h1>
 <p>In <a class="reference internal" href="permutation_idea.html"><span class="doc std std-doc">the idea of permutation</span></a>,
 we use permutation to compare a difference between two groups of numbers.</p>
@@ -952,7 +965,7 @@ the observed value, if we are in fact in the null (ideal) world:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0574
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0567
 </pre></div>
 </div>
 </div>
@@ -969,7 +982,7 @@ calculate the standard deviation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7792299358441976
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7717714329454717
 </pre></div>
 </div>
 </div>
@@ -1003,7 +1016,7 @@ distribution, which is zero.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5951660840133755
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5994584837113262
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1069,7 @@ permutation distribution:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7792299358441976
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7717714329454717
 </pre></div>
 </div>
 </div>
@@ -1117,7 +1130,7 @@ permutation test.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0574
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0567
 </pre></div>
 </div>
 </div>
@@ -1128,7 +1141,7 @@ permutation test does not.</p>
 <p>Of course, you should should not believe these assertions without evidence, so
 your next step is to use the <em>simulation</em> tools you have learned, to <a class="reference internal" href="testing_t.html"><span class="doc std std-doc">test the
 t-test</span></a>.</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
