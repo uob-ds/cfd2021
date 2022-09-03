@@ -5,6 +5,9 @@
 git+https://github.com/matthew-brett/jupyter-book.git@deepnote-button
 # Remove this next one when PRs merged (it's a dependency of jupyter-book).
 git+https://github.com/matthew-brett/sphinx-book-theme.git@deepnote-button
+# To avoid a Sphinx error:
+# https://github.com/readthedocs/readthedocs.org/issues/9038#issuecomment-1078927910
+jinja2<3.1
 
 # To allow static build / upload
 ghp-import
